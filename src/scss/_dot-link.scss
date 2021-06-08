@@ -1,0 +1,36 @@
+.dot-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    text-transform: lowercase;
+
+    color: var(--primary-color);
+
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 0.9rem;
+        height: 0.9rem;
+        flex-shrink: 0;
+        border-radius: 50%;
+        background-color: var(--primary-color);
+        margin-right: 1rem;
+        margin-top: 0.3rem;
+    }
+    &:link,
+    &:visited {
+        color: var(--primary-color);
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        .dot-link__text {
+            transform: translateX(.5rem);
+        }
+    }
+}
+
+.dot-link__text {
+    transition: transform .3s;
+}

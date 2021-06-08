@@ -1,0 +1,54 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    text-transform: lowercase;
+    color: #ffffff;
+    background-color: var(--primary-color);
+    transition: color 0.2s, background-color 0.2s;
+    flex-shrink: 0;
+    border-radius: 2.2rem;
+   
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    user-select: none;
+    &::after {
+        content: attr(data-text);
+        left: 100%;
+        position: absolute;
+        padding: .8rem 1.6rem;
+        padding-top: 0.6rem;
+        transition: transform .5s ease;
+    }
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: white;
+        
+
+        .btn__inner-text {
+            transform: translateX(-100%);
+        }
+        &::after {
+            transform: translateX(-100%);
+        }
+    }
+}
+
+
+.btn__inner-text {
+    display: block;
+    transition: transform .5s ease;
+    padding: .8rem 1.6rem;
+    padding-top: 0.6rem;
+
+   
+}

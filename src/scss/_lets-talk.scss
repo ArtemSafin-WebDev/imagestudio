@@ -1,0 +1,152 @@
+.lets-talk {
+    margin-bottom: 12rem;
+}
+
+.lets-talk__row {
+    display: grid;
+    grid-template-columns: minmax(auto, 9rem) minmax(0, 1fr);
+    grid-column-gap: 9rem;
+}
+
+.lets-talk__star {
+    width: 9rem;
+    height: 9rem;
+    display: block;
+    fill: var(--primary-color);
+    animation-name: star-spin;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    margin-top: 14rem;
+}
+
+
+.lets-talk__card {
+    background: #f9f9f9;
+    border-radius: 18rem 18rem 14rem 0px;
+    padding: 11rem 17.5rem;
+    padding-bottom: 12rem;
+    background-image: url("data:image/svg+xml,%3Csvg width='486' height='234' viewBox='0 0 486 234' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='243' cy='-9' r='221.5' fill='%23F9F9F9' stroke='white' stroke-width='43'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: right 10rem top;
+    background-size: 48.6rem auto;
+}
+
+.lets-talk__card-heading {
+    font-size: 6.8rem;
+    line-height: 6.4rem;
+    text-transform: lowercase;
+    margin-bottom: 4.5rem;
+    font-weight: 400;
+}
+
+.lets-talk__form-row {
+    display: grid;
+    align-items: center;
+    grid-template-columns: minmax(auto, 24rem) minmax(0, 1fr);
+    grid-gap: 3rem;
+}
+
+.lets-talk__manager-text {
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+}
+
+.lets-talk__input-wrapper {
+    display: flex;
+    align-items: center;
+    border: 0.2rem solid #111111;
+    border-radius: 10rem;
+    padding: 1rem;
+    position: relative;
+}
+
+.lets-talk__input {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+    padding: 0 2rem;
+    width: 50%;
+    flex-grow: 1;
+
+    @include placeholder {
+        color: var(--text-color);
+        text-transform: lowercase;
+    }
+}
+
+.lets-talk__form-submit {
+    padding: 1.6rem 3.2rem;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: 4rem;
+    flex-shrink: 0;
+    user-select: none;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: var(--primary-color-hover);
+    }
+}
+
+.lets-talk__policy-checkbox {
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    top: 100%;
+    left: 3.2rem;
+    margin-top: 1.2rem;
+    user-select: none;
+    cursor: pointer;
+}
+
+.lets-talk__policy-checkbox-input {
+    @include visuallyHidden();
+}
+
+.lets-talk__policy-checkbox-mark {
+    width: 1.2rem;
+    height: 1.2rem;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--text-color);
+    flex-shrink: 0;
+    margin-right: 0.6rem;
+    margin-top: 0.3rem;
+    svg {
+        width: 0.85rem;
+        height: 0.6rem;
+        fill: var(--text-color);
+        transition: opacity 0.2s;
+        opacity: 0;
+        
+    }
+}
+
+.lets-talk__policy-checkbox-text {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    text-transform: lowercase;
+
+    a {
+        color: var(--primary-color);
+        &:link,
+        &:visited {
+            color: var(--primary-color);
+        }
+    }
+}
+
+
+.lets-talk__policy-checkbox-input:checked ~ .lets-talk__policy-checkbox-mark svg {
+    opacity: 1;
+}

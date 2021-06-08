@@ -1,0 +1,27 @@
+.section-label {
+    font-weight: normal;
+    font-size: 2.8rem;
+    line-height: 3.4rem;
+    font-weight: 400;
+    text-transform: lowercase;
+    padding: 0.7rem 2rem;
+    padding-top: 0.5rem;
+    border: 2px solid #ffffff;
+    align-self: flex-start;
+    border-radius: 2.5rem 2.5rem 2.5rem 0;
+    color: white;
+    justify-self: flex-start;
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    &--dark {
+        color: var(--text-color);
+        border-color: var(--text-color);
+        &:link,
+        &:visited {
+            color: var(--text-color);
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.buy-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    padding: 0.7rem 1.6rem;
+    border: 1px solid currentColor;
+    border-radius: 2.2rem;
+    transition: opacity 0.2s;
+    color: white;
+
+    svg {
+        fill: currentColor;
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 1rem;
+    }
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: white;
+        opacity: 0.8;
+    }
+
+    
+
+   
+
+    &--blue {
+        color: var(--primary-color);
+        &:link,
+        &:visited {
+            color: var(--primary-color);
+        }
+
+        .no-touch &:hover,
+        .touch &:active {
+            color: var(--primary-color);
+        }
+    }
+}

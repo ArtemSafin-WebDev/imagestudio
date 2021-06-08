@@ -1,0 +1,37 @@
+
+.slider-arrows {
+    display: flex;
+    align-items: center;
+}
+
+.slider-arrows__btn {
+    flex-shrink: 0;
+    margin-right: 3.4rem;
+    transition: opacity .3s;
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &.swiper-button-disabled {
+        
+        cursor: default;
+
+        svg {
+            fill: rgba(#111111, .2);
+        }
+    }
+    svg {
+        width: 4.5rem;
+        height: 2.2rem;
+        fill: var(--text-color);
+        display: block;
+        transition: fill .2s;
+    }
+
+    .no-touch &:not(.swiper-button-disabled):hover,
+    .touch &:not(.swiper-button-disabled):active {
+        svg {
+            fill: var(--primary-color);
+        }
+    }
+}
