@@ -195,11 +195,11 @@
             @content;
         }
     } @else if $class == small-mobile {
-        @media only screen and (max-width: (576px)) {
+        @media only screen and (max-width: (375px)) {
             @content;
         }
     } @else if $class == supersmall-mobile {
-        @media only screen and (max-width: (370px)) {
+        @media only screen and (max-width: (340px)) {
             @content;
         }
     }
@@ -227,7 +227,7 @@
             @content;
         }
     } @else if $class == mobile {
-        @media only screen and (min-width: 577px) {
+        @media only screen and (min-width: 376px) {
             @content;
         }
     }

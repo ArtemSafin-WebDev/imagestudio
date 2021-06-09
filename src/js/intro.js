@@ -14,7 +14,7 @@ export default function intro() {
         const nextArrow = element.querySelector('.intro__main-slider-arrow--next');
         const prevArrow = element.querySelector('.intro__main-slider-arrow--prev');
         const nextArrowProgress = nextArrow.querySelector('circle:nth-child(2)');
-        const AUTOPLAY_DURATION = 5;
+        const AUTOPLAY_DURATION = 8;
         const AUTOPLAY = true;
         const bullets = Array.from(element.querySelectorAll('.intro__main-slider-bullet'));
 
@@ -26,7 +26,8 @@ export default function intro() {
             slidesPerView: 1,
             watchOverflow: true,
             init: false,
-            loop: true,
+            loop: false,
+            spaceBetween: 14,
             navigation: {
                 nextEl: nextArrow,
                 prevEl: prevArrow
@@ -41,6 +42,12 @@ export default function intro() {
                     autoplay(swiper.realIndex);
                     activeIndex = swiper.realIndex;
                 }
+            },
+            breakpoints: {
+                641: {
+                    spaceBetween: 0,
+                    loop: true
+                }
             }
         });
 
@@ -50,7 +57,14 @@ export default function intro() {
             slidesPerView: 1,
             watchOverflow: true,
             init: false,
-            loop: true
+            spaceBetween: 14,
+            loop: false,
+            breakpoints: {
+                641: {
+                    loop: true,
+                    spaceBetween: 0,
+                }
+            }
         });
 
         textSlider.init();
@@ -63,6 +77,7 @@ export default function intro() {
         }
 
         function autoplay(startIndex) {
+            if (window.matchMedia('(max-width: 640px)').matches) return;
             bullets.forEach(bullet => {
                 gsap.set(bullet, {
                     '--slider-progress': 0

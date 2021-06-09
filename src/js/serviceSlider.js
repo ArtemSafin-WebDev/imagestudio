@@ -22,13 +22,19 @@ export default function serviceSlider() {
         const instance = new Swiper(container, {
             slidesPerView: 1,
             watchOverflow: true,
-            spaceBetween: 20,
+            spaceBetween: 14,
             speed: 500,
-            loop: true,
+            loop: false,
             init: false,
             navigation: {
                 nextEl: element.querySelector('.service__slider-arrow--next'),
                 prevEl: element.querySelector('.service__slider-arrow--prev')
+            },
+            breakpoints: {
+                641: {
+                    spaceBetween: 20,
+                    loop: true
+                }
             },
             on: {
                 init: swiper => {
@@ -50,6 +56,7 @@ export default function serviceSlider() {
         instance.init();
 
         function autoplay(startIndex) {
+            if (window.matchMedia('(max-width: 640px)').matches) return;
             links.forEach(link => {
                 const linkProgress = link.querySelector('rect:nth-child(2)');
                 gsap.set(linkProgress, {
@@ -81,7 +88,11 @@ export default function serviceSlider() {
             link.addEventListener('click', event => {
                 event.preventDefault();
 
-                instance.slideToLoop(linkIndex);
+                if (window.matchMedia('(max-width: 640px)').matches) {
+                    instance.slideTo(linkIndex);
+                } else {
+                    instance.slideToLoop(linkIndex);
+                }
             });
         });
     });

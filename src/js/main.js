@@ -13,6 +13,14 @@ import services from './services';
 import portfolio from './portfolio';
 import portfolioSlider from './portfolioSlider';
 import intro from './intro';
+import menu from './menu';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import cycle from './cycle';
+import moveUpBlocks from './moveUpBlocks';
+import shop from './shop';
+
+gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -30,10 +38,35 @@ document.addEventListener('DOMContentLoaded', function() {
     services();
     portfolio();
     portfolioSlider();
-   
+    menu();
+    cycle();
+    moveUpBlocks();
+    shop();
+
+    const mq = window.matchMedia('(max-width: 640px)');
+
+    function screenTest(e) {
+        location.reload();
+    }
+
+    mq.addListener(screenTest);
 });
+
+const handleLoad = () => {
+    requestAnimationFrame(() => {
+        ScrollTrigger.refresh();
+    });
+};
+
+setTimeout(() => {
+    document.body.classList.add('animatable');
+    handleLoad();
+}, 2500);
 
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
-    setTimeout(() => document.body.classList.add('animatable'), 300)
-})
+    setTimeout(() => {
+        document.body.classList.add('animatable');
+        handleLoad();
+    }, 300);
+});

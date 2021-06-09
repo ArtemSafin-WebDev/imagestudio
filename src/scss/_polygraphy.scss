@@ -1,5 +1,9 @@
 .polygraphy {
     margin-bottom: 12rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 8rem;
+    }
 }
 
 .polygraphy__row {
@@ -7,6 +11,19 @@
     grid-template-columns: minmax(0, 32rem) minmax(0, 1fr);
     grid-column-gap: 4rem;
     align-items: flex-start;
+
+    @include breakpoint(mobile) {
+        grid-gap: 0;
+        grid-template-columns: minmax(auto, 5.5rem) minmax(0, 1fr);
+        grid-row-gap: 3rem;
+        grid-template-areas: 'poligraphy-number poligraphy-text-content' 'poligraphy-slider poligraphy-slider';
+    }
+}
+
+.polygraphy__content {
+    @include breakpoint(mobile) {
+        display: contents;
+    }
 }
 
 .polygraphy__info-row {
@@ -14,6 +31,15 @@
     grid-template-columns: minmax(auto, 1fr) minmax(auto, 53rem);
     grid-column-gap: 4rem;
     margin-bottom: 7rem;
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+        align-items: initial;
+        grid-gap: initial;
+        margin: 0;
+        grid-area: poligraphy-text-content;
+    }
 }
 
 .polygraphy__info-heading {
@@ -21,15 +47,30 @@
     line-height: 3.2rem;
     text-transform: lowercase;
     font-weight: 400;
+
+    @include breakpoint(mobile) {
+        font-size: 2.1rem;
+        line-height: 2.5rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .polygraphy__info-text {
     font-size: 1.8rem;
     line-height: 2.5rem;
     text-transform: lowercase;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.7rem;
+        line-height: 2.5rem;
+    }
 }
 
 .polygraphy__slider {
+    @include breakpoint(mobile) {
+        grid-area: poligraphy-slider;
+    }
     .swiper-container {
         overflow: visible;
     }
@@ -52,8 +93,11 @@
 
     color: var(--text-color);
 
-    .no-touch &:hover,
-    .touch &:active {
+    @include breakpoint(mobile) {
+        padding: 4rem 2rem;
+    }
+
+    .no-touch &:hover {
         color: var(--text-color);
 
         .polygraphy__slider-card-image {
@@ -84,7 +128,12 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
-    transition: transform .3s;
+    transition: transform 0.3s;
+    
+
+    // &--need-shadow {
+    //     filter: drop-shadow(1.8rem 3.4rem 2.4rem rgba(121, 154, 168, 0.09));
+    // }
 }
 
 .polygraphy__slider-card-title {
@@ -92,18 +141,32 @@
     line-height: 2rem;
     text-align: center;
     text-transform: lowercase;
+    color: var(--text-color);
 }
 
 .polygraphy__slider-controls {
     margin-top: 5rem;
     display: flex;
     align-items: center;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 3rem;
+    }
 }
 
 .polygraphy__slider-arrows {
     margin-left: auto;
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .polygraphy__slider-buy-link {
     margin-right: 3.6rem;
+    @include breakpoint(mobile) {
+        margin-right: 0;
+        margin-bottom: 2.4rem;
+    }
 }

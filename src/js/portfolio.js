@@ -1,21 +1,22 @@
-
 import gsap from 'gsap';
+import { debounce } from 'lodash';
 
 export default function portfolio() {
     const elements = Array.from(document.querySelectorAll('.js-portfolio'));
 
     elements.forEach(element => {
         const links = Array.from(element.querySelectorAll('.portfolio__categories-link'));
+        const tabs = Array.from(element.querySelectorAll('.portfolio__tab'));
         const indicator = document.createElement('div');
         indicator.classList.add('portfolio__categories-link-indicator');
-        
 
         let activeIndex = 0;
 
-        const setActiveLink = index => {
+        const setActiveLink = (index, forced = false) => {
             links.forEach(link => link.classList.remove('active'));
             links[index].classList.add('active');
-
+            tabs.forEach(tab => tab.classList.remove('active'));
+            tabs[index].classList.add('active');
             activeIndex = index;
             if (links.length) {
                 const activeLinkOffsetX = links[index].offsetLeft;
@@ -34,11 +35,10 @@ export default function portfolio() {
                     y: activeLinkOffsetY,
                     width: activeLinkWidth,
                     height: activeLinkHeight,
-                    duration: 0.2
-                })
-
+                    duration: forced ? 0 : 0.2
+                });
             }
-        }
+        };
 
         if (!links.length) return;
 
@@ -46,15 +46,19 @@ export default function portfolio() {
 
         setActiveLink(activeIndex);
 
-        window.addEventListener('resize', () => {
-            setActiveLink(activeIndex);
-        })
+        window.addEventListener(
+            'resize',
+            debounce(() => {
+                setActiveLink(activeIndex, true);
+            }),
+            300
+        );
 
         links.forEach((link, linkIndex) => {
             link.addEventListener('click', event => {
                 event.preventDefault();
                 setActiveLink(linkIndex);
-            })
-        })
-    })
+            });
+        });
+    });
 }

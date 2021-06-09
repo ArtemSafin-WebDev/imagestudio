@@ -4,13 +4,25 @@
     line-height: 3.4rem;
     font-weight: 400;
     text-transform: lowercase;
-    padding: 0.7rem 2rem;
-    padding-top: 0.5rem;
-    border: 2px solid #ffffff;
+    padding: 0.5rem 1.8rem;
+    padding-top: 0.3rem;
+    border: 0.2rem solid #ffffff;
     align-self: flex-start;
-    border-radius: 2.5rem 2.5rem 2.5rem 0;
+    border-radius: 0rem 2.5rem 2.5rem 2.5rem;
     color: white;
     justify-self: flex-start;
+    padding-left: 1.6rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 2.3rem;
+        line-height: 2.3rem;
+        padding: .4rem 1.4rem;
+        padding-top: 0.1rem;
+        padding-left: 1.2rem;
+        border-width: 2px;
+        
+    }
     &:link,
     &:visited {
         color: white;

@@ -1,5 +1,8 @@
 .portfolio {
     margin-bottom: 16.5rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 7rem;
+    }
 }
 
 .portfolio__row {
@@ -7,6 +10,11 @@
     grid-template-columns: minmax(0, 32rem) minmax(0, 1fr);
     grid-column-gap: 4rem;
     align-items: flex-start;
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2.8rem;
+        align-items: initial;
+    }
 }
 
 .portfolio__info-row {
@@ -16,6 +24,14 @@
     margin-bottom: 5.5rem;
     padding-bottom: 4rem;
     border-bottom: 2px solid #111111;
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+        grid-gap: initial;
+        margin: 0;
+        padding-bottom: 2rem;
+        margin-bottom: 2.5rem;
+    }
 }
 
 .portfolio__info-heading {
@@ -23,12 +39,24 @@
     line-height: 3.2rem;
     text-transform: lowercase;
     font-weight: 400;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 2.3rem;
+        line-height: 2.8rem;
+        margin-bottom: 1.5rem;
+    }
 }
 
 .portfolio__info-text {
     font-size: 1.8rem;
     line-height: 2.5rem;
     text-transform: lowercase;
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.7rem;
+        line-height: 2.5rem;
+    }
 }
 
 .portfolio__categories {
@@ -36,6 +64,30 @@
     flex-wrap: wrap;
     position: relative;
     margin-bottom: 5.5rem;
+    @include breakpoint(mobile) {
+        flex-wrap: nowrap;
+        margin-bottom: 0;
+        &::after {
+            content: '';
+            width: var(--content-padding);
+            height: 1px;
+            flex-shrink: 0;
+        }
+    }
+}
+
+.portfolio__categories-wrapper {
+    @include breakpoint(mobile) {
+        margin: 0 calc(-1 * var(--content-padding));
+        padding: 0 var(--content-padding);
+        margin-bottom: 1rem;
+        padding-bottom: 2rem;
+        overflow-y: hidden;
+
+        @include noScrollbar();
+
+      
+    }
 }
 
 .portfolio__categories-link {
@@ -46,10 +98,22 @@
     transition: color 0.2s, border-color 0.2s;
     margin-right: 2.4rem;
     padding: 0.3rem 1rem;
+    padding-top: 0.2rem;
     border-radius: 1.4rem;
     text-transform: lowercase;
     margin-bottom: 1rem;
     user-select: none;
+    white-space: nowrap;
+    @include breakpoint(mobile) {
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 1.2;
+        margin-right: 2rem;
+        margin-bottom: 0;
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
     -webkit-user-drag: none;
     &:last-child {
         margin-right: 0;
@@ -62,14 +126,11 @@
 }
 
 .portfolio__categories-link-indicator {
-    border: 2px solid var(--primary-color);
+    border: 0.2rem solid var(--primary-color);
     border-radius: 1.4rem;
     position: absolute;
     pointer-events: none;
 }
-
-
-
 
 .portfolio__slider-card-image {
     position: absolute;
@@ -83,8 +144,6 @@
 }
 
 .portfolio__slider {
-    
-
     .swiper-container {
         overflow: visible;
     }
@@ -94,9 +153,18 @@
         flex-direction: column;
         width: 29rem;
 
+        @include breakpoint(mobile) {
+            width: 23rem;
+        }
+
         &-tuple {
             width: 24.2rem;
             padding-top: 4rem;
+
+            @include breakpoint(mobile) {
+                padding-top: 0;
+                width: 18rem;
+            }
         }
     }
 }
@@ -106,45 +174,47 @@
     position: relative;
     width: 100%;
 
+    @include breakpoint(mobile) {
+        height: 32.7rem;
+    }
+
     .swiper-slide-tuple & {
         &:nth-child(1) {
             margin-bottom: 20px;
             height: 15rem;
+            @include breakpoint(mobile) {
+                height: 11rem;
+            }
         }
         &:nth-child(2) {
             height: 27rem;
+            @include breakpoint(mobile) {
+                height: 15rem;
+                flex-grow: 1;
+            }
         }
     }
 }
 
+.portfolio__tabs {
+    position: relative;
+}
 
-// .portfolio__slider-wrapper {
-//     height: 48rem;
-//     flex-shrink: 0;
-//     display: flex;
-//     flex-direction: column;
-//     flex-wrap: wrap;
-// }
-
-// .portfolio__slider-card {
-//     position: relative;
-//     width: 24.2rem;
-//     height: 15rem;
-//     margin-right: 2rem;
-//     -webkit-user-drag: none;
-//     user-select: none;
-//     &:nth-child(3n + 1) {
-//         height: 41.8rem;
-//         width: 29rem;
-//         margin-bottom: 0;
-//     }
-//     &:nth-child(3n - 1) {
-//         margin-top: 4rem;
-//         margin-bottom: 2rem;
-//     }
-
-//     &:nth-child(3n) {
-//         height: 27rem;
-//         margin-bottom: 0;
-//     }
-// }
+.portfolio__tab {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
+    &.active {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity 0.4s, visibility 0.4s;
+        z-index: 10;
+        position: relative;
+    }
+}

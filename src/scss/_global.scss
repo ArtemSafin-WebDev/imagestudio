@@ -13,12 +13,27 @@
     --primary-color-hover: #1850ec;
     --text-color: #111111;
     --gilroy: 'Gilroy', sans-serif;
+
+    
 }
 
 html {
     box-sizing: border-box;
-    font-size: 10px;
+    font-size: 9px;
+
+    font-size: clamp(5px, 0.60vw, 9px);
     -webkit-text-size-adjust: 100%;
+
+    @include breakpoint(mobile) {
+        font-size: 10px;
+    }
+
+    @include breakpoint(small-mobile) {
+        font-size: 9px;
+    }
+    @include breakpoint(supersmall-mobile) {
+        font-size: 8px;
+    }
 
     @include noHighlight();
 }
@@ -33,6 +48,19 @@ body {
     font-family: sans-serif;
     color: var(--text-color);
     font-family: var(--gilroy);
+
+    &:not(.animatable) {
+        overflow-y: scroll;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        body {
+            height: auto;
+            overflow: hidden;
+        }
+    }
 }
 
 main {

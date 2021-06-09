@@ -1,11 +1,15 @@
 .page-footer {
-   
 }
 
 .page-footer__content {
     padding-top: 7rem;
     padding-bottom: 1.6rem;
     border-top: 0.2rem solid var(--text-color);
+
+    @include breakpoint(mobile) {
+        padding-top: 6.4rem;
+        border-width: 2px;
+    }
 }
 
 .page-footer__row {
@@ -14,6 +18,20 @@
     grid-gap: 3rem;
     margin-bottom: 7.5rem;
     align-items: flex-start;
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+        grid-gap: initial;
+        margin-bottom: 5rem;
+        &:first-child {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            display: grid;
+            grid-column-gap: 3rem;
+            grid-row-gap: 5rem;
+            grid-template-areas: 'footer-logo footer-btn' 'footer-nav footer-links' 'footer-contacts footer-contacts';
+        }
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -22,18 +40,30 @@
 .page-footer__logo {
     display: block;
     flex-shrink: 1;
+    flex-shrink: 0;
+    @include breakpoint(mobile) {
+        grid-area: footer-logo;
+        align-self: center;
+    }
 }
 
 .page-footer__logo-image {
     width: 16.7rem;
     display: block;
     height: auto;
+
+    @include breakpoint(mobile) {
+        width: 13.8rem;
+    }
 }
 
 .page-footer__nav {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    @include breakpoint(mobile) {
+        grid-area: footer-nav;
+    }
 }
 
 .page-footer__nav-link {
@@ -41,11 +71,15 @@
     line-height: 2.4rem;
     margin-bottom: 2.5rem;
     text-transform: lowercase;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        margin-bottom: 1.2rem;
+    }
     &:last-child {
         margin-bottom: 0;
     }
-
-    
 }
 
 .page-footer__nav-link-text {
@@ -62,20 +96,33 @@
     text-transform: lowercase;
     margin-bottom: 2.7rem;
     font-weight: 400;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .page-footer__info-links {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    @include breakpoint(mobile) {
+        grid-area: footer-links;
+    }
 }
 
 .page-footer__info-link {
     font-size: 1.6rem;
     line-height: 2.4rem;
-    margin-bottom: .8rem;
+    margin-bottom: 0.8rem;
     text-transform: lowercase;
-    
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .page-footer__info-link-text {
@@ -87,6 +134,9 @@
 .page-footer__contacts {
     display: flex;
     flex-direction: column;
+    @include breakpoint(mobile) {
+        grid-area: footer-contacts;
+    }
 }
 
 .page-footer__contacts-links {
@@ -96,10 +146,19 @@
     align-items: flex-start;
     font-size: 1.6rem;
     line-height: 2.7rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.7rem;
+        margin-bottom: 2rem;
+    }
 }
 
 .page-footer__contacts-link {
     margin-bottom: 0.3rem;
+    @include breakpoint(mobile) {
+        margin: 0;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -119,6 +178,10 @@
 .page-footer__social-list-item {
     margin-right: 2.5rem;
     flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        margin-right: 3rem;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -134,13 +197,22 @@
     background: #f9f9f9;
     border-radius: 50%;
     flex-shrink: 0;
-    transition: background-color .3s;
+    transition: background-color 0.3s;
+
+    @include breakpoint(mobile) {
+        width: 3.8rem;
+        height: 3.8rem;
+    }
     svg {
         width: 1.6rem;
         height: 1.6rem;
         fill: var(--primary-color);
         display: block;
-        transition: fill .3s;
+        transition: fill 0.3s;
+        @include breakpoint(mobile) {
+            width: 2rem;
+            height: 2rem;
+        }
     }
 
     .no-touch &:hover,
@@ -156,7 +228,14 @@
 .page-footer__policy {
     font-size: 1.4rem;
     line-height: 2.4rem;
-    grid-column: 2 / 3;
+    text-transform: lowercase;
+    @include breakpointMF(small-tablet) {
+        grid-column: 2 / 3;
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1.3rem;
+    }
 }
 
 .page-footer__made-by {
@@ -164,10 +243,22 @@
     line-height: 2.4rem;
     display: inline-flex;
     align-items: center;
+    text-transform: lowercase;
 
+    @include breakpoint(mobile) {
+        line-height: 1.2;
+    }
+
+  
     .no-touch &:hover,
     .touch &:active {
         color: var(--text-color);
+    }
+}
+
+.page-footer__made-by-text {
+    @include breakpoint(mobile) {
+        border-bottom: 1px solid currentColor;
     }
 }
 
@@ -183,4 +274,9 @@
 .page-footer__callback-btn {
     align-self: flex-start;
     justify-self: flex-end;
+
+    @include breakpoint(mobile) {
+        grid-area: footer-btn;
+        align-self: center;
+    }
 }
