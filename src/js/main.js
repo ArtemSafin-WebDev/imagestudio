@@ -19,13 +19,14 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import cycle from './cycle';
 import moveUpBlocks from './moveUpBlocks';
 import shop from './shop';
+import advantages from './advantages';
+import sliderCursor from './sliderCursor';
 
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
     detectTouch();
-
     setScrollbarWidth();
     intro();
     validation();
@@ -40,8 +41,11 @@ document.addEventListener('DOMContentLoaded', function() {
     portfolioSlider();
     menu();
     cycle();
-    moveUpBlocks();
     shop();
+    advantages();
+    sliderCursor();
+    moveUpBlocks();
+    
 
     const mq = window.matchMedia('(max-width: 640px)');
 
@@ -68,5 +72,7 @@ window.addEventListener('load', function() {
     setTimeout(() => {
         document.body.classList.add('animatable');
         handleLoad();
+
+      
     }, 300);
 });

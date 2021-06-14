@@ -84,8 +84,11 @@
                                     <a href="#" class="intro__main-slider-card">
                                         <img src="img/main-slider-2.jpg" alt="" class="intro__main-slider-card-image">
                                         <div class="intro__main-slider-card-action">
-                                            <svg width="14" height="14" aria-hidden="true" class="icon-eye">
-                                                <use xlink:href="#eye"></use>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.02 12"
+                                                class="icon-eye">
+                                                <path
+                                                    d="M11.51,0C5.26,0,.45,5.51.45,5.51L0,6l.45.49s4.38,5,10.21,5.46a6.06,6.06,0,0,0,.85.05,5.92,5.92,0,0,0,.84-.05c5.83-.46,10.22-5.46,10.22-5.46L23,6l-.45-.49S17.76,0,11.51,0Zm0,1.5a10.93,10.93,0,0,1,4.5,1,5.26,5.26,0,0,1-3.92,7.93H11A5.28,5.28,0,0,1,6.35,4.56a5.14,5.14,0,0,1,.65-2H7A10.87,10.87,0,0,1,11.51,1.5ZM5,3.7a6.68,6.68,0,0,0,.84,5.14A17.48,17.48,0,0,1,2.16,6,18,18,0,0,1,5,3.7Zm13.12,0A17.68,17.68,0,0,1,20.86,6a17.51,17.51,0,0,1-3.63,2.84,6.78,6.78,0,0,0,1-3.59,6.75,6.75,0,0,0-.16-1.55Z" />
+                                                <circle cx="11.54" cy="5.25" r="2.25" />
                                             </svg>
                                             Смотреть кейс
                                         </div>
@@ -928,12 +931,18 @@
         </div>
     </div>
 </section>
-<section class="advantages js-move-up-block">
+<section class="advantages js-advantages">
     <div class="container">
         <div class="advantages__row">
-            <svg width="14" height="14" aria-hidden="true" class="icon-star advantages__star">
-                <use xlink:href="#star"></use>
-            </svg>
+            <div class="advantages__star-wrapper">
+                <div class="advantages__star-inner-wrapper">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-star advantages__star">
+                        <use xlink:href="#star"></use>
+                    </svg>
+                </div>
+
+
+            </div>
             <div class="advantages__content">
                 <div class="advantages__top-text">
                     <p>
@@ -1022,7 +1031,7 @@
                 <div class="portfolio__sliders">
                     <div class="portfolio__tabs">
                         <div class="portfolio__tab">
-                            <div class="portfolio__slider js-portfolio-slider">
+                            <div class="portfolio__slider js-portfolio-slider js-cursor-slider-area">
                                 <div class="swiper-container">
                                     <div class="swiper-wrapper">
                                         <a href="#" class="portfolio__slider-card">
@@ -1083,7 +1092,7 @@
                             </div>
                         </div>
                         <div class="portfolio__tab">
-                            <div class="portfolio__slider js-portfolio-slider">
+                            <div class="portfolio__slider js-portfolio-slider js-cursor-slider-area">
                                 <div class="swiper-container">
                                     <div class="swiper-wrapper">
                                         <a href="#" class="portfolio__slider-card">
@@ -1144,7 +1153,7 @@
                             </div>
                         </div>
                         <div class="portfolio__tab">
-                            <div class="portfolio__slider js-portfolio-slider">
+                            <div class="portfolio__slider js-portfolio-slider js-cursor-slider-area">
                                 <div class="swiper-container">
                                     <div class="swiper-wrapper">
                                         <a href="#" class="portfolio__slider-card">
@@ -1205,7 +1214,7 @@
                             </div>
                         </div>
                         <div class="portfolio__tab">
-                            <div class="portfolio__slider js-portfolio-slider">
+                            <div class="portfolio__slider js-portfolio-slider js-cursor-slider-area">
                                 <div class="swiper-container">
                                     <div class="swiper-wrapper">
                                         <a href="#" class="portfolio__slider-card">
@@ -1339,8 +1348,8 @@
 
                             </div>
                             <label class="lets-talk__policy-checkbox">
-                                <input type="checkbox" name="policy" value="1" class="lets-talk__policy-checkbox-input" required
-                                    checked>
+                                <input type="checkbox" name="policy" value="1" class="lets-talk__policy-checkbox-input"
+                                    required checked>
                                 <span class="lets-talk__policy-checkbox-mark">
                                     <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
                                         <use xlink:href="#checkmark"></use>

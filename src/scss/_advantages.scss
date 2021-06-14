@@ -24,7 +24,7 @@
     animation-duration: 4s;
     animation-timing-function: linear;
     fill: var(--primary-color);
-
+   
     @include breakpoint(mobile) {
         width: 6.6rem;
         height: 6.6rem;
@@ -90,4 +90,9 @@
         font-size: 2.1rem;
         line-height: 2.5rem;
     }
+}
+
+
+.advantages__star-wrapper {
+    align-self: flex-start;
 }

@@ -54,6 +54,10 @@ export default function portfolio() {
             300
         );
 
+        window.addEventListener('load', () => {
+            setActiveLink(activeIndex, true);
+        })
+
         links.forEach((link, linkIndex) => {
             link.addEventListener('click', event => {
                 event.preventDefault();

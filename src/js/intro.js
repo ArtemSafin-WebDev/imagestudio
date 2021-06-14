@@ -62,7 +62,7 @@ export default function intro() {
             breakpoints: {
                 641: {
                     loop: true,
-                    spaceBetween: 0,
+                    spaceBetween: 5,
                 }
             }
         });

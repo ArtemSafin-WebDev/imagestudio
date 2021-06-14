@@ -16,14 +16,17 @@ export default function shop() {
                         trigger: element,
                         start: 'top bottom',
                         scrub: 1,
-                        end: 'center center'
+                        end: 'bottom top'
                     }
                 });
 
-                tl.from(image, {
+                tl.fromTo(image, {
                     yPercent: 50,
+                    
+                }, {
+                    yPercent: -13,
                     duration: 2
-                });
+                })
             }
         });
     });

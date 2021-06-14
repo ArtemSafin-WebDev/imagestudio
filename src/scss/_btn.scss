@@ -24,10 +24,11 @@
         padding: 0.8rem 1.6rem;
         padding-top: 0.6rem;
         transition: transform 0.5s ease;
+     
         @include breakpoint(mobile) {
             padding: 0.6rem 1.6rem;
             padding-top: 0.5rem;
-        }   
+        }
     }
     &:link,
     &:visited {
@@ -38,11 +39,28 @@
         color: white;
 
         .btn__inner-text {
-            transform: translateX(-100%);
+            animation-name: moving-letters;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
         }
         &::after {
-            transform: translateX(-100%);
+            animation-name: moving-letters;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+         
         }
+    }
+}
+
+@keyframes moving-letters {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
     }
 }
 
@@ -51,8 +69,10 @@
     transition: transform 0.5s ease;
     padding: 0.8rem 1.6rem;
     padding-top: 0.6rem;
+ 
+   
     @include breakpoint(mobile) {
         padding: 0.4rem 1.6rem;
         padding-top: 0.3rem;
-    } 
+    }
 }

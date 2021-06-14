@@ -6,6 +6,18 @@
 }
 
 .services__heading {
+
+    @include breakpointMF(small-tablet) {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .4s, visibility 0s linear .4s;
+    
+        .animatable & {
+            opacity: 1;
+            visibility: inherit;
+            transition: opacity .6s ease-out 1.8s, visibility .6s ease-out 1.8s;
+        }
+    }
     @include breakpoint(mobile) {
         margin-bottom: 1.2rem;
     }
@@ -166,7 +178,7 @@
         height: 4rem;
         border-radius: 50%;
         top: -0.1rem;
-        border: 0.2rem solid transparent;
+        border: 2px solid transparent;
         color: var(--text-color);
         transition: border-color 0.4s, color 0.4s;
         font-weight: 600;

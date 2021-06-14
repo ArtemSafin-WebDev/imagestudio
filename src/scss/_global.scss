@@ -48,6 +48,12 @@ body {
     font-family: sans-serif;
     color: var(--text-color);
     font-family: var(--gilroy);
+   
+    &.slider-cursor-active {
+        cursor: none;
+
+        
+    }
 
     &:not(.animatable) {
         overflow-y: scroll;

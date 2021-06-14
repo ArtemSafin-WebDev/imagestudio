@@ -13,14 +13,14 @@ export default function cycle() {
                     scrollTrigger: {
                         trigger: element,
                         start: 'top bottom+=20%',
-                        scrub: 1,
+                      
                         end: 'center center'
                     }
                 });
 
                 tl.from(text, {
                     xPercent: -50,
-                    duration: 2
+                    duration: 1.4
                 });
             }
         });

@@ -1,7 +1,16 @@
 .page-header {
     position: relative;
-    z-index: 180;
+    z-index: 480;
     transition: z-index 0.4s step-end;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .4s, visibility 0s linear .4s;
+
+    .animatable & {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity .4s ease 1.5s, visibility .4s ease 1.5s;
+    }
     .menu-open & {
         z-index: 500;
         transition: z-index 0.4s step-start;
@@ -296,17 +305,15 @@
 .page-header__menu-nav-link {
     font-size: 4rem;
     line-height: 4.9rem;
-    margin-bottom: 3rem;
-    color: rgba(white, 0.5);
+    padding-bottom: 3rem;
+    color: white;
     text-transform: lowercase;
+
+    
 
     &:link,
     &:visited {
-        color: rgba(white, 0.5);
-    }
-
-    &:last-child {
-        margin-bottom: 0;
+        color: white;
     }
 
     .no-touch &:hover,
@@ -314,14 +321,22 @@
         color: white;
     }
 
-    &.active {
-        color: white;
+    &.faded {
+        color: rgba(white, 0.5);
     }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    
+
+   
 
     @include breakpoint(mobile) {
         font-size: 3.2rem;
         line-height: 3.9rem;
-        margin-bottom: 2.2rem;
+        padding-bottom: 2.2rem;
         
     }
 }

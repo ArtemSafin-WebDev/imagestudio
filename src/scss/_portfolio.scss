@@ -126,7 +126,7 @@
 }
 
 .portfolio__categories-link-indicator {
-    border: 0.2rem solid var(--primary-color);
+    border: 2px solid var(--primary-color);
     border-radius: 1.4rem;
     position: absolute;
     pointer-events: none;
@@ -176,6 +176,10 @@
 
     @include breakpoint(mobile) {
         height: 32.7rem;
+    }
+
+    .slider-cursor-active & {
+        cursor: none;
     }
 
     .swiper-slide-tuple & {

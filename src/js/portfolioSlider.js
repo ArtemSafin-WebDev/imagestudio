@@ -53,6 +53,7 @@ export default function portfolioSlider() {
         new Swiper(container, {
             slidesPerView: 'auto',
             spaceBetween: 20,
+            touchStartPreventDefault: false,
             // watchOverflow: true
         });
     });
