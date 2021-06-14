@@ -7,19 +7,22 @@ export default function polygraphySlider() {
 
     elements.forEach(element => {
         const container = element.querySelector('.swiper-container');
-        
 
         new Swiper(container, {
             slidesPerView: 'auto',
             watchOverflow: true,
             spaceBetween: 14,
             speed: 400,
+            sliderPerGroup: 2,
             navigation: {
                 nextEl: element.querySelector('.slider-arrows__btn--next'),
                 prevEl: element.querySelector('.slider-arrows__btn--prev')
+            },
+            breakpoints: {
+                641: {
+                    sliderPerGroup: 6
+                }
             }
         });
-
-       
     });
 }
