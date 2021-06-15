@@ -43,7 +43,6 @@ export default function modals() {
             if (typeof window.closeMenu === 'function') {
                 window.closeMenu();
             }
-
             const link = event.target.matches('.js-open-modal') ? event.target : event.target.closest('.js-open-modal');
             const hash = link.hash;
             openModal(hash);

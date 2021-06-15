@@ -2,7 +2,7 @@
     position: fixed;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
-   
+
     height: 100%;
     z-index: 700;
     display: flex;
@@ -53,18 +53,16 @@
     margin-left: auto;
     max-width: 66rem;
     position: relative;
-    min-height: 100%;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
 
-    
-  
     transform: translateX(100%);
-    transition: transform .3s ease-in;
+    transition: transform 0.3s ease-in;
 
     .modal.active & {
         transform: translateX(0%);
-        transition: transform .4s ease-out;
+        transition: transform 0.4s ease-out;
     }
 }
 
@@ -92,5 +90,348 @@
         height: 100%;
         display: block;
         fill: white;
+    }
+}
+
+.modal__details-modal {
+    background-color: #fff;
+    margin-left: auto;
+    max-width: 102rem;
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        margin: 0;
+    }
+
+    .modal.active & {
+        transform: translateX(0%);
+        transition: transform 0.4s ease-out;
+    }
+}
+
+.modal__details-modal-slider {
+    position: relative;
+    user-select: none;
+
+    .swiper-slide {
+        width: 94%;
+    }
+}
+
+.modal__details-modal-slider-card {
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-bottom: 40%;
+        @include breakpoint(mobile) {
+            padding-bottom: 56.25%;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+
+        
+    }
+}
+
+.modal__details-modal-slider-card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+}
+
+.modal__details-content {
+    padding: 0 9rem;
+    padding-top: 7rem;
+    padding-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        padding: 0 var(--content-padding);
+        padding-top: 2.4rem;
+        padding-bottom: 4.8rem;
+    }
+}
+
+.modal__details-description {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    text-transform: lowercase;
+    margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.7rem;
+        line-height: 2.7rem;
+        margin-bottom: 4rem;
+    }
+    p {
+        margin-bottom: 1.5rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.modal__details-faq-heading {
+    margin-bottom: 2rem;
+    font-size: 2.8rem;
+    line-height: 5rem;
+    text-transform: lowercase;
+    font-weight: 400;
+
+    @include breakpoint(mobile) {
+        font-size: 2.3rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+}
+
+.modal__details-faq-accordions-list-item {
+   
+
+    @include breakpointMF(small-tablet) {
+        border-bottom: 1px solid rgba(black, 0.1);
+        &:last-child {
+            border: none;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        border-top: 1px solid rgba(black, .1);
+        &:last-child {
+            border-bottom: 1px solid rgba(black, .1);
+        }
+    }
+}
+
+.modal__details-faq-accordion-btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    color: var(--text-color);
+    transition: color 0.2s;
+    padding: 3.5rem 0;
+    text-transform: lowercase;
+    font-size: 2rem;
+    line-height: 3.2rem;
+    @include breakpoint(mobile) {
+        padding: 2rem 0;
+        font-size: 2.1rem;
+        line-height: 2.5rem;
+    }
+    svg {
+        width: 2.4rem;
+        height: 2.4rem;
+        flex-shrink: 0;
+        margin-left: 2rem;
+        fill: var(--primary-color);
+        transition: transform 0.2s;
+
+        @include breakpoint(mobile) {
+            width: 2.2rem;
+            height: 2.2rem;
+        }
+    }
+
+    .modal__details-faq-accordion.active & {
+        color: var(--primary-color);
+        svg {
+            transform: rotate(45deg);
+        }
+    }
+}
+
+.modal__details-faq-accordion-btn-text {
+    width: 50%;
+    flex-grow: 1;
+}
+
+.modal__details-faq-accordion-content {
+    height: 0;
+    overflow: hidden;
+}
+
+.modal__details-faq-accordion-content-inner {
+    text-transform: lowercase;
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+    padding-bottom: 3.2rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.3rem;
+        padding-bottom: 3rem;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-bottom: 0.5rem;
+        margin-top: 2.2rem;
+        font-size: 1.8rem;
+        line-height: 2.7rem;
+        font-weight: 400;
+
+        @include breakpoint(mobile) {
+            font-size: 1.7rem;
+            line-height: 2.7rem;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    p {
+        margin-bottom: 1.3rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    ul {
+        margin-bottom: 1.3rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+.modal__details-modal-slider-arrows {
+    position: absolute;
+    right: 3rem;
+    bottom: 5rem;
+    z-index: 40;
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.modal__details-modal-slider-arrow {
+    width: 3rem;
+    height: 3rem;
+    flex-shrink: 0;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2rem;
+
+    svg {
+        width: 0.9rem;
+        height: 1.8rem;
+        fill: white;
+        transition: fill 0.2s;
+    }
+
+    &.swiper-button-disabled {
+        cursor: default;
+        pointer-events: none;
+        svg {
+            fill: rgba(white, 0.5);
+        }
+    }
+
+    .no-touch &:not(.swiper-button-disabled):hover,
+    .touch &:not(.swiper-button-disabled):active {
+        svg {
+            fill: rgba(white, 0.8);
+        }
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.modal__details-modal-slider-card-title {
+    position: absolute;
+    left: 9rem;
+    right: 9rem;
+    bottom: 4rem;
+    font-size: 4rem;
+    line-height: 5rem;
+    font-weight: 400;
+    text-transform: lowercase;
+    z-index: 30;
+    color: white;
+
+    @include breakpoint(mobile) {
+        font-size: 2.3rem;
+        line-height: 2.8rem;
+        left: var(--content-padding);
+        right: var(--content-padding);
+        bottom: 2.5rem;
+    }
+}
+
+.modal__details-close-wrapper {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 102rem;
+
+    @include breakpoint(mobile) {
+        position: static;
+        max-width: none;
+        min-height: 12rem;
+        display: flex;
+        flex-direction: column;
+        padding: 2.5rem var(--content-padding);
+    }
+
+    .modal:not(.active) & {
+        right: calc(-1 * var(--sb-width, 0));
+    }
+    .modal__close {
+        position: absolute;
+        right: 100%;
+        top: 34rem;
+        margin-right: 9rem;
+
+        @include breakpoint(mobile) {
+            right: auto;
+            top: auto;
+            margin-right: 0;
+            position: static;
+            margin-left: auto;
+            margin-top: auto;
+        }
     }
 }

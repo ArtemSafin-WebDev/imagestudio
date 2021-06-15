@@ -23,6 +23,8 @@ import advantages from './advantages';
 import sliderCursor from './sliderCursor';
 import modals from './modals';
 import contactFormFileUpload from './contactFormFileupload';
+import accordions from './accordions';
+import modalDetailsSlider from './modalDetailsSlider';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -49,8 +51,9 @@ document.addEventListener('DOMContentLoaded', function() {
     moveUpBlocks();
     modals();
     contactFormFileUpload();
+    accordions();
+    modalDetailsSlider();
     
-
     const mq = window.matchMedia('(max-width: 640px)');
 
     function screenTest(e) {
