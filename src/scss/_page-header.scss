@@ -209,6 +209,7 @@
         opacity: 1;
         visibility: inherit;
         transition: opacity 0.4s, visibility 0.4s;
+        padding-right: var(--sb-width, 0);
     }
 }
 

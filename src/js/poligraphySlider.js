@@ -13,14 +13,14 @@ export default function polygraphySlider() {
             watchOverflow: true,
             spaceBetween: 14,
             speed: 400,
-            sliderPerGroup: 2,
+            slidesPerGroup: 2,
             navigation: {
                 nextEl: element.querySelector('.slider-arrows__btn--next'),
                 prevEl: element.querySelector('.slider-arrows__btn--prev')
             },
             breakpoints: {
                 641: {
-                    sliderPerGroup: 6
+                    slidesPerGroup: 6
                 }
             }
         });

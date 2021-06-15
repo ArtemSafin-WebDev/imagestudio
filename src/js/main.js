@@ -21,6 +21,8 @@ import moveUpBlocks from './moveUpBlocks';
 import shop from './shop';
 import advantages from './advantages';
 import sliderCursor from './sliderCursor';
+import modals from './modals';
+import contactFormFileUpload from './contactFormFileupload';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,6 +47,8 @@ document.addEventListener('DOMContentLoaded', function() {
     advantages();
     sliderCursor();
     moveUpBlocks();
+    modals();
+    contactFormFileUpload();
     
 
     const mq = window.matchMedia('(max-width: 640px)');

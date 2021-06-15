@@ -1,0 +1,86 @@
+<div class="modal js-modal" id="contact-modal">
+    <div class="modal__contact-modal">
+        <button class="modal__close modal__close--right js-close-modal" type="button">
+            <svg width="14" height="14" aria-hidden="true" class="icon-modal-close">
+                <use xlink:href="#modal-close"></use>
+            </svg>
+        </button>
+        <form action="/" method="POST" class="contact-form contact-form--modal" data-need-validation="" id="modal-contact-form">
+            <div class="contact-form__top-row">
+                <h3 class="contact-form__heading">
+                    Оставьте заявку
+                </h3>
+                <svg width="14" height="14" aria-hidden="true" class="icon-star contact-form__star">
+                    <use xlink:href="#star"></use>
+                </svg>
+            </div>
+            <div class="contact-form__fields">
+                <div class="contact-form__field">
+                    <input type="text" name="name" class="contact-form__input" required placeholder="Имя">
+                </div>
+                <div class="contact-form__field">
+                    <input type="tel" name="phone" class="contact-form__input js-phone-input" required
+                        data-parsley-phone="" placeholder="телефон">
+                </div>
+                <div class="contact-form__field">
+                    <textarea name="comment" class="contact-form__input" placeholder="Сообщение"></textarea>
+                </div>
+                <div class="contact-form__field">
+                    <div class="contact-form__file-upload js-contact-form-file-upload" data-loaded-text="заменить файл">
+                        <label class="contact-form__file-upload-dropzone">
+                            <input type="file" name="file" class="contact-form__file-upload-input">
+                            <div class="contact-form__file-upload-icon">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-paper-clip">
+                                    <use xlink:href="#paper-clip"></use>
+                                </svg>
+                            </div>
+                            <div class="contact-form__file-upload-text">
+                                прикрепить файл
+                            </div>
+                        </label>
+
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form__controls">
+                <label class="contact-form__policy-checkbox">
+                    <input type="checkbox" name="policy" value="1" class="contact-form__policy-checkbox-input" required
+                        checked>
+                    <span class="contact-form__policy-checkbox-mark">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                            <use xlink:href="#checkmark"></use>
+                        </svg>
+                    </span>
+                    <span class="contact-form__policy-checkbox-text">
+                        согласен с <a href="#">
+                            политикой<br> конфиденциальности
+                        </a>
+                    </span>
+                </label>
+                <button type="submit" class="btn btn--white contact-form__submit" data-text="отправить заявку">
+                    <span class="btn__inner-text">
+                        отправить заявку
+                    </span>
+
+                </button>
+            </div>
+            <div class="contact-form__success">
+                <div class="contact-form__top-row">
+                    <h3 class="contact-form__heading">
+                        Спасибо за<br> оставленную заявку
+                    </h3>
+                    <svg width="14" height="14" aria-hidden="true" class="icon-star contact-form__star">
+                        <use xlink:href="#star"></use>
+                    </svg>
+                </div>
+                <div class="contact-form__success-text">
+                    наш менеджер свяжется с вами после обработки оставленной заявки
+                </div>
+                <button type="reset" class="contact-form__success-send-again">
+                    отправить новую заявку
+                </button>
+
+            </div>
+        </form>
+    </div>
+</div>

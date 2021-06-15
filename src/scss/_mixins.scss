@@ -88,6 +88,7 @@
 }
 
 @mixin noScrollbar {
+    scrollbar-width: none;
     &::-webkit-scrollbar * {
         background: transparent;
     }
@@ -104,7 +105,7 @@
 }
 
 @mixin customScrollbar {
-    scrollbar-width: none;
+    
     &::-webkit-scrollbar {
         background-color: white;
         width: 0.6rem;

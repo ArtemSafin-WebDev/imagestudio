@@ -1,4 +1,4 @@
-import { lockScroll, unlockScroll } from './scrollBlocker';
+import { disableBodyScroll as lockScroll, clearAllBodyScrollLocks as unlockScroll } from 'body-scroll-lock';
 
 export default function menu() {
     const menu = document.querySelector('.page-header__menu');
@@ -8,7 +8,9 @@ export default function menu() {
 
     const openMenu = () => {
         if (menuOpen) return;
-        lockScroll(menu);
+        lockScroll(menu, {
+            reserveScrollBarGap: true
+        });
         document.body.classList.add('menu-open');
         menuOpen = true;
     };
@@ -44,15 +46,15 @@ export default function menu() {
                 if (link !== otherLink) {
                     otherLink.classList.add('faded');
                 } else {
-                    otherLink.classList.remove('faded')
+                    otherLink.classList.remove('faded');
                 }
             });
         });
 
         link.addEventListener('mouseleave', () => {
             menuLinks.forEach(link => {
-                link.classList.remove('faded')
-            })
-        })
+                link.classList.remove('faded');
+            });
+        });
     });
 }

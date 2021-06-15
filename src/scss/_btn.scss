@@ -17,6 +17,8 @@
     white-space: nowrap;
     user-select: none;
 
+    
+
     &::after {
         content: attr(data-text);
         left: 100%;
@@ -50,6 +52,19 @@
             animation-iteration-count: infinite;
             animation-timing-function: linear;
          
+        }
+    }
+
+    &--white {
+        background-color: white;
+        color: var(--primary-color);
+        &:link,
+        &:visited {
+            color: var(--primary-color);
+        }
+
+        .no-touch &:hover {
+            color: var(--primary-color);
         }
     }
 }
