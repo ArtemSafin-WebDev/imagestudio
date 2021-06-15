@@ -11,14 +11,14 @@ export default function modals() {
         const modal = document.querySelector(id);
         console.log('Opening modal', modal);
         if (modal) {
+            if (typeof window.closeMenu === 'function') {
+                window.closeMenu();
+            }
             lockScroll(modal, {
                 reserveScrollBarGap: true
             });
             modal.classList.add('active');
             activeModal = modal;
-
-            const openModalEvent = new CustomEvent('openmodal');
-            document.dispatchEvent(openModalEvent);
         } else {
             console.error(`Modal with ID: ${id} not found`);
         }

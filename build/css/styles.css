@@ -3793,6 +3793,10 @@ select:-webkit-autofill:focus {
 .swiper-container-initialized ~ .service__slider-controls .service__slider-link-bg rect:nth-child(2) {
   opacity: 1; }
 
+@media only screen and (min-width: 641px) {
+  .services__nav-accordion .services__slider-image-layer {
+    display: none; } }
+
 .cycle {
   margin-bottom: 20rem; }
   @media only screen and (max-width: 640px) {
@@ -5113,10 +5117,10 @@ select:-webkit-autofill:focus {
   .modal.active .modal__contact-modal {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
-    -webkit-transition: -webkit-transform .3s ease-out;
-    transition: -webkit-transform .3s ease-out;
-    transition: transform .3s ease-out;
-    transition: transform .3s ease-out, -webkit-transform .3s ease-out; }
+    -webkit-transition: -webkit-transform .4s ease-out;
+    transition: -webkit-transform .4s ease-out;
+    transition: transform .4s ease-out;
+    transition: transform .4s ease-out, -webkit-transform .4s ease-out; }
 
 .modal__close {
   width: 3.8rem;

@@ -238,3 +238,10 @@
 .swiper-container-initialized ~ .service__slider-controls .service__slider-link-bg rect:nth-child(2) {
     opacity: 1;
 }
+
+
+.services__nav-accordion .services__slider-image-layer {
+    @include breakpointMF(small-tablet) {
+        display: none;
+    }
+}
