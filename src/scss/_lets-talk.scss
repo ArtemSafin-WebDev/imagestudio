@@ -168,8 +168,10 @@
         -webkit-box-shadow: 0 0 0 3rem #f9f9f9 inset !important;
     }
 
-    -webkit-text-fill-color: var(--text-color) !important;
-
+    input:-webkit-autofill {
+        -webkit-text-fill-color: var(--text-color) !important;
+        color: var(--text-color) !important;
+    }
     input:-webkit-autofill {
         caret-color: var(--text-color) !important;
     }
@@ -184,7 +186,12 @@
             -webkit-box-shadow: 0 0 0 3rem var(--primary-color) inset !important;
         }
 
-        -webkit-text-fill-color: white !important;
+        input:-webkit-autofill {
+            -webkit-text-fill-color: white !important;
+            color: white !important;
+        }
+
+     
 
         input:-webkit-autofill {
             caret-color: white !important;

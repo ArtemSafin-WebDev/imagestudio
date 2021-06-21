@@ -3079,23 +3079,27 @@ select:-webkit-autofill:focus {
   border: 0.2rem solid #111111;
   border-radius: 10rem;
   padding: 1rem;
-  position: relative;
-  -webkit-text-fill-color: var(--text-color) !important; }
+  position: relative; }
   .lets-talk__input-wrapper input:-webkit-autofill,
   .lets-talk__input-wrapper input:-webkit-autofill:hover,
   .lets-talk__input-wrapper input:-webkit-autofill:focus,
   .lets-talk__input-wrapper input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 3rem #f9f9f9 inset !important; }
   .lets-talk__input-wrapper input:-webkit-autofill {
+    -webkit-text-fill-color: var(--text-color) !important;
+    color: var(--text-color) !important; }
+  .lets-talk__input-wrapper input:-webkit-autofill {
     caret-color: var(--text-color) !important; }
   .lets-talk--blue .lets-talk__input-wrapper {
-    border-color: white;
-    -webkit-text-fill-color: white !important; }
+    border-color: white; }
     .lets-talk--blue .lets-talk__input-wrapper input:-webkit-autofill,
     .lets-talk--blue .lets-talk__input-wrapper input:-webkit-autofill:hover,
     .lets-talk--blue .lets-talk__input-wrapper input:-webkit-autofill:focus,
     .lets-talk--blue .lets-talk__input-wrapper input:-webkit-autofill:active {
       -webkit-box-shadow: 0 0 0 3rem var(--primary-color) inset !important; }
+    .lets-talk--blue .lets-talk__input-wrapper input:-webkit-autofill {
+      -webkit-text-fill-color: white !important;
+      color: white !important; }
     .lets-talk--blue .lets-talk__input-wrapper input:-webkit-autofill {
       caret-color: white !important; }
   @media only screen and (max-width: 640px) {
@@ -5662,15 +5666,18 @@ select:-webkit-autofill:focus {
   grid-template-columns: minmax(0, 1fr);
   grid-row-gap: 3.5rem; }
 
-.contact-form__field {
-  -webkit-text-fill-color: white !important; }
-  .contact-form__field input:-webkit-autofill,
-  .contact-form__field input:-webkit-autofill:hover,
-  .contact-form__field input:-webkit-autofill:focus,
-  .contact-form__field input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 3rem var(--primary-color) inset !important; }
-  .contact-form__field input:-webkit-autofill {
-    caret-color: white !important; }
+.contact-form__field input:-webkit-autofill,
+.contact-form__field input:-webkit-autofill:hover,
+.contact-form__field input:-webkit-autofill:focus,
+.contact-form__field input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 3rem var(--primary-color) inset !important; }
+
+.contact-form__field input:-webkit-autofill {
+  -webkit-text-fill-color: white !important;
+  color: white !important; }
+
+.contact-form__field input:-webkit-autofill {
+  caret-color: white !important; }
 
 .contact-form__input {
   height: 4.5rem;
