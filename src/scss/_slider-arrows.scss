@@ -8,6 +8,8 @@
     flex-shrink: 0;
     margin-right: 3.4rem;
     transition: opacity .3s;
+
+    
     &:last-child {
         margin-right: 0;
     }
@@ -26,6 +28,11 @@
         fill: var(--text-color);
         display: block;
         transition: fill .2s;
+
+        @include breakpoint(mobile) {
+            height: 1.7rem;
+            width: 3.3rem;
+        }
     }
 
     .no-touch &:not(.swiper-button-disabled):hover,

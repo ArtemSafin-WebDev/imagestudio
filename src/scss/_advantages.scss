@@ -56,10 +56,11 @@
 
 .advantages__card {
     display: grid;
-    align-items: flex-start;
+    align-items: center;
     grid-template-columns: 1.3fr 1fr;
     text-transform: lowercase;
     padding: 5rem 0;
+
     @include breakpoint(mobile) {
         padding: 2.5rem 0;
         display: flex;

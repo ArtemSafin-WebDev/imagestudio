@@ -61,6 +61,18 @@
 }
 
 .contact-form__field {
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 3rem var(--primary-color) inset !important;
+    }
+
+    -webkit-text-fill-color: white !important;
+
+    input:-webkit-autofill {
+        caret-color: white !important;
+    }
 }
 
 .contact-form__input {
@@ -198,8 +210,8 @@ textarea.contact-form__input {
 }
 
 .contact-form__file-upload {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
 }
 
 .contact-form__file-upload-dropzone {
@@ -246,6 +258,8 @@ textarea.contact-form__input {
     border: 1px solid white;
     border-radius: 3rem;
     cursor: pointer;
+    
+   
 }
 
 .contact-form__file-upload-info-content {

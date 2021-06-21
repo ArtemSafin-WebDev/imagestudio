@@ -25,6 +25,11 @@ import modals from './modals';
 import contactFormFileUpload from './contactFormFileupload';
 import accordions from './accordions';
 import modalDetailsSlider from './modalDetailsSlider';
+import howWeWorkSlider from './howWeWorkSlider';
+import projectsSlider from './projectsSlider';
+import projectsShowMore from './projectsShowMore';
+import chooseSolution from './chooseSolution';
+import reviewsSlider from './reviewsSlider';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -53,6 +58,11 @@ document.addEventListener('DOMContentLoaded', function() {
     contactFormFileUpload();
     accordions();
     modalDetailsSlider();
+    howWeWorkSlider();
+    projectsSlider();
+    projectsShowMore();
+    chooseSolution();
+    reviewsSlider();
     
     const mq = window.matchMedia('(max-width: 640px)');
 

@@ -1,5 +1,9 @@
 .lets-talk {
     margin-bottom: 12rem;
+
+    &--blue {
+        color: white;
+    }
     @include breakpoint(mobile) {
         margin-bottom: 6rem;
     }
@@ -9,6 +13,12 @@
     display: grid;
     grid-template-columns: minmax(auto, 9rem) minmax(0, 1fr);
     grid-column-gap: 9rem;
+
+    .lets-talk--inner-star & {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: initial;
+    }
+
     @include breakpoint(mobile) {
         display: flex;
         flex-direction: column;
@@ -27,10 +37,26 @@
     animation-timing-function: linear;
     margin-top: 14rem;
 
+    .lets-talk--blue & {
+        fill: white;
+    }
+
+    .lets-talk--inner-star & {
+        margin: 0;
+        margin-top: 2rem;
+
+        @include breakpoint(mobile) {
+            margin: 0;
+            margin-bottom: 2.4rem;
+        }
+    }
+
     @include breakpoint(mobile) {
         margin: 0;
         width: 6.6rem;
         height: 6.6rem;
+        margin-bottom: 2.4rem;
+        display: block;
     }
 }
 
@@ -39,13 +65,47 @@
     border-radius: 18rem 18rem 14rem 0px;
     padding: 11rem 17.5rem;
     padding-bottom: 12rem;
-    background-image: url("data:image/svg+xml,%3Csvg width='486' height='234' viewBox='0 0 486 234' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='243' cy='-9' r='221.5' fill='%23F9F9F9' stroke='white' stroke-width='43'/%3E%3C/svg%3E%0A");
+    // background-image: url("data:image/svg+xml,%3Csvg width='486' height='234' viewBox='0 0 486 234' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='243' cy='-9' r='221.5' fill='%23F9F9F9' stroke='white' stroke-width='43'/%3E%3C/svg%3E%0A");
+
+    background-image: url("data:image/svg+xml,%3Csvg width='486' height='234' viewBox='0 0 486 234' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='243' cy='-9' r='221.5' fill='none' stroke='white' stroke-width='43'/%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
     background-position: right 10rem top;
     background-size: 48.6rem auto;
 
+    .lets-talk--blue & {
+        background-color: var(--primary-color);
+        background-image: url("data:image/svg+xml,%3Csvg width='486' height='234' viewBox='0 0 486 234' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='243' cy='-9' r='221.5' fill='none' stroke='%23336AFE' stroke-width='43'/%3E%3C/svg%3E%0A");
+
+        @include breakpoint(mobile) {
+            background-size: 18.9rem 18.9rem;
+            background-position: right top;
+            background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 183 207'%3E%3Ccircle cx='189' cy='18' r='167.5' style='isolation:isolate' fill='none' stroke='%23fff' stroke-width='43' opacity='.05'/%3E%3C/svg%3E");
+        }
+    }
+
+    .lets-talk--inner-star & {
+        @include breakpointMF(small-tablet) {
+            display: grid;
+            grid-template-columns: minmax(auto, 9rem) minmax(0, 1fr);
+            grid-column-gap: 18rem;
+            padding-left: 9rem;
+            padding-right: 9rem;
+            padding-top: 11rem;
+            padding-bottom: 11rem;
+        }
+
+        @include breakpoint(mobile) {
+            border-radius: 0;
+            margin: 0 calc(-1 * var(--content-padding));
+            padding: 0 var(--content-padding);
+            padding-top: 4rem;
+            padding-bottom: 6.4rem;
+        }
+    }
+
     @include breakpoint(mobile) {
-        background: none;
+        background-image: none;
+        background-color: transparent;
         padding: 0;
     }
 }
@@ -101,6 +161,36 @@
     padding: 1rem;
     position: relative;
 
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 3rem #f9f9f9 inset !important;
+    }
+
+    -webkit-text-fill-color: var(--text-color) !important;
+
+    input:-webkit-autofill {
+        caret-color: var(--text-color) !important;
+    }
+
+    .lets-talk--blue & {
+        border-color: white;
+
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+            -webkit-box-shadow: 0 0 0 3rem var(--primary-color) inset !important;
+        }
+
+        -webkit-text-fill-color: white !important;
+
+        input:-webkit-autofill {
+            caret-color: white !important;
+        }
+    }
+
     @include breakpoint(mobile) {
         padding: 0.5rem;
     }
@@ -112,6 +202,9 @@
     padding: 0 2rem;
     width: 50%;
     flex-grow: 1;
+    .lets-talk--blue & {
+        color: white;
+    }
 
     @include breakpoint(mobile) {
         font-weight: 500;
@@ -123,6 +216,9 @@
     @include placeholder {
         color: var(--text-color);
         text-transform: lowercase;
+        .lets-talk--blue & {
+            color: white;
+        }
     }
 }
 
@@ -157,6 +253,10 @@
             width: 3rem;
             fill: white;
             display: block;
+
+            .lets-talk--blue & {
+                fill: var(--primary-color);
+            }
         }
     }
     &:link,
@@ -167,6 +267,21 @@
     .no-touch &:hover,
     .touch &:active {
         background-color: var(--primary-color-hover);
+    }
+
+    .lets-talk--blue & {
+        background-color: white;
+        color: var(--primary-color);
+
+        &:link,
+        &:visited {
+            color: var(--primary-color);
+        }
+
+        .no-touch &:hover,
+        .touch &:active {
+            background-color: white;
+        }
     }
 }
 
@@ -209,6 +324,10 @@
     margin-right: 0.6rem;
     margin-top: 0.3rem;
 
+    .lets-talk--blue & {
+        border-color: white;
+    }
+
     @include breakpoint(mobile) {
         margin: 0;
         width: 2.4rem;
@@ -221,6 +340,10 @@
         fill: var(--text-color);
         transition: opacity 0.2s;
         opacity: 0;
+
+        .lets-talk--blue & {
+            fill: white;
+        }
 
         @include breakpoint(mobile) {
             width: 1.7rem;
@@ -243,6 +366,20 @@
         &:link,
         &:visited {
             color: var(--primary-color);
+        }
+
+        .lets-talk--blue & {
+            color: white;
+
+            &:link,
+            &:visited {
+                color: white;
+            }
+
+            .no-touch &:hover,
+            .touch &:active {
+                color: white;
+            }
         }
     }
 }

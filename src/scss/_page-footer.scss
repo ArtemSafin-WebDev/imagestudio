@@ -6,6 +6,16 @@
     padding-bottom: 1.6rem;
     border-top: 0.2rem solid var(--text-color);
 
+
+    .page-footer--no-bar & {
+      
+
+        @include breakpoint(mobile) {
+            border: none;
+            padding-top: 0;
+        }
+    }
+
     @include breakpoint(mobile) {
         padding-top: 6.4rem;
         border-width: 2px;
