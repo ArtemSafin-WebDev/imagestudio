@@ -155,7 +155,10 @@
                     </p>
                 </div>
                 <div class="design-intro__image-container">
-                    <img src="img/design-intro.jpg" alt="">
+
+                    <video class="lazyload" muted="" data-autoplay="" loop playsinline preload="none">
+                        <source src="assets/video/video.mp4" type="video/mp4" />
+                    </video>
                 </div>
             </div>
         </div>
@@ -199,12 +202,16 @@
                                     Фирменный стиль
                                 </div>
                             </div>
-                            <div class="directions__card-description">
-                                <p>
-                                    Создадим визуальный образ вашему бренду. Отразим основные ценности компании и
-                                    поможем
-                                    сформировать доверие
-                                </p>
+                            <div class="directions__card-description-wrapper">
+
+
+                                <div class="directions__card-description">
+                                    <p>
+                                        Создадим визуальный образ вашему бренду. Отразим основные ценности компании и
+                                        поможем
+                                        сформировать доверие
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </a>
@@ -232,6 +239,19 @@
                                     сувенирная продукция
                                 </div>
 
+                            </div>
+                            <div class="directions__card-description-wrapper">
+
+
+
+
+                                <div class="directions__card-description">
+                                    <p>
+                                        Создадим визуальный образ вашему бренду. Отразим основные ценности компании и
+                                        поможем
+                                        сформировать доверие
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </a>
@@ -266,6 +286,17 @@
                                 </div>
 
                             </div>
+                            <div class="directions__card-description-wrapper">
+
+
+                                <div class="directions__card-description">
+                                    <p>
+                                        Создадим визуальный образ вашему бренду. Отразим основные ценности компании и
+                                        поможем
+                                        сформировать доверие
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </a>
                 </li>
@@ -275,7 +306,8 @@
 </section>
 
 
-<section class="projects">
+<section class="projects js-move-up-block js-projects" data-loading-url="design.html"
+    data-loaded-text="Перейти в портфолио">
     <div class="container">
         <div class="projects__top-row">
             <h2 class="projects__heading">
@@ -463,16 +495,19 @@
                 </div>
             </li>
         </ul>
-        <a href="#" class="projects__load-more js-projects-load-more">
+        <a href="#" class="projects__load-more">
             <svg width="14" height="14" aria-hidden="true" class="icon-arrow-down">
                 <use xlink:href="#arrow-down"></use>
             </svg>
-            показать больше работ
+            <div class="projects__load-more-text">
+                показать больше работ
+            </div>
+
         </a>
     </div>
 </section>
 
-<section class="choose-solution js-choose-solution">
+<section class="choose-solution js-choose-solution js-move-up-block">
     <div class="container">
         <div class="section-heading choose-solution__heading">
             <h2 class="choose-solution__heading-main">
@@ -533,6 +568,8 @@
                                 </li>
                             </ul>
                         </div>
+
+
                         <div class="choose-solution__card-btn" data-text="Выбрать пакет s">
                             <div class="choose-solution__card-btn-text">
                                 Выбрать пакет s
@@ -596,11 +633,15 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="choose-solution__card-btn" data-text="Выбрать пакет m">
 
+
+
+
+                        <div class="choose-solution__card-btn" data-text="Выбрать пакет m">
                             <div class="choose-solution__card-btn-text">
                                 Выбрать пакет m
                             </div>
+
                         </div>
                     </a>
                 </li>
@@ -663,10 +704,15 @@
                                 </li>
                             </ul>
                         </div>
+
+
+
+
                         <div class="choose-solution__card-btn" data-text="Выбрать пакет xl">
                             <div class="choose-solution__card-btn-text">
                                 Выбрать пакет xl
                             </div>
+
                         </div>
                     </a>
                 </li>
@@ -699,6 +745,11 @@
                                     Оставьте заявку через формы сайта или соберите заказв интернет-магазине.
                                 </p>
                             </div>
+                            <a href="#" class="dot-link">
+                                <span class="dot-link__text">
+                                    посмотреть способы оплаты
+                                </span>
+                            </a>
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -829,7 +880,7 @@
     </div>
 </section>
 
-<section class="reviews js-reviews-slider">
+<section class="reviews js-reviews-slider js-move-up-block">
     <div class="container">
         <div class="reviews__row">
             <h2 class="section-label section-label--dark reviews__heading">
@@ -1043,7 +1094,7 @@
         </div>
     </div>
 </section>
-<section class="lets-talk lets-talk--inner-star lets-talk--blue">
+<section class="lets-talk lets-talk--inner-star lets-talk--blue js-move-up-block">
     <div class="container">
         <div class="lets-talk__row">
 

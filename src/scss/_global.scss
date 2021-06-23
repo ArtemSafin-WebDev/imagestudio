@@ -24,6 +24,9 @@ html {
     font-size: clamp(5px, 0.60vw, 9px);
     -webkit-text-size-adjust: 100%;
 
+
+  
+
     @include breakpoint(mobile) {
         font-size: 10px;
     }
@@ -231,6 +234,11 @@ th {
     height: auto;
     display: flex;
     flex-direction: column;
+}
+
+
+.swiper-container img {
+    pointer-events: none;
 }
 
 .no-scroll {

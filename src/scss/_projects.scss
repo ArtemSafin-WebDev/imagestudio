@@ -147,6 +147,10 @@
     }
 }
 
+.projects__load-more-text {
+    transition: transform .3s;
+}
+
 .projects__load-more {
     display: flex;
     align-items: center;
@@ -177,10 +181,17 @@
         color: var(--primary-color);
     }
 
-    .no-touch &:hover,
-    .touch &:active {
-        background-color: var(--primary-color);
-        color: white;
+    &.loaded {
+        svg {
+            display: none;
+        }
+    }
+
+    .no-touch &:not(.loaded):hover,
+    .touch &:not(.loaded):active {
+        .projects__load-more-text {
+            transform: translateX(1rem);
+        }
     }
 }
 

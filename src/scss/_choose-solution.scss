@@ -96,7 +96,8 @@
     transition: background-color 0.2s, color 0.2s;
     position: relative;
     min-height: 74rem;
-
+    backface-visibility: hidden;
+    transform: translateZ(0);
     @include breakpoint(mobile) {
         min-height: auto;
         padding: 4rem;
@@ -286,8 +287,7 @@
     text-align: center;
     width: auto;
     align-self: center;
-    // text-align: center;
-    // display: block;
+    padding: 1.6rem 3.2rem;
 
     background-color: var(--primary-color);
     color: white;
@@ -296,6 +296,7 @@
     overflow: hidden;
     position: relative;
     white-space: nowrap;
+
     &::after {
         content: attr(data-text);
         left: 100%;

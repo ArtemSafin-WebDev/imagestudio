@@ -1212,6 +1212,9 @@ th {
       -ms-flex-direction: column;
           flex-direction: column; }
 
+.swiper-container img {
+  pointer-events: none; }
+
 .no-scroll {
   overflow-y: scroll;
   position: fixed;
@@ -2045,7 +2048,7 @@ select:-webkit-autofill:focus {
 
 .page-footer__content {
   padding-top: 7rem;
-  padding-bottom: 1.6rem;
+  padding-bottom: 3rem;
   border-top: 0.2rem solid var(--text-color); }
   @media only screen and (max-width: 640px) {
     .page-footer--no-bar .page-footer__content {
@@ -3201,7 +3204,7 @@ select:-webkit-autofill:focus {
       color: var(--primary-color); }
     .no-touch .lets-talk--blue .lets-talk__form-submit:hover,
     .touch .lets-talk--blue .lets-talk__form-submit:active {
-      background-color: white; }
+      background-color: rgba(255, 255, 255, 0.92); }
 
 @media only screen and (max-width: 640px) {
   .lets-talk__form-submit-text {
@@ -6102,7 +6105,8 @@ textarea.contact-form__input {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-transform: translateZ(0);
-          transform: translateZ(0); }
+          transform: translateZ(0);
+  background-color: lightgrey; }
   @media only screen and (max-width: 640px) {
     .design-intro__image-container {
       border-radius: 0px 30rem 30rem 20rem; } }
@@ -6231,7 +6235,11 @@ textarea.contact-form__input {
   -webkit-transition: background-color 0.2s, color 0.2s;
   transition: background-color 0.2s, color 0.2s;
   position: relative;
-  min-height: 74rem; }
+  min-height: 74rem;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0); }
   @media only screen and (max-width: 640px) {
     .choose-solution__card {
       min-height: auto;
@@ -6408,6 +6416,7 @@ textarea.contact-form__input {
   width: auto;
   -ms-flex-item-align: center;
       align-self: center;
+  padding: 1.6rem 3.2rem;
   background-color: var(--primary-color);
   color: white;
   -webkit-transition: background-color 0.2s, color 0.2s;
@@ -6534,18 +6543,25 @@ textarea.contact-form__input {
       transition: -webkit-clip-path 0.8s;
       transition: clip-path 0.8s;
       transition: clip-path 0.8s, -webkit-clip-path 0.8s; }
-    .no-touch .directions__card:hover .directions__card-shape::after,
-    .touch .directions__card:active .directions__card-shape::after {
-      border-color: var(--primary-color); }
   .no-touch .directions__card:hover .directions__card-icon,
   .touch .directions__card:active .directions__card-icon {
     fill: white;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg); }
-    .no-touch .directions__card:hover .directions__card-icon.icon-directions-1,
-    .touch .directions__card:active .directions__card-icon.icon-directions-1 {
-      -webkit-transform: rotate(49deg);
-              transform: rotate(49deg); } }
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); }
+    .no-touch .directions__card:hover .directions__card-icon.icon-directions-3,
+    .touch .directions__card:active .directions__card-icon.icon-directions-3 {
+      -webkit-transform: rotate(90deg);
+              transform: rotate(90deg); }
+  .no-touch .directions__card:hover .directions__card-description,
+  .touch .directions__card:active .directions__card-description {
+    opacity: 1;
+    visibility: inherit;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: opacity .3s, visibility .3s, -webkit-transform .3s;
+    transition: opacity .3s, visibility .3s, -webkit-transform .3s;
+    transition: opacity .3s, visibility .3s, transform .3s;
+    transition: opacity .3s, visibility .3s, transform .3s, -webkit-transform .3s; } }
 
 .directions__card-shape {
   position: relative;
@@ -6570,17 +6586,16 @@ textarea.contact-form__input {
   .directions__card-shape::before {
     content: '';
     position: absolute;
-    left: -1px;
-    right: -1px;
-    top: -1px;
-    bottom: -1px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     -webkit-transform-origin: left top;
             transform-origin: left top;
     -webkit-transition: -webkit-clip-path 0.6s;
     transition: -webkit-clip-path 0.6s;
     transition: clip-path 0.6s;
     transition: clip-path 0.6s, -webkit-clip-path 0.6s;
-    z-index: -1;
     background-color: var(--primary-color);
     -webkit-clip-path: circle(0% at 0 0);
             clip-path: circle(0% at 0 0); }
@@ -6594,7 +6609,8 @@ textarea.contact-form__input {
     width: 100%;
     height: 100%;
     -webkit-transition: border-color 0.2s;
-    transition: border-color 0.2s; }
+    transition: border-color 0.2s;
+    z-index: -1; }
 
 .directions__card-icon {
   width: 7rem;
@@ -6608,19 +6624,17 @@ textarea.contact-form__input {
   -webkit-transition: fill 0.2s, -webkit-transform 0.5s;
   transition: fill 0.2s, -webkit-transform 0.5s;
   transition: fill 0.2s, transform 0.5s;
-  transition: fill 0.2s, transform 0.5s, -webkit-transform 0.5s;
-  -o-object-position: left top;
-     object-position: left top; }
+  transition: fill 0.2s, transform 0.5s, -webkit-transform 0.5s; }
   @media only screen and (max-width: 640px) {
     .directions__card-icon {
       width: 5rem;
       height: 5rem; } }
   .directions__card-icon.icon-directions-1 {
-    -webkit-transform-origin: 2.96rem 2.96rem;
-            transform-origin: 2.96rem 2.96rem; }
+    -webkit-transform-origin: 40% 45.2%;
+            transform-origin: 40% 45.2%; }
   .directions__card-icon.icon-directions-2 {
-    -webkit-transform-origin: 3.4rem center;
-            transform-origin: 3.4rem center; }
+    -webkit-transform-origin: 46% center;
+            transform-origin: 46% center; }
 
 .directions__card-title {
   font-size: 2.8rem;
@@ -6658,12 +6672,28 @@ textarea.contact-form__input {
   margin-top: 0.8rem;
   white-space: nowrap; }
 
+.directions__card-description-wrapper {
+  margin-top: 2.5rem;
+  overflow: hidden; }
+  @media only screen and (max-width: 640px) {
+    .directions__card-description-wrapper {
+      margin-top: 2.4rem; } }
+
 .directions__card-description {
   font-size: 1.8rem;
   line-height: 2.5rem;
   padding-top: 1.6rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  margin-top: 2.5rem; }
+  border-top: 1px solid rgba(0, 0, 0, 0.1); }
+  @media only screen and (min-width: 641px) {
+    .directions__card-description {
+      -webkit-transform: translateY(-100%);
+              transform: translateY(-100%);
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: opacity .3s, visibility 0s linear .3s, -webkit-transform .3s;
+      transition: opacity .3s, visibility 0s linear .3s, -webkit-transform .3s;
+      transition: opacity .3s, visibility 0s linear .3s, transform .3s;
+      transition: opacity .3s, visibility 0s linear .3s, transform .3s, -webkit-transform .3s; } }
   @media only screen and (max-width: 640px) {
     .directions__card-description {
       font-size: 1.7rem;
@@ -6819,6 +6849,12 @@ textarea.contact-form__input {
         background: -webkit-gradient(linear, left top, left bottom, color-stop(45.11%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.53)));
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 45.11%, rgba(0, 0, 0, 0.53) 100%); } }
 
+.projects__load-more-text {
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s; }
+
 .projects__load-more {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6852,10 +6888,12 @@ textarea.contact-form__input {
     fill: currentColor; }
   .projects__load-more:link, .projects__load-more:visited {
     color: var(--primary-color); }
-  .no-touch .projects__load-more:hover,
-  .touch .projects__load-more:active {
-    background-color: var(--primary-color);
-    color: white; }
+  .projects__load-more.loaded svg {
+    display: none; }
+  .no-touch .projects__load-more:not(.loaded):hover .projects__load-more-text,
+  .touch .projects__load-more:not(.loaded):active .projects__load-more-text {
+    -webkit-transform: translateX(1rem);
+            transform: translateX(1rem); }
 
 .projects__grid-card-info {
   position: absolute;
@@ -6995,6 +7033,7 @@ textarea.contact-form__input {
     position: relative;
     border-radius: 21rem 21rem 0px 21rem;
     overflow: hidden;
+    background-color: lightgrey;
     z-index: 20; }
     .reviews__slider-thumbs .swiper-container {
       position: absolute;
@@ -7005,7 +7044,14 @@ textarea.contact-form__input {
       margin: 0;
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; }
+      display: flex;
+      overflow: visible; }
+    .reviews__slider-thumbs .swiper-slide {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%; }
     .reviews__slider-thumbs::before {
       content: '';
       display: block;
@@ -7021,7 +7067,22 @@ textarea.contact-form__input {
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%; } }
+    height: 100%;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform .5s ease .5s;
+    transition: -webkit-transform .5s ease .5s;
+    transition: transform .5s ease .5s;
+    transition: transform .5s ease .5s, -webkit-transform .5s ease .5s;
+    z-index: 5; }
+    .reviews__slider-thumbs-card.active {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-transition: -webkit-transform .5s;
+      transition: -webkit-transform .5s;
+      transition: transform .5s;
+      transition: transform .5s, -webkit-transform .5s;
+      z-index: 10; } }
 
 @media only screen and (max-width: 640px) {
   .reviews__slider-thumbs-card {
@@ -7147,4 +7208,16 @@ textarea.contact-form__input {
     -webkit-transition: opacity 0.4s, visibility 0s linear 0.4s;
     transition: opacity 0.4s, visibility 0s linear 0.4s; }
   .reviews__slider-main .swiper-slide.swiper-slide-next {
-    opacity: 0.2; } }
+    opacity: 0.2; }
+    .reviews__slider-main .swiper-slide.swiper-slide-next .reviews__slider-card .dot-link {
+      opacity: 0; }
+    .reviews__slider-main .swiper-slide.swiper-slide-next .reviews__slider-card-author-company {
+      color: var(--text-color); }
+  .reviews__slider-main .reviews__slider-card .dot-link {
+    -webkit-transition: opacity .3s, visibility .3s, -webkit-transform .3s;
+    transition: opacity .3s, visibility .3s, -webkit-transform .3s;
+    transition: transform .3s, opacity .3s, visibility .3s;
+    transition: transform .3s, opacity .3s, visibility .3s, -webkit-transform .3s; }
+  .reviews__slider-main .reviews__slider-card-author-company {
+    -webkit-transition: color .3s;
+    transition: color .3s; } }

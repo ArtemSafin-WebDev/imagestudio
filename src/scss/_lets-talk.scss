@@ -287,7 +287,7 @@
 
         .no-touch &:hover,
         .touch &:active {
-            background-color: white;
+            background-color: rgba(white, .92);
         }
     }
 }

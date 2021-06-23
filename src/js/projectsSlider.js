@@ -10,13 +10,13 @@ function initializeCardSlider(card) {
     const DEBUG = false;
     const instance = new Swiper(container, {
         watchOverflow: true,
-        effect: 'fade',
+     
         speed: 600,
         longSwipesRatio: 0.25,
-
-        fadeEffect: {
-            crossFade: true
-        }
+        // effect: 'fade',
+        // fadeEffect: {
+        //     crossFade: true
+        // }
     });
 
     const slidesCount = instance.slides.length;

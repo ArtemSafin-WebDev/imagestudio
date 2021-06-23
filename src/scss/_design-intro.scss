@@ -43,7 +43,7 @@
     overflow: hidden;
     backface-visibility: hidden;
     transform: translateZ(0);
-
+    background-color: lightgrey;
     @include breakpoint(mobile) {
         border-radius: 0px 30rem 30rem 20rem;
 

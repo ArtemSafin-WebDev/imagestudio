@@ -30,6 +30,7 @@ import projectsSlider from './projectsSlider';
 import projectsShowMore from './projectsShowMore';
 import chooseSolution from './chooseSolution';
 import reviewsSlider from './reviewsSlider';
+import projectsLoadMore from './projectsLoadMore';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -60,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
     modalDetailsSlider();
     howWeWorkSlider();
     projectsSlider();
-    projectsShowMore();
+    projectsLoadMore();
     chooseSolution();
     reviewsSlider();
     
