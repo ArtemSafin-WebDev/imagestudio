@@ -6449,7 +6449,8 @@ textarea.contact-form__input {
   -webkit-transition: -webkit-transform 0.5s ease;
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease; }
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  text-transform: lowercase; }
 
 .choose-solution__card-package-old-price {
   position: absolute;
