@@ -13,6 +13,7 @@ function initializeCardSlider(card) {
      
         speed: 600,
         longSwipesRatio: 0.25,
+        allowTouchMove: primaryInput !== 'touch' ? false : true
         // effect: 'fade',
         // fadeEffect: {
         //     crossFade: true

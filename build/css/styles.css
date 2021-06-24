@@ -7055,7 +7055,8 @@ textarea.contact-form__input {
     -ms-flex-negative: 0;
         flex-shrink: 0;
     margin-right: 1rem;
-    background-color: var(--primary-color); }
+    background-color: var(--primary-color);
+    margin-top: 0.2rem; }
   .no-touch .projects__load-more:hover .projects__load-more-text,
   .touch .projects__load-more:active .projects__load-more-text {
     -webkit-transform: translateX(1rem);
