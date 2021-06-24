@@ -114,7 +114,7 @@
 
 
 .how-we-work__delivery {
-    margin-top: 3rem;
+    margin-top: 2rem;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -122,7 +122,11 @@
 
 .how-we-work__delivery-card {
     margin-right: 3.5rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
+
+    @include breakpoint(mobile) {
+        margin-right: 2rem;
+    }
     &:last-child {
         margin-right: 0;
     }
@@ -135,4 +139,8 @@
     object-fit: contain;
     object-position: left center;
     max-width: 100%;
+
+    @include breakpoint(mobile) {
+        height: 2.2rem;
+    }
 }

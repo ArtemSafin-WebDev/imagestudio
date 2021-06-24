@@ -6189,7 +6189,7 @@ textarea.contact-form__input {
       margin-bottom: 1.5rem; } }
 
 .how-we-work__delivery {
-  margin-top: 3rem;
+  margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6201,7 +6201,10 @@ textarea.contact-form__input {
 
 .how-we-work__delivery-card {
   margin-right: 3.5rem;
-  margin-top: 1rem; }
+  margin-top: 2rem; }
+  @media only screen and (max-width: 640px) {
+    .how-we-work__delivery-card {
+      margin-right: 2rem; } }
   .how-we-work__delivery-card:last-child {
     margin-right: 0; }
 
@@ -6214,6 +6217,9 @@ textarea.contact-form__input {
   -o-object-position: left center;
      object-position: left center;
   max-width: 100%; }
+  @media only screen and (max-width: 640px) {
+    .how-we-work__delivery-logo {
+      height: 2.2rem; } }
 
 .design-intro {
   margin-bottom: 20rem;
