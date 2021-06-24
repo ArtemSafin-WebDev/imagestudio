@@ -52,6 +52,10 @@
         font-size: 2.1rem;
         line-height: 2.5rem;
         margin-bottom: 1rem;
+
+        br {
+            display: none;
+        }
     }
 }
 
@@ -168,5 +172,14 @@
     @include breakpoint(mobile) {
         margin-right: 0;
         margin-bottom: 2.4rem;
+    }
+}
+
+
+.polygraphy__slider-consult-link {
+    margin-right: 2rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 0;
+        margin-bottom: 2rem;
     }
 }

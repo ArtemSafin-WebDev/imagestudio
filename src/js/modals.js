@@ -18,6 +18,7 @@ export default function modals() {
                 reserveScrollBarGap: true
             });
             modal.classList.add('active');
+            document.body.classList.add('modal-open');
             activeModal = modal;
         } else {
             console.error(`Modal with ID: ${id} not found`);
@@ -28,7 +29,7 @@ export default function modals() {
         unlockScroll();
         modal.classList.remove('active');
         activeModal = null;
-
+        document.body.classList.remove('modal-open');
         const closeModalEvent = new CustomEvent('closemodal');
         document.dispatchEvent(closeModalEvent);
     }

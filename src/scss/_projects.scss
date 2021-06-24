@@ -185,10 +185,20 @@
         svg {
             display: none;
         }
+
+        &::before {
+            content: '';
+            width: 0.9rem;
+            height: 0.9rem;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-right: 1rem;
+            background-color: var(--primary-color);
+        }
     }
 
-    .no-touch &:not(.loaded):hover,
-    .touch &:not(.loaded):active {
+    .no-touch &:hover,
+    .touch &:active {
         .projects__load-more-text {
             transform: translateX(1rem);
         }

@@ -1,0 +1,79 @@
+.merch-intro {
+    position: relative;
+    z-index: 1;
+}
+
+.merch-intro__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    img,
+    video {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.merch-intro__row {
+    display: grid;
+    grid-template-columns: minmax(0, 30rem) minmax(0, 1fr);
+    grid-column-gap: 6rem;
+    padding-top: 18rem;
+    padding-bottom: 27.4rem;
+    min-height: 111rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 16rem;
+        padding-bottom: 0;
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2rem;
+        min-height: auto;
+        padding-bottom: 4rem;
+    }
+}
+
+.merch-intro__text {
+    font-weight: 600;
+    font-size: 4.9rem;
+    line-height: 6rem;
+    letter-spacing: -0.01em;
+    text-transform: lowercase;
+    margin-bottom: 4rem;
+    max-width: 80rem;
+    margin-top: -2rem;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: 3.7rem;
+        padding-bottom: 62rem;
+    }
+}
+
+.merch-intro__content {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(mobile) {
+    }
+}
+
+.merch-intro__subtext {
+    margin-top: auto;
+    font-size: 2rem;
+    line-height: 2.7rem;
+    text-transform: lowercase;
+    @include breakpoint(mobile) {
+        font-size: 1.7rem;
+        line-height: 2.4rem;
+    }
+}

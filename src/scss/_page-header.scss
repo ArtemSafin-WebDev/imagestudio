@@ -4,12 +4,26 @@
     transition: z-index 0.4s step-end;
     opacity: 0;
     visibility: hidden;
-    transition: opacity .4s, visibility 0s linear .4s;
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
+
+    &--absolute {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        .menu-open & {
+            padding-right: var(--sb-width, 0);
+        }
+
+        .modal-open & {
+            padding-right: var(--sb-width, 0);
+        }
+    }
 
     .animatable & {
         opacity: 1;
         visibility: inherit;
-        transition: opacity .4s ease 1.5s, visibility .4s ease 1.5s;
+        transition: opacity 0.4s ease 1.5s, visibility 0.4s ease 1.5s;
     }
     .menu-open & {
         z-index: 500;
@@ -136,7 +150,7 @@
         content: '';
         display: block;
         width: 100%;
-        height: .22rem;
+        height: 0.22rem;
         background-color: var(--text-color);
         margin-bottom: 0.5rem;
         transition: transform 0.3s, background-color 0.3s;
@@ -214,12 +228,10 @@
 }
 
 .page-header__menu-inner {
-  
     @include breakpointMF(small-tablet) {
         background-color: var(--primary-color);
         color: white;
     }
-    
 }
 
 .page-header__menu-top-row {
@@ -310,8 +322,6 @@
     color: white;
     text-transform: lowercase;
 
-    
-
     &:link,
     &:visited {
         color: white;
@@ -330,15 +340,10 @@
         margin-bottom: 0;
     }
 
-    
-
-   
-
     @include breakpoint(mobile) {
         font-size: 3.2rem;
         line-height: 3.9rem;
         padding-bottom: 2.2rem;
-        
     }
 }
 

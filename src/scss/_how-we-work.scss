@@ -24,6 +24,16 @@
             grid-template-columns: repeat(4, minmax(0, 1fr));
             grid-column-gap: 12rem;
             grid-row-gap: 6rem;
+
+            
+        }
+
+        &--three-cols {
+            
+            .swiper-wrapper {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                grid-column-gap: 19rem;
+            }
         }
 
         .swiper-slide {
@@ -100,4 +110,29 @@
         line-height: 2.5rem;
         margin-bottom: 1.5rem;
     }
+}
+
+
+.how-we-work__delivery {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.how-we-work__delivery-card {
+    margin-right: 3.5rem;
+    margin-top: 1rem;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.how-we-work__delivery-logo {
+    height: 2rem;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    object-position: left center;
+    max-width: 100%;
 }

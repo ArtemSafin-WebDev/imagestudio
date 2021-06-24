@@ -12,6 +12,7 @@ export default function services() {
             const links = Array.from(element.querySelectorAll('.services__nav-link'));
             const imageLayers = Array.from(element.querySelectorAll('.services__slider-image-layer'));
             const textLayers = Array.from(element.querySelectorAll('.services__slider-text-item'));
+            const tabs = Array.from(element.querySelectorAll('.services__tab'));
 
             const setActiveLink = index => {
                 links.forEach(item => item.classList.remove('active'));
@@ -21,8 +22,16 @@ export default function services() {
             const setActiveSlides = index => {
                 imageLayers.forEach(item => item.classList.remove('active'));
                 textLayers.forEach(item => item.classList.remove('active'));
-                imageLayers[index].classList.add('active');
-                textLayers[index].classList.add('active');
+                tabs.forEach(tab => tab.classList.remove('active'));
+                if (imageLayers[index]) {
+                    imageLayers[index].classList.add('active');
+                }
+                if (textLayers[index]) {
+                    textLayers[index].classList.add('active');
+                }
+                if (tabs[index]) {
+                    tabs[index].classList.add('active');
+                }
             };
 
             const debouncedSetActiveSlides = debounce(setActiveSlides, 320);
@@ -56,6 +65,7 @@ export default function services() {
             const accordions = Array.from(element.querySelectorAll('.services__nav-accordion'));
             const images = Array.from(element.querySelectorAll('.services__slider-image-layer'));
             const textBlocks = Array.from(element.querySelectorAll('.services__slider-text-item'));
+            const tabs = Array.from(element.querySelectorAll('.services__tab-content'));
             const CLOSE_OTHER = true;
             const SPEED = 0.5;
 
@@ -74,11 +84,19 @@ export default function services() {
                 });
             };
 
-            accordions.forEach((accordion, accordionIndex) => {
-                const content = accordion.querySelector('.services__nav-accordion-content-inner');
-                content.appendChild(images[accordionIndex]);
-                content.appendChild(textBlocks[accordionIndex]);
-            });
+            if (textBlocks.length && images.length) {
+                accordions.forEach((accordion, accordionIndex) => {
+                    const content = accordion.querySelector('.services__nav-accordion-content-inner');
+                    content.appendChild(images[accordionIndex]);
+                    content.appendChild(textBlocks[accordionIndex]);
+                });
+            }
+            if (tabs.length) {
+                accordions.forEach((accordion, accordionIndex) => {
+                    const content = accordion.querySelector('.services__nav-accordion-content-inner');
+                    content.appendChild(tabs[accordionIndex]);
+                });
+            }
 
             accordions.forEach(element => {
                 const btn = element.querySelector('.services__nav-link');

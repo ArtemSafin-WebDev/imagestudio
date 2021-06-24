@@ -36,14 +36,14 @@ export default function reviewsSlider() {
             init: false,
             on: {
                 init: (swiper) => {
-                    // setActiveThumbCard(swiper.realIndex);
+                    setActiveThumbCard(swiper.realIndex);
 
-                    deboucedSetActiveThumb(swiper.realIndex);
+                    // deboucedSetActiveThumb(swiper.realIndex);
                 },
                 slideChange: (swiper) => {
-                    // setActiveThumbCard(swiper.realIndex);
+                    setActiveThumbCard(swiper.realIndex);
 
-                    deboucedSetActiveThumb(swiper.realIndex);
+                    // deboucedSetActiveThumb(swiper.realIndex);
                 }
             },
             breakpoints: {

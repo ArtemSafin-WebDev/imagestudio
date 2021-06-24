@@ -6,16 +6,15 @@
 }
 
 .services__heading {
-
     @include breakpointMF(small-tablet) {
         opacity: 0;
         visibility: hidden;
-        transition: opacity .4s, visibility 0s linear .4s;
-    
+        transition: opacity 0.4s, visibility 0s linear 0.4s;
+
         .animatable & {
             opacity: 1;
             visibility: inherit;
-            transition: opacity .6s ease-out 1.8s, visibility .6s ease-out 1.8s;
+            transition: opacity 0.6s ease-out 1.8s, visibility 0.6s ease-out 1.8s;
         }
     }
     @include breakpoint(mobile) {
@@ -27,11 +26,14 @@
     display: block;
 
     @include breakpointMF(small-tablet) {
-        transform: translateY(-26.5rem) scale(0.4);
-        transform-origin: left center;
-        transition: transform 1s;
+        .intro + .services .services__heading & {
+            transform: translateY(-26.5rem) scale(0.4);
+            transform-origin: left center;
+            transition: transform 1s;
+        }
+
         .services-header-collapsed & {
-            transform: translateY(0) scale(1);
+            transform: translateY(0) scale(1) !important;
         }
     }
 }
@@ -67,14 +69,14 @@
             height: 1px;
             left: 0;
             width: 100%;
-            background-color: rgba(black, .1);
+            background-color: rgba(black, 0.1);
             position: absolute;
-            transition: background-color .2s;
+            transition: background-color 0.2s;
         }
 
         &.active {
             &::after {
-                background-color: #F9F9F9;
+                background-color: #f9f9f9;
             }
         }
         &:last-child {
@@ -135,7 +137,6 @@
         color: var(--text-color);
         padding: 1.8rem 0;
     }
-    
 
     @include breakpointMF(small-tablet) {
         .services__nav-list-item:last-child & {
@@ -375,9 +376,120 @@
 
 .services__nav-accordion-content-inner {
     @include breakpoint(mobile) {
-        
-       
         padding: 3rem var(--content-padding);
-        background: #F9F9F9;
+        background: #f9f9f9;
+
+        &--no-bg {
+            background: transparent;
+            padding-top: .8rem;
+        }
     }
+}
+
+.services__tabs {
+    position: relative;
+}
+
+.services__tab {
+    @include breakpointMF(small-tablet) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+        z-index: 5;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s, visibility 0s linear 0.4s;
+
+        &.active {
+            z-index: 10;
+            transition: opacity 0.4s, visibility 0.4s;
+            position: relative;
+            opacity: 1;
+            visibility: inherit;
+        }
+    }
+}
+
+.services__tab-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 5.5rem;
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 4rem;
+    }
+}
+
+.services__text-blocks {
+    
+    @include breakpointMF(small-tablet) {
+        margin-top: -0.5rem;
+    }
+}
+
+.services__text-block {
+    margin-bottom: 5rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.services__text-block-heading {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+    text-transform: lowercase;
+    font-weight: 400;
+    margin-bottom: 1.7rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.1rem;
+        line-height: 2.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.services__text-block-text {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    text-transform: lowercase;
+    margin-bottom: 1rem;
+    @include breakpoint(mobile) {
+        font-size: 1.7rem;
+        line-height: 2.4rem;
+        margin-bottom: 1.2rem;
+    }
+}
+
+.services__text-content-link {
+    margin-top: 5rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 4.5rem;
+    }
+}
+
+
+.services__simple-image-wrapper {
+    @include breakpoint(mobile) {
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            padding-bottom: 56.25%;
+        }
+    }
+}
+
+.services__simple-image {
+    @include breakpoint(mobile) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+   
 }

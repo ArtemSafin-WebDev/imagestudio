@@ -31,6 +31,8 @@ import projectsShowMore from './projectsShowMore';
 import chooseSolution from './chooseSolution';
 import reviewsSlider from './reviewsSlider';
 import projectsLoadMore from './projectsLoadMore';
+import features from './features';
+import anchorLinks from './anchorLinks';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -64,6 +66,8 @@ document.addEventListener('DOMContentLoaded', function() {
     projectsLoadMore();
     chooseSolution();
     reviewsSlider();
+    features();
+    anchorLinks();
     
     const mq = window.matchMedia('(max-width: 640px)');
 

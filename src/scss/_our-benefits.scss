@@ -1,0 +1,89 @@
+.our-benefits {
+    margin-bottom: 16rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 10rem;
+    }
+}
+
+.our-benefits__row {
+    display: grid;
+    grid-template-columns: minmax(0, 30rem) minmax(0, 1fr);
+    grid-column-gap: 6rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 4rem;
+    }
+}
+
+.our-benefits__heading {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.7rem;
+    text-transform: lowercase;
+
+    @include breakpoint(mobile) {
+        font-size: 1.7rem;
+        line-height: 2.4rem;
+
+        br {
+            display: none;
+        }
+    }
+}
+
+.our-benefits__card {
+    display: flex;
+    flex-direction: column;
+}
+
+.our-benefits__card-icon {
+    width: 6rem;
+    height: 6rem;
+    display: block;
+    margin-bottom: 4.5rem;
+    object-fit: contain;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2.4rem;
+    }
+}
+
+.our-benefits__card-title {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+    text-transform: lowercase;
+    margin-bottom: 3rem;
+    font-weight: 400;
+
+    @include breakpoint(mobile) {
+        font-size: 2.1rem;
+        line-height: 2.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.our-benefits__card-text {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    text-transform: lowercase;
+
+    @include breakpoint(mobile) {
+        font-size: 1.7rem;
+        line-height: 2.4rem;
+    }
+}
+
+.our-benefits__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 4.5rem;
+    grid-column-gap: 9rem;
+    padding-right: 30rem;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+        grid-gap: 4rem;
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
