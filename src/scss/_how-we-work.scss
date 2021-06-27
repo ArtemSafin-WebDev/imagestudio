@@ -24,12 +24,9 @@
             grid-template-columns: repeat(4, minmax(0, 1fr));
             grid-column-gap: 12rem;
             grid-row-gap: 6rem;
-
-            
         }
 
         &--three-cols {
-            
             .swiper-wrapper {
                 grid-template-columns: repeat(3, minmax(0, 1fr));
                 grid-column-gap: 19rem;
@@ -112,7 +109,6 @@
     }
 }
 
-
 .how-we-work__delivery {
     margin-top: 2rem;
     display: flex;
@@ -142,5 +138,44 @@
 
     @include breakpoint(mobile) {
         height: 2.2rem;
+    }
+}
+
+.how-we-work__row {
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 4rem;
+        padding-left: 36rem;
+    }
+}
+
+.how-we-work__form-col {
+    @include breakpoint(mobile) {
+        margin: 0 calc(-1 * var(--content-padding));
+        margin-top: 10rem;
+        .contact-form,
+        .contact-form__success {
+            padding-top: 4rem;
+        }
+
+        
+    }
+}
+
+.how-we-work__slider .how-we-work__slider-column-wrapper {
+    @include breakpointMF(small-tablet) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+
+        .how-we-work__slider-card-number {
+            position: absolute;
+            right: 100%;
+            top: -.1rem;
+            margin-right: 6rem;
+        }
+
+        .how-we-work__slider-card {
+            max-width: 46rem;
+        }
     }
 }

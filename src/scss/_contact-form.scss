@@ -6,17 +6,15 @@
     padding-bottom: 11rem;
     position: relative;
     flex-grow: 1;
-    
 
     &--modal {
         padding-top: 10rem;
-        
     }
     @include breakpoint(mobile) {
         padding: 7rem var(--content-padding);
         padding-top: 7rem;
     }
-    
+
     .parsley-errors-list.filled {
         font-size: 1.4rem;
         line-height: 2.4rem;
@@ -36,6 +34,7 @@
     width: 50%;
     flex-grow: 1;
     font-weight: 400;
+    margin-bottom: 0.3rem;
 }
 
 .contact-form__star {
@@ -67,7 +66,6 @@
     input:-webkit-autofill:active {
         -webkit-box-shadow: 0 0 0 3rem var(--primary-color) inset !important;
     }
-
 
     input:-webkit-autofill {
         -webkit-text-fill-color: white !important;
@@ -148,6 +146,10 @@ textarea.contact-form__input {
     @include breakpoint(mobile) {
         margin-left: 0;
         margin-top: 4rem;
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+        padding: 1rem 0;
+        border-radius: 4rem;
     }
 }
 
@@ -180,12 +182,23 @@ textarea.contact-form__input {
     border: 1px solid white;
     margin-top: 0.2rem;
     transition: border-color 0.2s;
+
+    @include breakpoint(mobile) {
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-right: 1rem;
+    }
     svg {
         width: 8.6rem;
         height: 0.6rem;
         fill: white;
         transition: opacity 0.2s;
         opacity: 0;
+
+        @include breakpoint(mobile) {
+            width: 1.7rem;
+            height: 1.2rem;
+        }
     }
 }
 
@@ -193,6 +206,10 @@ textarea.contact-form__input {
     font-size: 1.4rem;
     line-height: 1.7rem;
     text-transform: lowercase;
+
+    @include breakpoint(mobile) {
+        padding-top: 0.45rem;
+    }
 
     a {
         color: white;
@@ -262,8 +279,6 @@ textarea.contact-form__input {
     border: 1px solid white;
     border-radius: 3rem;
     cursor: pointer;
-    
-   
 }
 
 .contact-form__file-upload-info-content {
@@ -316,13 +331,12 @@ textarea.contact-form__input {
     z-index: 30;
     opacity: 0;
     visibility: hidden;
-    transition: opacity .3s, visibility 0s linear .3s;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
     form.success & {
         opacity: 1;
         visibility: inherit;
-        transition: opacity .3s, visibility .3s;
+        transition: opacity 0.3s, visibility 0.3s;
     }
-
 }
 
 .contact-form__success-text {
@@ -338,8 +352,8 @@ textarea.contact-form__input {
     line-height: 2.5rem;
     border-bottom: 1px solid currentColor;
     margin-top: 9rem;
-    color: rgba(white, .5);
-    transition: color .2s;
+    color: rgba(white, 0.5);
+    transition: color 0.2s;
     .no-touch &:hover,
     .touch &:active {
         color: white;

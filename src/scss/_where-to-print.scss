@@ -1,0 +1,240 @@
+.where-to-print {
+    margin-bottom: 16rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 12rem;
+    }
+}
+
+.where-to-print__content {
+    @include breakpointMF(small-tablet) {
+        position: relative;
+        padding-left: 36rem;
+    }
+}
+.where-to-print__spring {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 7rem;
+    height: auto;
+    fill: var(--primary-color);
+
+    @include breakpoint(mobile) {
+        position: static;
+        width: 5.7rem;
+        height: auto;
+        order: -1;
+        margin-bottom: 2.2rem;
+    }
+}
+
+.where-to-print__heading {
+    margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
+}
+
+.where-to-print__list {
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        grid-gap: 2rem;
+        grid-auto-flow: dense;
+    }
+}
+.where-to-print__list-item {
+    display: flex;
+    flex-direction: column; 
+
+    @include breakpoint(mobile) {
+        width: 14.5rem;
+    }
+}
+
+.where-to-print__list-item--large {
+    grid-column: span 2;
+    @include breakpoint(mobile) {
+       
+
+        width: 32rem;
+    }
+}
+
+.where-to-print__card {
+    padding: 5rem 3rem;
+    background: #f9f9f9;
+    border-radius: 12rem;
+    text-align: center;
+    text-transform: lowercase;
+    position: relative;
+    z-index: 1;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 3.5rem;
+        padding-bottom: 2rem;
+    }
+    .where-to-print__list-item--large & {
+        text-align: left;
+        padding: 6rem;
+        border-radius: 9rem;
+        
+
+        @include breakpoint(mobile) {
+            border-radius: 6rem;
+            padding: 4rem;
+            
+        }
+    }
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--text-color);
+    }
+
+    .no-touch &:hover {
+        .where-to-print__card-image {
+            transform: scale(0.85);
+        }
+    }
+}
+
+.where-to-print__grouped-card-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 12px;
+    grid-auto-flow: dense;
+}
+
+.where-to-print__card-image-container {
+    position: relative;
+    margin-bottom: 2.5rem;
+
+    .where-to-print__list-item--large & {
+        position: absolute;
+        z-index: -1;
+        right: 6rem;
+        bottom: 2rem;
+        height: 18.8rem;
+        width: auto;
+        margin: 0;
+
+        @include breakpoint(mobile) {
+            height: 15rem;
+            right: 4rem;
+        }
+
+        .where-to-print__card-image {
+            position: static;
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+            object-position: right bottom;
+        }
+
+        &::before {
+            display: none;
+        }
+    }
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+    }
+}
+
+.where-to-print__card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.where-to-print__card-title {
+    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    text-transform: lowercase;
+    font-weight: 400;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+    .where-to-print__list-item--large & {
+        font-size: 2.8rem;
+        line-height: 3.2rem;
+        margin-bottom: 0.8rem;
+
+        @include breakpoint(mobile) {
+            font-size: 2.1rem;
+            line-height: 2.5rem;
+        }
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.where-to-print__card-price {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+}
+
+.where-to-print__card-price--old {
+    text-decoration-line: line-through;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+    }
+}
+
+.where-to-print__card-price--new {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+
+.where-to-print__card-label {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    text-transform: lowercase;
+    text-align: center;
+    display: inline-flex;
+    padding: 0.5rem 1.6rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 0 2.2rem 2.2rem 2.2rem;
+    position: absolute;
+    right: 0;
+    top: 1.2rem;
+    color: var(--primary-color);
+
+    @include breakpoint(mobile) {
+        padding: 0.5rem 1.1rem;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+
+        top: 1rem;
+        right: 0;
+    }
+}
+
+.where-to-print__slider {
+    .swiper-container {
+        overflow: visible;
+    }
+}

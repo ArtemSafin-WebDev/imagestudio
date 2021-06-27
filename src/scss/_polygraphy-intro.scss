@@ -1,0 +1,230 @@
+.polygraphy-intro {
+    margin-bottom: 14rem;
+    padding-top: 10rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 10rem;
+    }
+}
+
+.polygraphy-intro__heading {
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+    }
+}
+
+.polygraphy-intro__row {
+    margin-bottom: 10rem;
+    display: grid;
+    grid-template-columns: minmax(0, 32rem) minmax(0, 1fr);
+    grid-gap: 4rem;
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+        grid-gap: initial;
+        margin-bottom: 6rem;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.polygraphy-intro__content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2rem;
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+        grid-gap: initial;
+    }
+}
+
+.polygraphy-intro__content-heading {
+    font-weight: 600;
+    font-size: 4.9rem;
+    line-height: 6rem;
+    letter-spacing: -0.01em;
+    text-transform: lowercase;
+    margin-top: -1.5rem;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: 3.7rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.polygraphy-intro__content-text {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    text-transform: lowercase;
+    max-width: 33rem;
+    @include breakpoint(mobile) {
+        max-width: none;
+        margin-bottom: 0;
+        font-size: 1.7rem;
+        line-height: 2.4rem;
+    }
+}
+
+.polygraphy-intro__slider-info {
+    @include breakpoint(mobile) {
+        order: 5;
+    }
+}
+
+.polygraphy-intro__slider-info-title {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    text-transform: lowercase;
+
+    @include breakpoint(mobile) {
+        font-size: 2.3rem;
+        line-height: 2.8rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.polygraphy-intro__text-slider {
+    margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+      
+        margin-bottom: 0;
+
+        .swiper-container {
+            overflow: visible;
+        }
+    }
+}
+
+.polygraphy-intro__slider-info-text {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    text-transform: lowercase;
+  
+    @include breakpoint(mobile) {
+        font-size: 1.7rem;
+        line-height: 2.4rem;
+    }
+}
+
+.polygraphy-intro__slider-arrows {
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.polygraphy-intro__slider-arrow {
+    flex-shrink: 0;
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-right: 1.5rem;
+
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        circle {
+            transition: stroke 0.3s;
+        }
+
+        path {
+            transition: fill 0.3s;
+        }
+    }
+
+    &.autoplay-enabled {
+        svg {
+            circle {
+                transform: rotate(-90deg);
+                transform-origin: center;
+            }
+            circle:nth-child(2) {
+                stroke: var(--text-color);
+            }
+
+            path {
+                fill: var(--text-color);
+            }
+        }
+    }
+
+    &:not(.autoplay-enabled):hover {
+        svg {
+            circle {
+                stroke: var(--text-color);
+            }
+
+            path {
+                fill: var(--text-color);
+            }
+        }
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.polygraphy-intro__slider {
+ 
+
+
+    @include breakpointMF(small-tablet) {
+        border-radius: 0px 50rem 50rem 40rem;
+        overflow: hidden;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2.4rem;
+        
+       
+
+        .swiper-container {
+            overflow: visible;
+        }
+    }
+}
+
+.polygraphy-intro__slider-card {
+    position: relative;
+
+    @include breakpoint(mobile) {
+        border-radius: 0px 50rem 50rem 50rem;
+        overflow: hidden;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+    }
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 56.25%;
+
+        @include breakpoint(mobile) {
+            padding-bottom: 65%;
+        }
+    }
+}
+
+.polygraphy-intro__slider-card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

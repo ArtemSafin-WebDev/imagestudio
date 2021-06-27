@@ -27,12 +27,15 @@ import accordions from './accordions';
 import modalDetailsSlider from './modalDetailsSlider';
 import howWeWorkSlider from './howWeWorkSlider';
 import projectsSlider from './projectsSlider';
-import projectsShowMore from './projectsShowMore';
+
 import chooseSolution from './chooseSolution';
 import reviewsSlider from './reviewsSlider';
 import projectsLoadMore from './projectsLoadMore';
 import features from './features';
 import anchorLinks from './anchorLinks';
+import polygraphyIntroSlider from './polygraphyIntroSlider';
+import partnersSlider from './partnersSlider';
+import whereToPrintSlider from './whereToPrintSlider';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -68,6 +71,9 @@ document.addEventListener('DOMContentLoaded', function() {
     reviewsSlider();
     features();
     anchorLinks();
+    polygraphyIntroSlider();
+    partnersSlider();
+    whereToPrintSlider();
     
     const mq = window.matchMedia('(max-width: 640px)');
 

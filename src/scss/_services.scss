@@ -1,7 +1,7 @@
 .services {
     margin-bottom: 21rem;
     @include breakpoint(mobile) {
-        margin-bottom: 13.5rem;
+        margin-bottom: 10rem;
     }
 }
 
@@ -108,7 +108,7 @@
     display: block;
     transition: color 0.4s;
 
-    svg {
+    & > svg {
         display: none;
 
         @include breakpoint(mobile) {
@@ -169,56 +169,114 @@
 }
 
 .services__nav-link-counter {
-    &::before {
-        content: counter(ordered-list, decimal-leading-zero);
-    }
-    @include breakpointMF(small-tablet) {
-        position: absolute;
-        left: -9rem;
-        width: 4rem;
-        height: 4rem;
-        border-radius: 50%;
-        top: -0.1rem;
-        border: 2px solid transparent;
-        color: var(--text-color);
-        transition: border-color 0.4s, color 0.4s;
-        font-weight: 600;
-        font-size: 1.6rem;
-        line-height: 2.7rem;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    @include breakpoint(mobile) {
-        position: relative;
-        font-weight: 600;
-        font-size: 1.6rem;
-        line-height: 1.9rem;
-        margin-right: 1.8rem;
-        z-index: 1;
-        &::after {
-            content: '';
+    &:not(.services__nav-link-counter--unordered) {
+        &::before {
+            content: counter(ordered-list, decimal-leading-zero);
+        }
+        @include breakpointMF(small-tablet) {
             position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: 3.6rem;
-            height: 3.6rem;
-            z-index: -1;
-            border: 2px solid #235ffe;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.2s, visibility 0s linear 0.2s;
+            left: -9rem;
+            width: 4rem;
+            height: 4rem;
             border-radius: 50%;
+            top: -0.1rem;
+            border: 2px solid transparent;
+            color: var(--text-color);
+            transition: border-color 0.4s, color 0.4s;
+            font-weight: 600;
+            font-size: 1.6rem;
+            line-height: 2.7rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
-        .services__nav-accordion.active &::after {
+        @include breakpoint(mobile) {
+            position: relative;
+            font-weight: 600;
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            margin-right: 1.8rem;
+            z-index: 1;
+         
+            &::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 3.6rem;
+                height: 3.6rem;
+                z-index: -1;
+                border: 2px solid #235ffe;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.2s, visibility 0s linear 0.2s;
+                border-radius: 50%;
+            }
+
+            .services__nav-accordion.active &::after {
+                opacity: 1;
+                visibility: inherit;
+                transition: opacity 0.2s, visibility 0.2s;
+            }
+        }
+    }
+}
+
+.services__nav-link-counter--unordered {
+    width: 3rem;
+    height: 3rem;
+    flex-shrink: 0;
+    position: absolute;
+    left: -9rem;
+    top: 0.3rem;
+    position: absolute;
+
+    @include breakpoint(mobile) {
+        width: 2.2rem;
+        height: 2.2rem;
+        position: relative;
+        flex-shrink: 0;
+        margin-right: 1.2rem;
+        left: auto;
+        top: auto;
+        z-index: 1;
+        margin-top: -0.2rem;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: 50%;
+        background: #e8e8e8;
+        transition: opacity 0.2s;
+    }
+
+    svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+        transition: opacity 0.2s;
+        fill: var(--primary-color);
+        opacity: 0;
+    }
+
+    .services__nav-link.active &,
+    .services__nav-accordion.active & {
+        svg {
             opacity: 1;
-            visibility: inherit;
-            transition: opacity 0.2s, visibility 0.2s;
+        }
+
+        &::before {
+            opacity: 0;
         }
     }
 }
@@ -350,7 +408,7 @@
 .services__slider-text-description {
     font-size: 1.8rem;
     line-height: 2.5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     text-transform: lowercase;
     @include breakpoint(mobile) {
         font-weight: 500;
@@ -381,7 +439,7 @@
 
         &--no-bg {
             background: transparent;
-            padding-top: .8rem;
+            padding-top: 0.8rem;
         }
     }
 }
@@ -423,7 +481,6 @@
 }
 
 .services__text-blocks {
-    
     @include breakpointMF(small-tablet) {
         margin-top: -0.5rem;
     }
@@ -470,7 +527,6 @@
     }
 }
 
-
 .services__simple-image-wrapper {
     @include breakpoint(mobile) {
         position: relative;
@@ -491,5 +547,4 @@
         height: 100%;
         object-fit: cover;
     }
-   
 }
