@@ -7987,6 +7987,61 @@ textarea.contact-form__input {
   -o-object-fit: cover;
      object-fit: cover; }
 
+.polygraphy-catalog {
+  padding-top: 18rem;
+  margin-bottom: 14rem; }
+  @media only screen and (max-width: 640px) {
+    .polygraphy-catalog {
+      margin-bottom: 10rem;
+      padding-top: 7rem; } }
+
+@media only screen and (min-width: 641px) {
+  .polygraphy-catalog__row {
+    display: grid;
+    grid-template-columns: minmax(0, 30rem) minmax(0, 1fr);
+    grid-gap: 6rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; } }
+
+.polygraphy-catalog__back-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  text-transform: lowercase; }
+  @media only screen and (max-width: 640px) {
+    .polygraphy-catalog__back-link {
+      margin-bottom: 5rem; } }
+  .polygraphy-catalog__back-link svg {
+    width: 2.8rem;
+    height: auto;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    fill: currentColor;
+    margin-right: 2rem;
+    flex-shrink: 0; }
+
+.polygraphy-catalog__heading {
+  font-weight: 600;
+  font-size: 4.9rem;
+  line-height: 6rem;
+  letter-spacing: -0.01em;
+  text-transform: lowercase;
+  margin-bottom: 10rem;
+  margin-top: -2rem; }
+  @media only screen and (max-width: 640px) {
+    .polygraphy-catalog__heading {
+      font-weight: 600;
+      font-size: 3rem;
+      line-height: 3.7rem;
+      margin-bottom: 3rem;
+      text-transform: lowercase; } }
+
 .partners {
   margin-bottom: 14rem; }
   @media only screen and (max-width: 640px) {
@@ -8005,7 +8060,8 @@ textarea.contact-form__input {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-column-gap: 8rem;
-    grid-row-gap: 3.5rem; } }
+    grid-row-gap: 3.5rem;
+    width: auto; } }
 
 @media only screen and (max-width: 640px) {
   .partners__list-item {
@@ -8118,11 +8174,13 @@ textarea.contact-form__input {
   .where-to-print__list-item--large .where-to-print__card {
     text-align: left;
     padding: 6rem;
-    border-radius: 9rem; }
+    border-radius: 9rem;
+    padding-bottom: 21rem; }
     @media only screen and (max-width: 640px) {
       .where-to-print__list-item--large .where-to-print__card {
         border-radius: 6rem;
-        padding: 4rem; } }
+        padding: 4rem;
+        padding-bottom: 17rem; } }
   .no-touch .where-to-print__card:hover,
   .touch .where-to-print__card:active {
     color: var(--text-color); }

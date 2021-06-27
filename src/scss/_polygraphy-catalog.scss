@@ -1,0 +1,56 @@
+.polygraphy-catalog {
+    padding-top: 18rem;
+    margin-bottom: 14rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 10rem;
+        padding-top: 7rem;
+    }
+}
+
+.polygraphy-catalog__row {
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: minmax(0, 30rem) minmax(0, 1fr);
+        grid-gap: 6rem;
+        align-items: flex-start;
+    }
+}
+
+.polygraphy-catalog__back-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    text-transform: lowercase;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 5rem;
+    }
+
+    svg {
+        width: 2.8rem;
+        height: auto;
+        flex-shrink: 0;
+        fill: currentColor;
+        margin-right: 2rem;
+        flex-shrink: 0;
+    }
+}
+
+.polygraphy-catalog__heading {
+    font-weight: 600;
+    font-size: 4.9rem;
+    line-height: 6rem;
+    letter-spacing: -0.01em;
+    text-transform: lowercase;
+    margin-bottom: 10rem;
+    margin-top: -2rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: 3.7rem;
+        margin-bottom: 3rem;
+        text-transform: lowercase;
+    }
+}

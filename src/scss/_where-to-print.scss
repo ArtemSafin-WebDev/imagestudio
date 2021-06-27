@@ -84,11 +84,13 @@
         text-align: left;
         padding: 6rem;
         border-radius: 9rem;
+        padding-bottom: 21rem;
         
 
         @include breakpoint(mobile) {
             border-radius: 6rem;
             padding: 4rem;
+            padding-bottom: 17rem;
             
         }
     }
