@@ -151,15 +151,18 @@
 }
 
 .how-we-work__form-col {
+    .contact-form,
+    .contact-form__success {
+        padding-top: 7rem;
+    }
     @include breakpoint(mobile) {
         margin: 0 calc(-1 * var(--content-padding));
         margin-top: 10rem;
         .contact-form,
         .contact-form__success {
             padding-top: 4rem;
+            padding-bottom: 7rem;
         }
-
-        
     }
 }
 
@@ -170,12 +173,48 @@
         .how-we-work__slider-card-number {
             position: absolute;
             right: 100%;
-            top: -.1rem;
+            top: -0.1rem;
             margin-right: 6rem;
         }
 
         .how-we-work__slider-card {
             max-width: 46rem;
+        }
+    }
+}
+
+.how-we-work__slider-col-heading {
+    font-size: 4rem;
+    line-height: 5rem;
+    letter-spacing: -0.1rem;
+    text-transform: lowercase;
+    font-weight: 400;
+    position: relative;
+    margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.3rem;
+        line-height: 2.8rem;
+        margin-bottom: 4rem;
+    }
+
+    svg {
+        position: absolute;
+        right: 100%;
+        top: 1rem;
+        width: 3.8rem;
+        height: 3.8rem;
+        fill: var(--primary-color);
+        margin-right: 6rem;
+        @include breakpoint(mobile) {
+            position: static;
+            right: auto;
+            top: auto;
+            margin: 0;
+            margin-bottom: 1.4rem;
+            width: 3.8rem;
+            height: 3.8rem;
+            display: block;
         }
     }
 }

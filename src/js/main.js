@@ -36,6 +36,9 @@ import anchorLinks from './anchorLinks';
 import polygraphyIntroSlider from './polygraphyIntroSlider';
 import partnersSlider from './partnersSlider';
 import whereToPrintSlider from './whereToPrintSlider';
+import productTable from './productTable';
+import productInfoSlider from './productInfoSlider';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -74,6 +77,8 @@ document.addEventListener('DOMContentLoaded', function() {
     polygraphyIntroSlider();
     partnersSlider();
     whereToPrintSlider();
+    productTable();
+    productInfoSlider();
     
     const mq = window.matchMedia('(max-width: 640px)');
 
