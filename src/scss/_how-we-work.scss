@@ -7,7 +7,7 @@
 }
 
 .how-we-work__heading {
-    margin-bottom: 6rem;
+    margin-bottom: 8rem;
     @include breakpoint(mobile) {
         margin-bottom: 3rem;
     }
@@ -153,7 +153,9 @@
 .how-we-work__form-col {
     .contact-form,
     .contact-form__success {
-        padding-top: 7rem;
+        padding-top: 6rem;
+
+        padding-bottom: 9rem;
     }
     @include breakpoint(mobile) {
         margin: 0 calc(-1 * var(--content-padding));

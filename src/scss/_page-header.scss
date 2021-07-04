@@ -139,6 +139,10 @@
     z-index: 260;
     position: relative;
 
+
+    width: 32px;
+    height: 32px;
+
     @include breakpoint(mobile) {
         width: 3.7rem;
         height: 3.7rem;
@@ -156,6 +160,10 @@
         transition: transform 0.3s, background-color 0.3s;
         backface-visibility: hidden;
         transform: translateZ(0);
+
+
+        height: 2px;
+        margin-bottom: 6px;
 
         @include breakpoint(mobile) {
             margin-bottom: 0.7rem;
@@ -183,9 +191,11 @@
 
         &::before {
             transform: translateZ(0) translateY(0.35rem) rotate(-45deg);
+            transform: translateZ(0) translateY(3.2px) rotate(-45deg);
         }
         &::after {
             transform: translateZ(0) translateY(-0.35rem) rotate(45deg);
+            transform: translateZ(0) translateY(-3.2px) rotate(45deg);
         }
 
         @include breakpoint(mobile) {
