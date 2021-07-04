@@ -1,0 +1,120 @@
+.studio-intro {
+    padding-top: 18rem;
+    margin-bottom: 20rem;
+    @include breakpoint(mobile) {
+        padding-top: 7rem;
+        margin-bottom: 9rem;
+    }
+}
+
+.studio-intro__row {
+    margin-bottom: 10rem;
+    display: grid;
+    grid-template-columns: minmax(0, 30rem) minmax(0, 1fr);
+    grid-gap: 6rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include breakpoint(mobile) {
+        grid-gap: 2rem;
+        grid-template-columns: minmax(0, 1fr);
+        margin-bottom: 3rem;
+    }
+}
+
+.studio-intro__text {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    text-transform: lowercase;
+    @include breakpoint(mobile) {
+        font-size: 1.7rem;
+        line-height: 2.4rem;
+    }
+}
+
+.studio-intro__heading {
+    font-weight: 600;
+    font-size: 4.9rem;
+    line-height: 6rem;
+    letter-spacing: -0.01em;
+    text-transform: lowercase;
+    margin-top: -1.4rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: 3.7rem;
+        margin: 0;
+        text-transform: lowercase;
+    }
+}
+
+.studio-intro__numbers {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(mobile) {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-gap: 2rem;
+    }
+}
+
+.studio-intro__numbers-block {
+    margin-bottom: 5rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    @include breakpoint(mobile) {
+        margin: 0;
+    }
+
+    
+ 
+}
+
+.studio-intro__numbers-block-digit {
+    font-size: 5rem;
+    line-height: 1.2;
+    color: var(--primary-color);
+
+    @include breakpoint(mobile) {
+        font-size: 2.6rem;
+        margin-bottom: 0.2rem;
+    }
+}
+
+.studio-intro__numbers-block-text {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    @include breakpoint(mobile) {
+        font-size: 1.7rem;
+        line-height: 2.4rem;
+    }
+}
+
+.studio-intro__image-wrapper {
+    position: relative;
+    border-radius: 0px 50rem 50rem 40rem;
+    overflow: hidden;
+
+    @include breakpoint(mobile) {
+        margin-top: 2rem;
+    }
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-bottom: 58%;
+    }
+}
+
+.studio-intro__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

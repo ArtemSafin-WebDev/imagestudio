@@ -38,6 +38,8 @@ import partnersSlider from './partnersSlider';
 import whereToPrintSlider from './whereToPrintSlider';
 import productTable from './productTable';
 import productInfoSlider from './productInfoSlider';
+import historySlider from './historySlider';
+import teamSlider from './teamSlider';
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -79,6 +81,8 @@ document.addEventListener('DOMContentLoaded', function() {
     whereToPrintSlider();
     productTable();
     productInfoSlider();
+    historySlider();
+    teamSlider();
     
     const mq = window.matchMedia('(max-width: 640px)');
 

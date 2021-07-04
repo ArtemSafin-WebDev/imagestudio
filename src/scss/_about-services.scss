@@ -1,0 +1,282 @@
+.about-services {
+    margin-bottom: 21rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 10rem;
+    }
+}
+
+.about-services__row {
+    display: grid;
+    grid-template-columns: minmax(0, 30rem) minmax(0, 1fr);
+    grid-gap: 6rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2.5rem;
+    }
+}
+
+.about-services__content-block {
+    margin-bottom: 14rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.about-services__content-block-top-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 53rem);
+    align-items: center;
+    grid-gap: 4rem;
+    padding-bottom: 5rem;
+    border-bottom: 2px solid #000000;
+    margin-bottom: 8rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        padding-bottom: 2rem;
+        grid-gap: 1.8rem;
+        margin-bottom: 2.5rem;
+    }
+}
+
+.about-services__content-block-heading {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+    text-transform: lowercase;
+    font-weight: 400;
+}
+
+.about-services__content-block-intro-text {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    text-transform: lowercase;
+    max-width: 46rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.7rem;
+        line-height: 2.5rem;
+    }
+}
+
+.about-services__services-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 1.5rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-gap: 3rem;
+    }
+}
+
+.about-services__services-list-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-services__services-card {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-services__services-card-title {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+    text-transform: lowercase;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+
+    @include breakpoint(mobile) {
+        font-size: 2.6rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+}
+.about-services__services-card-info {
+    padding: 3.2rem;
+    min-height: 34rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    position: relative;
+    z-index: 1;
+
+    background-color: #ffeeee;
+
+    @include breakpoint(mobile) {
+        padding: 2.5rem 2rem;
+        min-height: auto;
+        padding-right: 7rem;
+    }
+
+    &--blue {
+        background-color: #ebf0f7;
+    }
+
+    &--green {
+        background-color: #e1ffe2;
+    }
+}
+
+.about-services__services-card-icon {
+    position: absolute;
+    height: 11rem;
+    max-width: 23rem;
+    width: auto;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+    &--pink-book {
+        height: 18rem;
+        max-width: none;
+        right: 2rem;
+        bottom: -1rem;
+
+        @include breakpoint(mobile) {
+            height: 14rem;
+            right: 1rem;
+        }
+    }
+
+    &--blue-book {
+        top: 1.2rem;
+        right: 1.2rem;
+        left: auto;
+        bottom: auto;
+        height: 14rem;
+        max-width: none;
+
+        @include breakpoint(mobile) {
+            right: 1rem;
+            height: 12rem;
+        }
+    }
+
+    &--cap {
+        height: 12.6rem;
+        max-width: none;
+        right: -1rem;
+        bottom: 2.2rem;
+
+        @include breakpoint(mobile) {
+            height: 10rem;
+            bottom: 1rem;
+            right: -2rem;
+        }
+    }
+}
+
+.about-services__services-card-list {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.about-services__services-card-list-item {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+    text-transform: lowercase;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: flex-start;
+
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+    &::before {
+        content: '';
+        width: 0.7rem;
+        height: 0.7rem;
+        background-color: var(--text-color);
+        border-radius: 50%;
+        flex-shrink: 0;
+        margin-right: 2.4rem;
+        margin-top: 1.4rem;
+
+        @include breakpoint(mobile) {
+            width: 0.6rem;
+            height: 0.6rem;
+            margin-top: 1.2rem;
+            margin-right: 1.5rem;
+        }
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.about-services__advantages-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 9rem;
+    grid-row-gap: 3rem;
+    @include breakpoint(mobile) {
+        grid-gap: 5rem;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+.about-services__advantages-card-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    @include breakpoint(mobile) {
+        margin: 0;
+        order: 10;
+    }
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.about-services__advantages-card {
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.about-services__advantages-card-text {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    text-transform: lowercase;
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.7rem;
+        line-height: 2.4rem;
+        margin-bottom: 2rem;
+    }
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+.about-services__advantages-card-title {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+    text-transform: lowercase;
+    font-weight: 400;
+    margin-bottom: 1.2rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 2.4rem;
+        line-height: 2.5rem;
+        text-transform: lowercase;
+        margin-bottom: 1.3rem;
+    }
+    &:first-child {
+        margin-top: 0;
+    }
+}

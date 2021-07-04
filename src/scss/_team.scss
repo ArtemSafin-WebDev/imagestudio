@@ -1,0 +1,514 @@
+.team {
+    margin-bottom: 16rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 10rem;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.team__top-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 53rem);
+    grid-gap: 4rem;
+    align-items: center;
+    padding-bottom: 4rem;
+    border-bottom: 2px solid #000000;
+    margin-bottom: 8rem;
+
+    @include breakpoint(mobile) {
+        display: contents;
+    }
+}
+
+.team__heading {
+    font-size: 4rem;
+    line-height: 5rem;
+    letter-spacing: -0.1rem;
+    text-transform: lowercase;
+    font-weight: 400;
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 2.3rem;
+        line-height: 2.8rem;
+        padding-bottom: 2rem;
+        margin-bottom: 2.5rem;
+        border-bottom: 2px solid #000000;
+        order: -3;
+    }
+}
+
+.team__top-slider-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include breakpoint(mobile) {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.team__top-slider-pagination {
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.7rem;
+    text-transform: lowercase;
+    margin-right: 3rem;
+    white-space: nowrap;
+}
+
+.team__top-slider-arrows {
+    display: flex;
+    align-items: center;
+}
+
+.team__top-slider {
+    display: grid;
+    grid-template-columns: minmax(0, 30rem) minmax(0, 1fr);
+    grid-gap: 6rem;
+    margin-bottom: 9rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2rem;
+        display: contents;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.team__top-slider-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.team__top-slider-card-image-container {
+    position: relative;
+    margin-bottom: 2rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 1.5rem;
+    }
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-bottom: 65%;
+    }
+}
+
+.team__top-slider-card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team__top-slider-card-title {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 400;
+    text-transform: lowercase;
+}
+
+.team__top-slider-text {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    text-transform: lowercase;
+    margin-top: -0.4rem;
+    @include breakpoint(mobile) {
+        margin: 0;
+        margin-bottom: 2rem;
+        order: -2;
+    }
+    p {
+        margin-bottom: 1.4rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.team__top-slider-wrapper {
+    @include breakpoint(mobile) {
+        margin-bottom: 5rem;
+        .swiper-container {
+            overflow: visible;
+        }
+    }
+
+    @include breakpointMF(small-tablet) {
+        .swiper-container {
+            margin-right: calc((100vw - 100% - 36rem - var(--sb-width, 0)) * -1 / 2);
+            padding-right: calc((100vw - 100% - 36rem - var(--sb-width, 0)) / 2);
+            width: auto;
+            margin-left: 0;
+        }
+        .swiper-slide {
+            width: 80rem;
+            height: auto;
+        }
+    }
+}
+
+.team__advantages {
+    padding-right: 22rem;
+    padding-left: 36rem;
+    margin-bottom: 5rem;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 3rem;
+        order: 6;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.team__advantages-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-column-gap: 9rem;
+    grid-row-gap: 3rem;
+
+    @include breakpoint(mobile) {
+        grid-gap: 4rem;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+.team__advantages-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.team__advantages-card-icon {
+    height: 5.7rem;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: left center;
+    margin-bottom: 3.7rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+        height: 4rem;
+    }
+}
+
+.team__advantages-card-title {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+    text-transform: lowercase;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+
+    @include breakpoint(mobile) {
+        font-size: 2.1rem;
+        line-height: 2.5rem;
+        text-transform: lowercase;
+        margin-bottom: 0.8rem;
+    }
+}
+
+.team__advantages-card-text {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    text-transform: lowercase;
+
+    @include breakpoint(mobile) {
+        font-size: 1.7rem;
+        line-height: 2.4rem;
+    }
+}
+
+.team__bottom-slider {
+    @include breakpoint(mobile) {
+        order: 7;
+        .swiper-slide {
+            width: 28rem;
+        }
+
+        .swiper-container {
+            overflow: visible;
+        }
+    }
+    @include breakpointMF(small-tablet) {
+        .swiper-container {
+            margin-right: calc((100vw - 100% - 36rem - var(--sb-width, 0)) * -1 / 2);
+            padding-right: calc((100vw - 100% - 36rem - var(--sb-width, 0)) / 2);
+            width: auto;
+            margin-left: 0;
+        }
+
+        .swiper-slide {
+            width: 31rem;
+        }
+    }
+}
+
+.team__bottom-slider-arrows {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 4rem;
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.team__bottom-slider-card {
+    position: relative;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    color: white;
+    background-color: var(--primary-color);
+    &:link,
+    &:visited {
+        color: white;
+    }
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 24.92%, rgba(0, 0, 0, 0.9) 85.21%);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+    }
+
+    .no-touch &:hover {
+        color: white;
+        &::after {
+            opacity: 1;
+        }
+
+        .team__bottom-slider-card-text {
+            transform: translateY(0%);
+            transition: transform 0.4s;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        color: white;
+        &::after {
+            opacity: 1;
+        }
+
+        .team__bottom-slider-card-text {
+            transform: translateY(0%);
+            transition: transform 0.4s;
+        }
+    }
+}
+
+.team__bottom-slider-card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team__bottom-slider-card-text {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1.6rem 2rem;
+    justify-content: flex-end;
+    transition: transform 0.3s;
+    transform: translateY(100%);
+    z-index: 30;
+}
+
+.team__bottom-slider-row {
+    display: grid;
+    grid-template-columns: minmax(0, 30rem) minmax(0, 1fr);
+    grid-gap: 6rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 3rem;
+    }
+}
+
+.team__bottom-slider-text {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    text-transform: lowercase;
+
+    
+}
+
+.team__bottom-slider-info-cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-gap: 14px;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.team__bottom-slider-hh-card {
+    background-color: var(--primary-color);
+    color: white;
+    grid-column: span 2;
+    display: flex;
+    align-items: center;
+    padding: 1rem 6.6rem;
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+        display: flex;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.team__bottom-slider-hh-card-image {
+    width: 22rem;
+    height: auto;
+    margin-right: 4.4rem;
+
+    @include breakpoint(mobile) {
+        width: 8.5rem;
+        margin-right: 2rem;
+        position: absolute;
+        right: 0rem;
+        top: 0rem;
+        z-index: -1;
+    }
+}
+
+.team__bottom-slider-hh-card-content {
+    width: 50%;
+    flex-grow: 1;
+}
+
+.team__bottom-slider-hh-card-title {
+    font-size: 2.8rem;
+    line-height: 3.4rem;
+    font-weight: 400;
+    text-transform: lowercase;
+    margin-bottom: 2.4rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.1rem;
+        line-height: 2.4rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.team__bottom-slider-hh-card-btns {
+    display: flex;
+    align-items: center;
+}
+
+.team__bottom-slider-hh-card-hunter-btn {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 4.3rem;
+    height: 4.3rem;
+    flex-shrink: 0;
+    background-color: #fff;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-right: 0.8rem;
+    color: var(--text-color);
+    &:link,
+    &:visited {
+        color: var(--text-color);
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--text-color);
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+    svg {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+.team__bottom-slider-hh-card-apply-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 1.2rem 2.4rem;
+    background-color: white;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    text-transform: lowercase;
+    border-radius: 2rem;
+
+    svg {
+        width: 1.4rem;
+        height: 1.4rem;
+        flex-shrink: 0;
+        margin-left: 1.2rem;
+        fill: var(--text-color);
+        margin-top: 0.3rem;
+    }
+    &:link,
+    &:visited {
+        color: var(--text-color);
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--text-color);
+    }
+}
+
+.team__bottom-slider-info-card {
+    position: relative;
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-bottom: 100%;
+    }
+}
+
+.team__bottom-slider-wrapper {
+    margin-bottom: 14px;
+}
+
+.team__bottom-slider-info-card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
