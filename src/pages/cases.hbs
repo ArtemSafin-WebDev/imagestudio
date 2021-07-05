@@ -1,0 +1,777 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="cases js-cases">
+    <div class="container">
+        <div class="cases__row">
+            <h2 class="section-label section-label--dark">
+                Портфолио
+            </h2>
+            <div class="cases__content">
+                <h1 class="cases__heading">
+                    С 2013 года мы создали более 1000 проектов
+                </h1>
+
+            </div>
+        </div>
+        <form class="cases__filters" method="GET" action="/">
+            <div class="cases__filters-categories">
+                <div class="cases__filters-category">
+                    <label class="cases__filters-checkbox">
+                        <input type="radio" name="category" value="all" class="cases__filters-checkbox-input" checked>
+                        <span class="cases__filters-checkbox-text">
+                            Все
+                        </span>
+                    </label>
+
+                </div>
+                <div class="cases__filters-category">
+
+                    <label class="cases__filters-checkbox">
+                        <input type="radio" name="category" value="polygraphy" class="cases__filters-checkbox-input">
+                        <span class="cases__filters-checkbox-text">
+                            Полиграфия
+
+
+                        </span>
+
+                        <svg width="14" height="14" aria-hidden="true" class="icon-arrow-down">
+                            <use xlink:href="#arrow-down"></use>
+                        </svg>
+                    </label>
+                </div>
+                <div class="cases__filters-category">
+
+                    <label class="cases__filters-checkbox">
+                        <input type="radio" name="category" value="design" class="cases__filters-checkbox-input">
+                        <span class="cases__filters-checkbox-text">
+                            Дизайн
+                        </span>
+                    </label>
+                </div>
+                <div class="cases__filters-category">
+
+                    <label class="cases__filters-checkbox">
+                        <input type="radio" name="category" value="merch" class="cases__filters-checkbox-input">
+                        <span class="cases__filters-checkbox-text">
+                            Мерч
+                        </span>
+                    </label>
+                </div>
+                <div class="cases__filters-category">
+
+                    <label class="cases__filters-checkbox">
+                        <input type="radio" name="category" value="clients" class="cases__filters-checkbox-input">
+                        <span class="cases__filters-checkbox-text">
+                            Индустрии и клиенты
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="cases__filters-subcategories">
+                <div class="cases__filters-subcategories-dropdown" data-parent="polygraphy">
+                    <div class="cases__filters-subcategories-dropdown-inner">
+                        <div class="cases__filters-subcategories-dropdown-row">
+                            <button type="button" class="cases__filters-reset">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                                    <use xlink:href="#cross"></use>
+                                </svg>
+                                сбросить выбранное
+                            </button>
+                            <div class="cases__filters-subcategories-checkboxes">
+                                <label class="cases__filters-subcategories-checkbox">
+                                    <input type="checkbox" name="subcategory" value="1"
+                                        class="cases__filters-subcategories-checkbox-input">
+                                    <span class="cases__filters-subcategories-checkbox-text">
+                                        Наклейки,стикеры
+                                    </span>
+                                </label>
+                                <label class="cases__filters-subcategories-checkbox">
+                                    <input type="checkbox" name="subcategory" value="2"
+                                        class="cases__filters-subcategories-checkbox-input">
+                                    <span class="cases__filters-subcategories-checkbox-text">
+                                        Сувенирная продукция
+                                    </span>
+                                </label>
+                                <label class="cases__filters-subcategories-checkbox">
+                                    <input type="checkbox" name="subcategory" value="2"
+                                        class="cases__filters-subcategories-checkbox-input">
+                                    <span class="cases__filters-subcategories-checkbox-text">
+                                        Пакеты
+                                    </span>
+                                </label>
+                                <label class="cases__filters-subcategories-checkbox">
+                                    <input type="checkbox" name="subcategory" value="2"
+                                        class="cases__filters-subcategories-checkbox-input">
+                                    <span class="cases__filters-subcategories-checkbox-text">
+                                        Плакаты, афишы
+                                    </span>
+                                </label>
+                                <label class="cases__filters-subcategories-checkbox">
+                                    <input type="checkbox" name="subcategory" value="2"
+                                        class="cases__filters-subcategories-checkbox-input">
+                                    <span class="cases__filters-subcategories-checkbox-text">
+                                        Футболки
+                                    </span>
+                                </label>
+                                <label class="cases__filters-subcategories-checkbox">
+                                    <input type="checkbox" name="subcategory" value="2"
+                                        class="cases__filters-subcategories-checkbox-input">
+                                    <span class="cases__filters-subcategories-checkbox-text">
+                                        Ролл-апстенды
+                                    </span>
+                                </label>
+                                <label class="cases__filters-subcategories-checkbox">
+                                    <input type="checkbox" name="subcategory" value="2"
+                                        class="cases__filters-subcategories-checkbox-input">
+                                    <span class="cases__filters-subcategories-checkbox-text">
+                                        Листовки
+                                    </span>
+                                </label>
+                                <label class="cases__filters-subcategories-checkbox">
+                                    <input type="checkbox" name="subcategory" value="2"
+                                        class="cases__filters-subcategories-checkbox-input">
+                                    <span class="cases__filters-subcategories-checkbox-text">
+                                        Печать на холсте
+                                    </span>
+                                </label>
+                                <label class="cases__filters-subcategories-checkbox">
+                                    <input type="checkbox" name="subcategory" value="2"
+                                        class="cases__filters-subcategories-checkbox-input">
+                                    <span class="cases__filters-subcategories-checkbox-text">
+                                        Плакаты, афишы
+                                    </span>
+                                </label>
+                                <label class="cases__filters-subcategories-checkbox">
+                                    <input type="checkbox" name="subcategory" value="2"
+                                        class="cases__filters-subcategories-checkbox-input">
+                                    <span class="cases__filters-subcategories-checkbox-text">
+                                        Значки
+                                    </span>
+                                </label>
+                                <label class="cases__filters-subcategories-checkbox">
+                                    <input type="checkbox" name="subcategory" value="2"
+                                        class="cases__filters-subcategories-checkbox-input">
+                                    <span class="cases__filters-subcategories-checkbox-text">
+                                        Штампы и печати
+                                    </span>
+                                </label>
+                                <label class="cases__filters-subcategories-checkbox">
+                                    <input type="checkbox" name="subcategory" value="2"
+                                        class="cases__filters-subcategories-checkbox-input">
+                                    <span class="cases__filters-subcategories-checkbox-text">
+                                        Футболки
+                                    </span>
+                                </label>
+                                <label class="cases__filters-subcategories-checkbox">
+                                    <input type="checkbox" name="subcategory" value="2"
+                                        class="cases__filters-subcategories-checkbox-input">
+                                    <span class="cases__filters-subcategories-checkbox-text">
+                                        Грамоты и дипломы
+                                    </span>
+                                </label>
+                                <label class="cases__filters-subcategories-checkbox">
+                                    <input type="checkbox" name="subcategory" value="2"
+                                        class="cases__filters-subcategories-checkbox-input">
+                                    <span class="cases__filters-subcategories-checkbox-text">
+                                        Статуэтки
+                                    </span>
+                                </label>
+                                <label class="cases__filters-subcategories-checkbox">
+                                    <input type="checkbox" name="subcategory" value="2"
+                                        class="cases__filters-subcategories-checkbox-input">
+                                    <span class="cases__filters-subcategories-checkbox-text">
+                                        Визитки
+                                    </span>
+                                </label>
+                                <label class="cases__filters-subcategories-checkbox">
+                                    <input type="checkbox" name="subcategory" value="2"
+                                        class="cases__filters-subcategories-checkbox-input">
+                                    <span class="cases__filters-subcategories-checkbox-text">
+                                        Блокноты
+                                    </span>
+                                </label>
+                                <label class="cases__filters-subcategories-checkbox">
+                                    <input type="checkbox" name="subcategory" value="2"
+                                        class="cases__filters-subcategories-checkbox-input">
+                                    <span class="cases__filters-subcategories-checkbox-text">
+                                        Открытки, сертификаты, приглашения
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </form>
+        <div class="cases__catalog">
+            <ul class="cases__catalog-list">
+                <li class="cases__catalog-list-item">
+                    <a href="#" class="cases__catalog-card">
+                        <div class="cases__catalog-card-backplate">
+
+                        </div>
+                        <div class="cases__catalog-card-details">
+                            <div class="cases__catalog-card-description">
+                                <p>
+                                    Идея VII Международного молодежного образовательного форума Cәләт в Билярске
+                                    заключается в создании развивающей среды, объединяющей молодежь, увлеченной
+                                    интеллектуальным творчеством, заинтересованной в духовном и культурном
+                                    обогащении.
+                                </p>
+                            </div>
+                            <div class="cases__catalog-card-watch">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-eye">
+                                    <use xlink:href="#eye"></use>
+                                </svg>
+                                Смотреть кейс
+                            </div>
+                        </div>
+                        <div class="cases__catalog-card-image-container">
+                            <img src="img/cases/1.jpg" alt="" class="cases__catalog-card-image">
+                            <div class="cases__catalog-card-tags">
+                                <div class="cases__catalog-card-tag">
+                                    пакет
+                                </div>
+                                <div class="cases__catalog-card-tag">
+                                    Название и слоган
+                                </div>
+                                <div class="cases__catalog-card-tag">
+                                    Логотип
+                                </div>
+                                <div class="cases__catalog-card-tag">
+                                    Фирменный стиль
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="cases__catalog-card-title">
+                            Айдентика Специальных Олимпийских игр в Казани
+                        </h4>
+                    </a>
+                </li>
+                <li class="cases__catalog-list-item">
+                    <a href="#" class="cases__catalog-card">
+                        <div class="cases__catalog-card-backplate">
+
+                        </div>
+                        <div class="cases__catalog-card-details">
+                            <div class="cases__catalog-card-description">
+                                <p>
+                                    Идея VII Международного молодежного образовательного форума Cәләт в Билярске
+                                    заключается в создании развивающей среды, объединяющей молодежь, увлеченной
+                                    интеллектуальным творчеством, заинтересованной в духовном и культурном
+                                    обогащении.
+                                </p>
+                            </div>
+                            <div class="cases__catalog-card-watch">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-eye">
+                                    <use xlink:href="#eye"></use>
+                                </svg>
+                                Смотреть кейс
+                            </div>
+                        </div>
+                        <div class="cases__catalog-card-image-container">
+                            <img src="img/cases/2.jpg" alt="" class="cases__catalog-card-image">
+                            <div class="cases__catalog-card-tags">
+                                <div class="cases__catalog-card-tag">
+                                    еда
+                                </div>
+                                <div class="cases__catalog-card-tag">
+                                    бренд
+                                </div>
+
+                            </div>
+                        </div>
+                        <h4 class="cases__catalog-card-title">
+                            Фонд Пространственных Данных Республики Татарстан
+                        </h4>
+                    </a>
+                </li>
+                <li class="cases__catalog-list-item">
+                    <a href="#" class="cases__catalog-card">
+                        <div class="cases__catalog-card-backplate">
+
+                        </div>
+                        <div class="cases__catalog-card-details">
+                            <div class="cases__catalog-card-description">
+                                <p>
+                                    Идея VII Международного молодежного образовательного форума Cәләт в Билярске
+                                    заключается в создании развивающей среды, объединяющей молодежь, увлеченной
+                                    интеллектуальным творчеством, заинтересованной в духовном и культурном
+                                    обогащении.
+                                </p>
+                            </div>
+                            <div class="cases__catalog-card-watch">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-eye">
+                                    <use xlink:href="#eye"></use>
+                                </svg>
+                                Смотреть кейс
+                            </div>
+                        </div>
+                        <div class="cases__catalog-card-image-container">
+                            <img src="img/cases/3.jpg" alt="" class="cases__catalog-card-image">
+                            <div class="cases__catalog-card-tags">
+                                <div class="cases__catalog-card-tag">
+                                    Айдентика
+                                </div>
+                                <div class="cases__catalog-card-tag">
+                                    Название и слоган
+                                </div>
+                                <div class="cases__catalog-card-tag">
+                                    Логотип
+                                </div>
+
+                            </div>
+                        </div>
+                        <h4 class="cases__catalog-card-title">
+                            Мерч для BILER FOrum
+                        </h4>
+                    </a>
+                </li>
+
+                <li class="cases__catalog-list-item">
+                    <a href="#" class="cases__catalog-card">
+                        <div class="cases__catalog-card-backplate">
+
+                        </div>
+                        <div class="cases__catalog-card-details">
+                            <div class="cases__catalog-card-description">
+                                <p>
+                                    Идея VII Международного молодежного образовательного форума Cәләт в Билярске
+                                    заключается в создании развивающей среды, объединяющей молодежь, увлеченной
+                                    интеллектуальным творчеством, заинтересованной в духовном и культурном
+                                    обогащении.
+                                </p>
+                            </div>
+                            <div class="cases__catalog-card-watch">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-eye">
+                                    <use xlink:href="#eye"></use>
+                                </svg>
+                                Смотреть кейс
+                            </div>
+                        </div>
+                        <div class="cases__catalog-card-image-container">
+                            <img src="img/cases/4.jpg" alt="" class="cases__catalog-card-image">
+                            <div class="cases__catalog-card-tags">
+                                <div class="cases__catalog-card-tag">
+                                    пакет
+                                </div>
+                                <div class="cases__catalog-card-tag">
+                                    Название и слоган
+                                </div>
+                                <div class="cases__catalog-card-tag">
+                                    Логотип
+                                </div>
+                                <div class="cases__catalog-card-tag">
+                                    Фирменный стиль
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="cases__catalog-card-title">
+                            Айдентика Специальных Олимпийских игр в Казани
+                        </h4>
+                    </a>
+                </li>
+                <li class="cases__catalog-list-item">
+                    <a href="#" class="cases__catalog-card">
+                        <div class="cases__catalog-card-backplate">
+
+                        </div>
+                        <div class="cases__catalog-card-details">
+                            <div class="cases__catalog-card-description">
+                                <p>
+                                    Идея VII Международного молодежного образовательного форума Cәләт в Билярске
+                                    заключается в создании развивающей среды, объединяющей молодежь, увлеченной
+                                    интеллектуальным творчеством, заинтересованной в духовном и культурном
+                                    обогащении.
+                                </p>
+                            </div>
+                            <div class="cases__catalog-card-watch">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-eye">
+                                    <use xlink:href="#eye"></use>
+                                </svg>
+                                Смотреть кейс
+                            </div>
+                        </div>
+                        <div class="cases__catalog-card-image-container">
+                            <img src="img/cases/5.jpg" alt="" class="cases__catalog-card-image">
+                            <div class="cases__catalog-card-tags">
+                                <div class="cases__catalog-card-tag">
+                                    еда
+                                </div>
+                                <div class="cases__catalog-card-tag">
+                                    бренд
+                                </div>
+
+                            </div>
+                        </div>
+                        <h4 class="cases__catalog-card-title">
+                            Мерч для BILER FOrum
+                        </h4>
+
+
+                    </a>
+                </li>
+                <li class="cases__catalog-list-item">
+                    <a href="#" class="cases__catalog-card">
+                        <div class="cases__catalog-card-backplate">
+
+                        </div>
+                        <div class="cases__catalog-card-details">
+                            <div class="cases__catalog-card-description">
+                                <p>
+                                    Идея VII Международного молодежного образовательного форума Cәләт в Билярске
+                                    заключается в создании развивающей среды, объединяющей молодежь, увлеченной
+                                    интеллектуальным творчеством, заинтересованной в духовном и культурном
+                                    обогащении.
+                                </p>
+                            </div>
+                            <div class="cases__catalog-card-watch">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-eye">
+                                    <use xlink:href="#eye"></use>
+                                </svg>
+                                Смотреть кейс
+                            </div>
+                        </div>
+                        <div class="cases__catalog-card-image-container">
+                            <img src="img/cases/6.jpg" alt="" class="cases__catalog-card-image">
+                            <div class="cases__catalog-card-tags">
+                                <div class="cases__catalog-card-tag">
+                                    Айдентика
+                                </div>
+                                <div class="cases__catalog-card-tag">
+                                    Название и слоган
+                                </div>
+                                <div class="cases__catalog-card-tag">
+                                    Логотип
+                                </div>
+
+                            </div>
+                        </div>
+                        <h4 class="cases__catalog-card-title">
+                            Фонд Пространственных Данных Республики Татарстан
+                        </h4>
+                    </a>
+                </li>
+                <li class="cases__catalog-list-item">
+                    <a href="#" class="cases__catalog-card">
+                        <div class="cases__catalog-card-backplate">
+
+                        </div>
+                        <div class="cases__catalog-card-details">
+                            <div class="cases__catalog-card-description">
+                                <p>
+                                    Идея VII Международного молодежного образовательного форума Cәләт в Билярске
+                                    заключается в создании развивающей среды, объединяющей молодежь, увлеченной
+                                    интеллектуальным творчеством, заинтересованной в духовном и культурном
+                                    обогащении.
+                                </p>
+                            </div>
+                            <div class="cases__catalog-card-watch">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-eye">
+                                    <use xlink:href="#eye"></use>
+                                </svg>
+                                Смотреть кейс
+                            </div>
+                        </div>
+                        <div class="cases__catalog-card-image-container">
+                            <img src="img/cases/1.jpg" alt="" class="cases__catalog-card-image">
+                            <div class="cases__catalog-card-tags">
+                                <div class="cases__catalog-card-tag">
+                                    пакет
+                                </div>
+                                <div class="cases__catalog-card-tag">
+                                    Название и слоган
+                                </div>
+                                <div class="cases__catalog-card-tag">
+                                    Логотип
+                                </div>
+                                <div class="cases__catalog-card-tag">
+                                    Фирменный стиль
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="cases__catalog-card-title">
+                            Айдентика Специальных Олимпийских игр в Казани
+                        </h4>
+                    </a>
+                </li>
+                <li class="cases__catalog-list-item">
+                    <a href="#" class="cases__catalog-card">
+                        <div class="cases__catalog-card-backplate">
+
+                        </div>
+                        <div class="cases__catalog-card-details">
+                            <div class="cases__catalog-card-description">
+                                <p>
+                                    Идея VII Международного молодежного образовательного форума Cәләт в Билярске
+                                    заключается в создании развивающей среды, объединяющей молодежь, увлеченной
+                                    интеллектуальным творчеством, заинтересованной в духовном и культурном
+                                    обогащении.
+                                </p>
+                            </div>
+                            <div class="cases__catalog-card-watch">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-eye">
+                                    <use xlink:href="#eye"></use>
+                                </svg>
+                                Смотреть кейс
+                            </div>
+                        </div>
+                        <div class="cases__catalog-card-image-container">
+                            <img src="img/cases/2.jpg" alt="" class="cases__catalog-card-image">
+                            <div class="cases__catalog-card-tags">
+                                <div class="cases__catalog-card-tag">
+                                    еда
+                                </div>
+                                <div class="cases__catalog-card-tag">
+                                    бренд
+                                </div>
+
+                            </div>
+                        </div>
+                        <h4 class="cases__catalog-card-title">
+                            Фонд Пространственных Данных Республики Татарстан
+                        </h4>
+                    </a>
+                </li>
+                <li class="cases__catalog-list-item">
+                    <a href="#" class="cases__catalog-card">
+                        <div class="cases__catalog-card-backplate">
+
+                        </div>
+                        <div class="cases__catalog-card-details">
+                            <div class="cases__catalog-card-description">
+                                <p>
+                                    Идея VII Международного молодежного образовательного форума Cәләт в Билярске
+                                    заключается в создании развивающей среды, объединяющей молодежь, увлеченной
+                                    интеллектуальным творчеством, заинтересованной в духовном и культурном
+                                    обогащении.
+                                </p>
+                            </div>
+                            <div class="cases__catalog-card-watch">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-eye">
+                                    <use xlink:href="#eye"></use>
+                                </svg>
+                                Смотреть кейс
+                            </div>
+                        </div>
+                        <div class="cases__catalog-card-image-container">
+                            <img src="img/cases/3.jpg" alt="" class="cases__catalog-card-image">
+                            <div class="cases__catalog-card-tags">
+                                <div class="cases__catalog-card-tag">
+                                    Айдентика
+                                </div>
+                                <div class="cases__catalog-card-tag">
+                                    Название и слоган
+                                </div>
+                                <div class="cases__catalog-card-tag">
+                                    Логотип
+                                </div>
+
+                            </div>
+                        </div>
+                        <h4 class="cases__catalog-card-title">
+                            Мерч для BILER FOrum
+                        </h4>
+                    </a>
+                </li>
+
+                <li class="cases__catalog-list-item">
+                    <a href="#" class="cases__catalog-card">
+                        <div class="cases__catalog-card-backplate">
+
+                        </div>
+                        <div class="cases__catalog-card-details">
+                            <div class="cases__catalog-card-description">
+                                <p>
+                                    Идея VII Международного молодежного образовательного форума Cәләт в Билярске
+                                    заключается в создании развивающей среды, объединяющей молодежь, увлеченной
+                                    интеллектуальным творчеством, заинтересованной в духовном и культурном
+                                    обогащении.
+                                </p>
+                            </div>
+                            <div class="cases__catalog-card-watch">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-eye">
+                                    <use xlink:href="#eye"></use>
+                                </svg>
+                                Смотреть кейс
+                            </div>
+                        </div>
+                        <div class="cases__catalog-card-image-container">
+                            <img src="img/cases/4.jpg" alt="" class="cases__catalog-card-image">
+                            <div class="cases__catalog-card-tags">
+                                <div class="cases__catalog-card-tag">
+                                    пакет
+                                </div>
+                                <div class="cases__catalog-card-tag">
+                                    Название и слоган
+                                </div>
+                                <div class="cases__catalog-card-tag">
+                                    Логотип
+                                </div>
+                                <div class="cases__catalog-card-tag">
+                                    Фирменный стиль
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="cases__catalog-card-title">
+                            Айдентика Специальных Олимпийских игр в Казани
+                        </h4>
+                    </a>
+                </li>
+                <li class="cases__catalog-list-item">
+                    <a href="#" class="cases__catalog-card">
+                        <div class="cases__catalog-card-backplate">
+
+                        </div>
+                        <div class="cases__catalog-card-details">
+                            <div class="cases__catalog-card-description">
+                                <p>
+                                    Идея VII Международного молодежного образовательного форума Cәләт в Билярске
+                                    заключается в создании развивающей среды, объединяющей молодежь, увлеченной
+                                    интеллектуальным творчеством, заинтересованной в духовном и культурном
+                                    обогащении.
+                                </p>
+                            </div>
+                            <div class="cases__catalog-card-watch">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-eye">
+                                    <use xlink:href="#eye"></use>
+                                </svg>
+                                Смотреть кейс
+                            </div>
+                        </div>
+                        <div class="cases__catalog-card-image-container">
+                            <img src="img/cases/5.jpg" alt="" class="cases__catalog-card-image">
+                            <div class="cases__catalog-card-tags">
+                                <div class="cases__catalog-card-tag">
+                                    еда
+                                </div>
+                                <div class="cases__catalog-card-tag">
+                                    бренд
+                                </div>
+
+                            </div>
+                        </div>
+                        <h4 class="cases__catalog-card-title">
+                            Мерч для BILER FOrum
+                        </h4>
+
+
+                    </a>
+                </li>
+                <li class="cases__catalog-list-item">
+                    <a href="#" class="cases__catalog-card">
+                        <div class="cases__catalog-card-backplate">
+
+                        </div>
+                        <div class="cases__catalog-card-details">
+                            <div class="cases__catalog-card-description">
+                                <p>
+                                    Идея VII Международного молодежного образовательного форума Cәләт в Билярске
+                                    заключается в создании развивающей среды, объединяющей молодежь, увлеченной
+                                    интеллектуальным творчеством, заинтересованной в духовном и культурном
+                                    обогащении.
+                                </p>
+                            </div>
+                            <div class="cases__catalog-card-watch">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-eye">
+                                    <use xlink:href="#eye"></use>
+                                </svg>
+                                Смотреть кейс
+                            </div>
+                        </div>
+                        <div class="cases__catalog-card-image-container">
+                            <img src="img/cases/6.jpg" alt="" class="cases__catalog-card-image">
+                            <div class="cases__catalog-card-tags">
+                                <div class="cases__catalog-card-tag">
+                                    Айдентика
+                                </div>
+                                <div class="cases__catalog-card-tag">
+                                    Название и слоган
+                                </div>
+                                <div class="cases__catalog-card-tag">
+                                    Логотип
+                                </div>
+
+                            </div>
+                        </div>
+                        <h4 class="cases__catalog-card-title">
+                            Фонд Пространственных Данных Республики Татарстан
+                        </h4>
+                    </a>
+                </li>
+            </ul>
+
+            <a href="#" class="cases__catalog-load-more">
+                <svg width="14" height="14" aria-hidden="true" class="icon-arrow-down">
+                    <use xlink:href="#arrow-down"></use>
+                </svg>
+                <div class="cases__catalog-load-more-text">
+                    показать больше работ
+                </div>
+
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<section class="lets-talk lets-talk--inner-star lets-talk--blue">
+    <div class="container">
+        <div class="lets-talk__row">
+            <div class="lets-talk__card">
+                <svg width="14" height="14" aria-hidden="true" class="icon-star lets-talk__star">
+                    <use xlink:href="#star"></use>
+                </svg>
+                <div class="lets-talk__card-content">
+                    <h2 class="lets-talk__card-heading">
+                        Давайте обсудим<br>
+                        ваш проект
+                    </h2>
+                    <form action="/" method="POST">
+                        <div class="lets-talk__form-row">
+                            <div class="lets-talk__manager-text">
+                                наш менеджер ответит<br> на все ваши вопросы
+                            </div>
+                            <div class="lets-talk__inputs-block">
+                                <div class="lets-talk__input-wrapper">
+                                    <input type="tel" name="phone" class="lets-talk__input js-phone-input" required
+                                        placeholder="номер телефона">
+                                    <button class="lets-talk__form-submit" type="submit">
+                                        <span class="lets-talk__form-submit-text">
+                                            отправить заявку
+                                        </span>
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-submit-arrow-right">
+                                            <use xlink:href="#submit-arrow-right"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <label class="lets-talk__policy-checkbox">
+                                    <input type="checkbox" name="policy" value="1"
+                                        class="lets-talk__policy-checkbox-input" required checked>
+                                    <span class="lets-talk__policy-checkbox-mark">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                                            <use xlink:href="#checkmark"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="lets-talk__policy-checkbox-text">
+                                        согласен с
+                                        политикой конфиденциальности
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{{/content}}
+{{/extend}}

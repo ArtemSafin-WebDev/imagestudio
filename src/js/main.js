@@ -40,6 +40,7 @@ import productTable from './productTable';
 import productInfoSlider from './productInfoSlider';
 import historySlider from './historySlider';
 import teamSlider from './teamSlider';
+import cases from './cases';
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -83,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
     productInfoSlider();
     historySlider();
     teamSlider();
+    cases();
     
     const mq = window.matchMedia('(max-width: 640px)');
 
