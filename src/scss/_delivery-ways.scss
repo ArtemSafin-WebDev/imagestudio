@@ -1,0 +1,166 @@
+.delivery-ways {
+    margin-bottom: 12rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 7rem;
+    }
+}
+
+.delivery-ways__row {
+    display: grid;
+    grid-template-columns: minmax(0, 30rem) minmax(0, 1fr);
+    grid-gap: 6rem;
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 4rem;
+    }
+}
+
+.delivery-ways__content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 4.5rem;
+    grid-auto-flow: dense;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2rem;
+    }
+}
+
+.delivery-ways__card {
+    padding: 4rem 4.4rem;
+    background: #f9f9f9;
+    color: var(--text-color);
+
+    @include breakpoint(mobile) {
+        padding: 2.5rem;
+    }
+}
+
+.delivery-ways__card-title {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+    text-transform: lowercase;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    @include breakpoint(mobile) {
+        font-size: 2.1rem;
+        line-height: 2.5rem;
+        margin-bottom: 0.8rem;
+    }
+}
+
+.delivery-ways__card-text {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    text-transform: lowercase;
+    max-width: 43rem;
+    @include breakpoint(mobile) {
+        font-size: 1.7rem;
+        line-height: 2.4rem;
+        max-width: none;
+    }
+}
+
+.delivery-ways__card--self {
+    display: flex;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+    }
+}
+
+.delivery-ways__card-content {
+    width: 30%;
+    flex-grow: 1;
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+    }
+}
+
+.delivery-ways__card-map {
+    border: 0.4rem solid #ffffff;
+    padding: 2.5rem;
+    padding-top: 3rem;
+    width: 25rem;
+    flex-shrink: 0;
+    margin-left: 5rem;
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+        margin: 0;
+        flex-shrink: 1;
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    svg {
+        width: 3.2rem;
+        height: 4rem;
+        fill: var(--primary-color);
+        margin-bottom: 2rem;
+    }
+}
+
+.delivery-ways__card-map-address {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    margin-bottom: 4.4rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+        font-size: 1.7rem;
+        line-height: 2.4rem;
+    }
+}
+
+.delivery-ways__card--variants {
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.delivery-ways__card-companies {
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include breakpoint(mobile) {
+        margin-top: 3rem;
+    }
+}
+
+.delivery-ways__card-company {
+    flex-shrink: 0;
+    margin-right: 3.6rem;
+    margin-bottom: 3.5rem;
+    @include breakpoint(mobile) {
+        margin-right: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+}
+
+.delivery-ways__card-company-logo {
+    height: 2rem;
+    width: auto;
+    object-fit: contain;
+    object-position: left center;
+    @include breakpoint(mobile) {
+        height: 1.8rem;
+    }
+}
+
+.delivery-ways__card-image {
+    display: block;
+    height: auto;
+    margin-top: auto;
+    @include breakpoint(mobile) {
+        margin-top: 1rem;
+    }
+}
+
+.delivery-ways__card-map-show {
+    white-space: nowrap;
+}

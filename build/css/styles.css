@@ -10533,3 +10533,521 @@ textarea.contact-form__input {
   .touch .cases__catalog-load-more:active .cases__catalog-load-more-text {
     -webkit-transform: translateX(1rem);
             transform: translateX(1rem); }
+
+.delivery-intro {
+  padding-top: 10rem;
+  margin-bottom: 14rem; }
+  @media only screen and (max-width: 640px) {
+    .delivery-intro {
+      padding-top: 7rem;
+      margin-bottom: 9rem; } }
+
+.delivery-intro__row {
+  display: grid;
+  grid-template-columns: minmax(0, 30rem) minmax(0, 1fr);
+  grid-gap: 6rem; }
+  @media only screen and (max-width: 640px) {
+    .delivery-intro__row {
+      grid-template-columns: minmax(0, 1fr);
+      grid-gap: 1rem; } }
+
+.delivery-intro__heading {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  text-transform: lowercase;
+  font-weight: 400; }
+  @media only screen and (max-width: 640px) {
+    .delivery-intro__heading {
+      font-size: 1.7rem;
+      line-height: 2.4rem; } }
+
+.delivery-intro__text {
+  font-weight: 600;
+  font-size: 4.9rem;
+  line-height: 6rem;
+  letter-spacing: -0.01em;
+  text-transform: lowercase;
+  max-width: 86rem;
+  margin-top: -1.5rem; }
+  @media only screen and (max-width: 640px) {
+    .delivery-intro__text {
+      font-weight: 600;
+      font-size: 3rem;
+      line-height: 3.7rem;
+      margin: 0; } }
+
+.delivery-ways {
+  margin-bottom: 12rem; }
+  @media only screen and (max-width: 640px) {
+    .delivery-ways {
+      margin-bottom: 7rem; } }
+
+.delivery-ways__row {
+  display: grid;
+  grid-template-columns: minmax(0, 30rem) minmax(0, 1fr);
+  grid-gap: 6rem; }
+  @media only screen and (max-width: 640px) {
+    .delivery-ways__row {
+      grid-template-columns: minmax(0, 1fr);
+      grid-gap: 4rem; } }
+
+.delivery-ways__content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 4.5rem;
+  grid-auto-flow: dense; }
+  @media only screen and (max-width: 640px) {
+    .delivery-ways__content {
+      grid-template-columns: minmax(0, 1fr);
+      grid-gap: 2rem; } }
+
+.delivery-ways__card {
+  padding: 4rem 4.4rem;
+  background: #f9f9f9;
+  color: var(--text-color); }
+  @media only screen and (max-width: 640px) {
+    .delivery-ways__card {
+      padding: 2.5rem; } }
+
+.delivery-ways__card-title {
+  font-size: 2.8rem;
+  line-height: 3.2rem;
+  text-transform: lowercase;
+  margin-bottom: 2rem;
+  font-weight: 400; }
+  @media only screen and (max-width: 640px) {
+    .delivery-ways__card-title {
+      font-size: 2.1rem;
+      line-height: 2.5rem;
+      margin-bottom: 0.8rem; } }
+
+.delivery-ways__card-text {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  text-transform: lowercase;
+  max-width: 43rem; }
+  @media only screen and (max-width: 640px) {
+    .delivery-ways__card-text {
+      font-size: 1.7rem;
+      line-height: 2.4rem;
+      max-width: none; } }
+
+.delivery-ways__card--self {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media only screen and (max-width: 640px) {
+    .delivery-ways__card--self {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+
+.delivery-ways__card-content {
+  width: 30%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+  @media only screen and (max-width: 640px) {
+    .delivery-ways__card-content {
+      width: 100%;
+      -webkit-box-flex: 0;
+          -ms-flex-positive: 0;
+              flex-grow: 0; } }
+
+.delivery-ways__card-map {
+  border: 0.4rem solid #ffffff;
+  padding: 2.5rem;
+  padding-top: 3rem;
+  width: 25rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-left: 5rem; }
+  @media only screen and (max-width: 640px) {
+    .delivery-ways__card-map {
+      padding: 2rem;
+      margin: 0;
+      -ms-flex-negative: 1;
+          flex-shrink: 1;
+      width: 100%;
+      margin-top: 2rem; } }
+  .delivery-ways__card-map svg {
+    width: 3.2rem;
+    height: 4rem;
+    fill: var(--primary-color);
+    margin-bottom: 2rem; }
+
+.delivery-ways__card-map-address {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  margin-bottom: 4.4rem; }
+  @media only screen and (max-width: 640px) {
+    .delivery-ways__card-map-address {
+      margin-bottom: 2rem;
+      font-size: 1.7rem;
+      line-height: 2.4rem; } }
+
+.delivery-ways__card--variants {
+  grid-row: span 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.delivery-ways__card-companies {
+  margin-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  @media only screen and (max-width: 640px) {
+    .delivery-ways__card-companies {
+      margin-top: 3rem; } }
+
+.delivery-ways__card-company {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 3.6rem;
+  margin-bottom: 3.5rem; }
+  @media only screen and (max-width: 640px) {
+    .delivery-ways__card-company {
+      margin-right: 2.5rem;
+      margin-bottom: 2.5rem; } }
+
+.delivery-ways__card-company-logo {
+  height: 2rem;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: left center;
+     object-position: left center; }
+  @media only screen and (max-width: 640px) {
+    .delivery-ways__card-company-logo {
+      height: 1.8rem; } }
+
+.delivery-ways__card-image {
+  display: block;
+  height: auto;
+  margin-top: auto; }
+  @media only screen and (max-width: 640px) {
+    .delivery-ways__card-image {
+      margin-top: 1rem; } }
+
+.delivery-ways__card-map-show {
+  white-space: nowrap; }
+
+.delivery-payment {
+  margin-bottom: 18rem; }
+  @media only screen and (max-width: 640px) {
+    .delivery-payment {
+      margin-bottom: 7rem; } }
+
+.delivery-payment__row {
+  display: grid;
+  grid-template-columns: minmax(0, 36rem) minmax(0, 1fr); }
+  @media only screen and (max-width: 640px) {
+    .delivery-payment__row {
+      grid-template-columns: minmax(0, 1fr);
+      grid-gap: 2rem; } }
+
+.delivery-payment__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 9rem; }
+  @media only screen and (max-width: 640px) {
+    .delivery-payment__list {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      grid-gap: 2rem; } }
+
+.delivery-payment__list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.delivery-payment__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 3rem;
+  background: #f9f9f9;
+  color: var(--text-color);
+  min-height: 39rem; }
+  @media only screen and (max-width: 640px) {
+    .delivery-payment__card {
+      min-height: auto;
+      padding: 2.5rem; } }
+
+.delivery-payment__card-icon {
+  height: 6.6rem;
+  width: auto;
+  max-width: none;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: left center;
+     object-position: left center;
+  margin-bottom: 3rem; }
+  @media only screen and (max-width: 640px) {
+    .delivery-payment__card-icon {
+      height: 5rem;
+      margin-bottom: 2rem; } }
+
+.delivery-payment__card-title {
+  font-size: 2.8rem;
+  line-height: 3.2rem;
+  text-transform: lowercase;
+  margin-bottom: 2rem;
+  font-weight: 400; }
+  @media only screen and (max-width: 640px) {
+    .delivery-payment__card-title {
+      font-size: 2.1rem;
+      line-height: 2.5rem;
+      margin-bottom: 0.8rem; } }
+
+.delivery-payment__card-text {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  margin-bottom: 3rem;
+  text-transform: lowercase; }
+  @media only screen and (max-width: 640px) {
+    .delivery-payment__card-text {
+      margin-bottom: 2rem;
+      font-size: 1.7rem;
+      line-height: 2.4rem; } }
+
+.delivery-payment__card-link {
+  margin-top: auto; }
+
+.delivery-payment__card-systems {
+  margin-top: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.delivery-payment__card-systems-card {
+  margin-right: 2.4rem;
+  margin-top: 1.5rem; }
+
+.delivery-payment__card-systems-card-icon {
+  width: 10rem;
+  height: auto;
+  display: block;
+  max-width: none; }
+
+.company-requisites {
+  margin-bottom: 12rem; }
+  @media only screen and (max-width: 640px) {
+    .company-requisites {
+      margin-bottom: 7rem; } }
+
+.company-requisites__accordion {
+  background: #f9f9f9;
+  overflow: hidden; }
+
+.company-requisites__btn {
+  display: grid;
+  grid-template-columns: minmax(0, 27rem) minmax(0, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5.5rem 9rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 1; }
+  @media only screen and (max-width: 640px) {
+    .company-requisites__btn {
+      padding: 2.5rem 2.5rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      grid-gap: initial;
+      -webkit-box-align: initial;
+          -ms-flex-align: initial;
+              align-items: initial; } }
+
+.company-requisites__btn-link-text:last-of-type {
+  display: none; }
+
+.company-requisites__accordion.active .company-requisites__btn-link-text:first-of-type {
+  display: none; }
+
+.company-requisites__accordion.active .company-requisites__btn-link-text:last-of-type {
+  display: inline; }
+
+.company-requisites__btn-image {
+  position: absolute;
+  left: 50%;
+  top: -10rem;
+  width: 58rem;
+  height: auto;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: -1;
+  pointer-events: none;
+  margin-left: 8rem; }
+
+.company-requisites__title {
+  font-size: 2.8rem;
+  line-height: 3.2rem;
+  font-weight: 400;
+  text-transform: lowercase; }
+  @media only screen and (max-width: 640px) {
+    .company-requisites__title {
+      font-size: 2.1rem;
+      line-height: 2.5rem;
+      margin-bottom: 1.5rem; } }
+
+.company-requisites__btn-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  text-transform: lowercase;
+  color: var(--primary-color); }
+  @media only screen and (max-width: 640px) {
+    .company-requisites__btn-link {
+      font-size: 1.7rem;
+      line-height: 2.4rem;
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2; } }
+  .company-requisites__btn-link:link, .company-requisites__btn-link:visited {
+    color: var(--primary-color); }
+  .company-requisites__btn-link svg {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    width: 1.4rem;
+    height: 0.8rem;
+    fill: var(--primary-color);
+    margin-right: 1.5rem;
+    -webkit-transition: fill 0.2s, -webkit-transform 0.2s;
+    transition: fill 0.2s, -webkit-transform 0.2s;
+    transition: fill 0.2s, transform 0.2s;
+    transition: fill 0.2s, transform 0.2s, -webkit-transform 0.2s; }
+    .company-requisites__accordion.active .company-requisites__btn-link svg {
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg); }
+
+.company-requisites__btn-partner-card {
+  margin-left: 3rem;
+  white-space: nowrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0; }
+  @media only screen and (max-width: 640px) {
+    .company-requisites__btn-partner-card {
+      margin: 0;
+      margin-bottom: 1.5rem;
+      display: block;
+      display: none; } }
+
+.company-requisites__btn-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media only screen and (max-width: 640px) {
+    .company-requisites__btn-content {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: initial;
+          -ms-flex-align: initial;
+              align-items: initial;
+      display: contents; } }
+
+.company-requisites__btn-partner-card {
+  margin-left: auto; }
+  @media only screen and (max-width: 640px) {
+    .company-requisites__btn-partner-card {
+      margin-left: 0; } }
+
+.company-requisites__content {
+  height: 0;
+  overflow: hidden; }
+
+.company-requisites__table-wrapper {
+  padding-left: 36rem;
+  padding-right: 9rem; }
+  @media only screen and (max-width: 640px) {
+    .company-requisites__table-wrapper {
+      padding: 0 2.5rem; } }
+
+.company-requisites__table {
+  padding-top: 6rem;
+  padding-bottom: 8rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1); }
+  @media only screen and (max-width: 640px) {
+    .company-requisites__table {
+      padding: 2.5rem 0; } }
+  .company-requisites__table table {
+    border-collapse: collapse;
+    width: 100%; }
+    @media only screen and (max-width: 640px) {
+      .company-requisites__table table {
+        display: block; } }
+    @media only screen and (max-width: 640px) {
+      .company-requisites__table table tbody {
+        display: block; } }
+    @media only screen and (max-width: 640px) {
+      .company-requisites__table table tr {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        margin-bottom: 2rem; }
+        .company-requisites__table table tr:last-child {
+          margin-bottom: 0; } }
+    .company-requisites__table table th,
+    .company-requisites__table table td {
+      text-align: left;
+      vertical-align: top;
+      font-weight: 400;
+      color: black;
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      padding-bottom: 2rem;
+      padding-right: 6rem; }
+      @media only screen and (max-width: 640px) {
+        .company-requisites__table table th,
+        .company-requisites__table table td {
+          display: block;
+          padding: 0;
+          font-size: 1.7rem;
+          line-height: 2.4rem; } }
+    @media only screen and (max-width: 640px) {
+      .company-requisites__table table th {
+        color: var(--primary-color);
+        margin-bottom: 0.5rem; } }

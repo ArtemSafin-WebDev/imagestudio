@@ -1,0 +1,210 @@
+.company-requisites {
+    margin-bottom: 12rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 7rem;
+    }
+}
+
+.company-requisites__accordion {
+    background: #f9f9f9;
+    overflow: hidden;
+}
+
+.company-requisites__btn {
+    display: grid;
+    grid-template-columns: minmax(0, 27rem) minmax(0, 1fr);
+    align-items: center;
+    padding: 5.5rem 9rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    @include breakpoint(mobile) {
+        padding: 2.5rem 2.5rem;
+        display: flex;
+        flex-direction: column;
+        grid-gap: initial;
+        align-items: initial;
+    }
+}
+
+.company-requisites__btn-link-text {
+    &:last-of-type {
+        display: none;
+    }
+
+    .company-requisites__accordion.active & {
+        &:first-of-type {
+            display: none;
+        }
+
+        &:last-of-type {
+            display: inline;
+        }
+    }
+}
+
+.company-requisites__btn-image {
+    position: absolute;
+    left: 50%;
+    top: -10rem;
+    width: 58rem;
+    height: auto;
+    transform: translateX(-50%);
+    z-index: -1;
+    pointer-events: none;
+    margin-left: 8rem;
+}
+
+.company-requisites__title {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+    font-weight: 400;
+    text-transform: lowercase;
+
+    @include breakpoint(mobile) {
+        font-size: 2.1rem;
+        line-height: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.company-requisites__btn-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    text-transform: lowercase;
+    color: var(--primary-color);
+
+    @include breakpoint(mobile) {
+        font-size: 1.7rem;
+        line-height: 2.4rem;
+
+        order: 2;
+    }
+    &:link,
+    &:visited {
+        color: var(--primary-color);
+    }
+    svg {
+        flex-shrink: 0;
+        width: 1.4rem;
+        height: 0.8rem;
+        fill: var(--primary-color);
+        margin-right: 1.5rem;
+        transition: fill 0.2s, transform 0.2s;
+
+        .company-requisites__accordion.active & {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.company-requisites__btn-partner-card {
+    margin-left: 3rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+    @include breakpoint(mobile) {
+        margin: 0;
+        margin-bottom: 1.5rem;
+        display: block;
+
+        display: none;
+    }
+}
+
+.company-requisites__btn-content {
+    display: flex;
+    align-items: center;
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: initial;
+        display: contents;
+    }
+}
+
+.company-requisites__btn-partner-card {
+    margin-left: auto;
+    @include breakpoint(mobile) {
+        margin-left: 0;
+    }
+}
+
+.company-requisites__content {
+    height: 0;
+    overflow: hidden;
+}
+
+.company-requisites__content-inner {
+}
+
+.company-requisites__table-wrapper {
+    padding-left: 36rem;
+    padding-right: 9rem;
+
+    @include breakpoint(mobile) {
+        padding: 0 2.5rem;
+    }
+}
+
+.company-requisites__table {
+    padding-top: 6rem;
+    padding-bottom: 8rem;
+    border-top: 1px solid rgba(black, 0.1);
+
+    @include breakpoint(mobile) {
+        padding: 2.5rem 0;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+
+        @include breakpoint(mobile) {
+            display: block;
+        }
+
+        tbody {
+            @include breakpoint(mobile) {
+                display: block;
+            }
+        }
+
+        tr {
+            @include breakpoint(mobile) {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 2rem;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+      
+        th,
+        td {
+            text-align: left;
+            vertical-align: top;
+            font-weight: 400;
+            color: black;
+            font-size: 1.8rem;
+            line-height: 2.4rem;
+            padding-bottom: 2rem;
+            padding-right: 6rem;
+            @include breakpoint(mobile) {
+                display: block;
+                padding: 0;
+                font-size: 1.7rem;
+                line-height: 2.4rem;
+            }
+        }
+
+        th {
+            @include breakpoint(mobile) {
+                color: var(--primary-color);
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+}

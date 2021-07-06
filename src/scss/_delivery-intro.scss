@@ -1,0 +1,47 @@
+.delivery-intro {
+    padding-top: 10rem;
+    margin-bottom: 14rem;
+    @include breakpoint(mobile) {
+        padding-top: 7rem;
+        margin-bottom: 9rem;
+    }
+}
+
+.delivery-intro__row {
+    display: grid;
+    grid-template-columns: minmax(0, 30rem) minmax(0, 1fr);
+    grid-gap: 6rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 1rem;
+    }
+}
+
+.delivery-intro__heading {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    text-transform: lowercase;
+    font-weight: 400;
+
+    @include breakpoint(mobile) {
+        font-size: 1.7rem;
+        line-height: 2.4rem;
+    }
+}
+
+.delivery-intro__text {
+    font-weight: 600;
+    font-size: 4.9rem;
+    line-height: 6rem;
+    letter-spacing: -0.01em;
+    text-transform: lowercase;
+    max-width: 86rem;
+    margin-top: -1.5rem;
+    @include breakpoint(mobile) {
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: 3.7rem;
+        margin: 0;
+    }
+}
