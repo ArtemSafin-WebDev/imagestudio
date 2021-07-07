@@ -955,8 +955,8 @@
                         Давайте обсудим<br>
                         ваш проект
                     </h2>
-                    <form action="/" method="POST">
-                        <div class="lets-talk__form-row">
+                    <form action="/" method="POST" data-need-validation="">
+                        <div class="lets-talk__form-row" id="lets-talk-error-element">
                             <div class="lets-talk__manager-text">
                                 наш менеджер ответит<br> на все ваши вопросы
                             </div>
@@ -965,7 +965,7 @@
 
                                 <div class="lets-talk__input-wrapper">
                                     <input type="tel" name="phone" class="lets-talk__input js-phone-input" required
-                                        placeholder="номер телефона">
+                                        placeholder="номер телефона" data-parsley-phone="" data-parsley-class-handler="#lets-talk-error-element">
                                     <button class="lets-talk__form-submit" type="submit">
                                         <span class="lets-talk__form-submit-text">
                                             отправить заявку

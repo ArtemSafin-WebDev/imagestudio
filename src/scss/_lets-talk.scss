@@ -4,6 +4,10 @@
     &--blue {
         color: white;
     }
+
+    .parsley-errors-list {
+        display: none;
+    }
     @include breakpoint(mobile) {
         margin-bottom: 6rem;
     }
@@ -160,6 +164,7 @@
     border-radius: 10rem;
     padding: 1rem;
     position: relative;
+    transition: border-color 0.2s;
 
     input:-webkit-autofill,
     input:-webkit-autofill:hover,
@@ -191,11 +196,13 @@
             color: white !important;
         }
 
-     
-
         input:-webkit-autofill {
             caret-color: white !important;
         }
+    }
+
+    .parsley-error & {
+        border-color: #e38787 !important;
     }
 
     @include breakpoint(mobile) {
@@ -287,7 +294,7 @@
 
         .no-touch &:hover,
         .touch &:active {
-            background-color: rgba(white, .92);
+            background-color: rgba(white, 0.92);
         }
     }
 }
@@ -308,6 +315,11 @@
     user-select: none;
     cursor: pointer;
 
+    &.parsley-error {
+        .lets-talk__policy-checkbox-mark {
+            border-color: #e38787;
+        }
+    }
     @include breakpoint(mobile) {
         position: static;
         left: auto;
@@ -330,6 +342,7 @@
     flex-shrink: 0;
     margin-right: 0.6rem;
     margin-top: 0.3rem;
+    transition: border-color 0.2s;
 
     .lets-talk--blue & {
         border-color: white;

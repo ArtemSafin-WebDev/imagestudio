@@ -35,6 +35,7 @@
 .partners__card {
     position: relative;
     display: block;
+    pointer-events: none;
     &::before {
         content: '';
         display: block;

@@ -1,0 +1,27 @@
+.case-images {
+    margin-bottom: 9rem;
+}
+
+.case-images__figure {
+    margin-bottom: 4rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.case-images__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2.5rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.case-images__figcaption {
+    max-width: 46rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    text-transform: lowercase;
+}

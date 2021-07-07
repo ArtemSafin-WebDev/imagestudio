@@ -1,0 +1,113 @@
+.case-task {
+   
+    margin-bottom: 18rem;
+}
+
+.case-task__row {
+    display: grid;
+    grid-template-columns: minmax(0, 27rem) minmax(0, 1fr) minmax(0, 53rem);
+    grid-column-gap: 9rem;
+    align-items: flex-start;
+}
+
+.case-task__star {
+    width: 9rem;
+    height: 9rem;
+    animation-name: star-spin;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    fill: var(--primary-color);
+
+    @include breakpoint(mobile) {
+        width: 6.6rem;
+        height: 6.6rem;
+        margin-bottom: 1.4rem;
+    }
+}
+.case-task__heading {
+    font-size: 4rem;
+    line-height: 5rem;
+    text-transform: lowercase;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+    margin-top: -1.2rem;
+}
+
+.case-task__description {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    text-transform: lowercase;
+}
+
+.case-task__client {
+    border-top: 1px solid #111111;
+    padding-top: 4.4rem;
+    display: flex;
+}
+
+.case-task__client-image-container {
+    flex-shrink: 0;
+    margin-right: 4rem;
+    width: 18rem;
+}
+
+.case-task__client-image {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.case-task__client-content {
+    width: 30%;
+    flex-grow: 1;
+}
+
+.case-task__client-info {
+    display: flex;
+    
+}
+
+.case-task__client-info-card {
+    flex-shrink: 0;
+    margin-bottom: 3.4rem;
+    margin-right: 4.5rem;
+}
+
+.case-task__client-info-card-title {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    font-weight: 400;
+    text-transform: lowercase;
+    margin-bottom: 1.5rem;
+}
+
+.case-task__client-info-card-description {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+    
+}
+
+.case-task__client-tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.case-task__client-tag {
+    font-size: 1.3rem;
+    line-height: 1.2;
+    text-transform: lowercase;
+    color: #b9b9b9;
+    margin-right: 2.2rem;
+    margin-bottom: .7rem;
+
+    &:link,
+    &:visited {
+        color: #b9b9b9;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--text-color);
+    }
+}
