@@ -1,0 +1,61 @@
+.case-info {
+    margin: 22rem 0;
+
+    @include breakpoint(mobile) {
+        margin: 7rem 0;
+    }
+}
+
+.case-info__row {
+    display: grid;
+    grid-template-columns: minmax(0, 30rem) minmax(0, 1fr);
+    grid-gap: 6rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 3rem;
+    }
+
+    .icon-spring {
+        height: 6.6rem;
+        fill: var(--primary-color);
+        display: block;
+        width: 6.4rem;
+
+        @include breakpoint(mobile) {
+            width: 5.7rem;
+            height: auto;
+        }
+    }
+}
+
+.case-info__content {
+    max-width: 83rem;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+    }
+}
+
+.case-info__heading {
+    font-size: 4rem;
+    line-height: 5rem;
+    text-transform: lowercase;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+    @include breakpoint(mobile) {
+        font-size: 2.3rem;
+        line-height: 2.8rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.case-info__text {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    text-transform: lowercase;
+    @include breakpoint(mobile) {
+        font-size: 1.7rem;
+        line-height: 2.5rem;
+    }
+}

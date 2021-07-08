@@ -1,6 +1,9 @@
 .case-task {
-   
     margin-bottom: 18rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 7rem;
+    }
 }
 
 .case-task__row {
@@ -8,6 +11,10 @@
     grid-template-columns: minmax(0, 27rem) minmax(0, 1fr) minmax(0, 53rem);
     grid-column-gap: 9rem;
     align-items: flex-start;
+    @include breakpoint(mobile) {
+        grid-gap: 0;
+        grid-template-columns: minmax(0, 1fr);
+    }
 }
 
 .case-task__star {
@@ -32,24 +39,48 @@
     font-weight: 400;
     margin-bottom: 2.5rem;
     margin-top: -1.2rem;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        font-size: 2.3rem;
+        line-height: 2.8rem;
+        margin-bottom: 1.7rem;
+    }
 }
 
 .case-task__description {
     font-size: 1.8rem;
     line-height: 2.5rem;
     text-transform: lowercase;
+
+    @include breakpoint(mobile) {
+        font-size: 1.7rem;
+        line-height: 2.4rem;
+        margin-bottom: 3rem;
+    }
 }
 
 .case-task__client {
     border-top: 1px solid #111111;
     padding-top: 4.4rem;
     display: flex;
+    @include breakpoint(mobile) {
+        padding-top: 3rem;
+        flex-direction: column;
+    }
 }
 
 .case-task__client-image-container {
     flex-shrink: 0;
     margin-right: 4rem;
     width: 18rem;
+
+    @include breakpoint(mobile) {
+        flex-shrink: 1;
+        margin: 0;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
 }
 
 .case-task__client-image {
@@ -61,17 +92,25 @@
 .case-task__client-content {
     width: 30%;
     flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+    }
 }
 
 .case-task__client-info {
     display: flex;
-    
 }
 
 .case-task__client-info-card {
     flex-shrink: 0;
     margin-bottom: 3.4rem;
     margin-right: 4.5rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 2.5rem;
+        margin-right: 4.5rem;
+    }
 }
 
 .case-task__client-info-card-title {
@@ -80,12 +119,19 @@
     font-weight: 400;
     text-transform: lowercase;
     margin-bottom: 1.5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: .5rem;
+    }
 }
 
 .case-task__client-info-card-description {
     font-size: 2.8rem;
     line-height: 3.2rem;
-    
+    @include breakpoint(mobile) {
+        font-size: 2.3rem;
+        line-height: 1.2;
+    }
 }
 
 .case-task__client-tags {
@@ -99,7 +145,7 @@
     text-transform: lowercase;
     color: #b9b9b9;
     margin-right: 2.2rem;
-    margin-bottom: .7rem;
+    margin-bottom: 0.7rem;
 
     &:link,
     &:visited {

@@ -78,6 +78,10 @@
     }
 }
 
+.contact-form__field--centered {
+    align-self: center;
+}
+
 .contact-form__input {
     height: 4.5rem;
     border-bottom: 1px solid white;
@@ -359,4 +363,11 @@ textarea.contact-form__input {
     .touch &:active {
         color: white;
     }
+}
+
+.contact-form__remark {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    text-transform: lowercase;
+    margin-top: 1.8rem;
 }

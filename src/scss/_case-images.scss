@@ -1,9 +1,15 @@
 .case-images {
     margin-bottom: 9rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 7rem;
+    }
 }
 
 .case-images__figure {
     margin-bottom: 4rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -14,6 +20,9 @@
     width: 100%;
     height: auto;
     margin-bottom: 2.5rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 1.8rem;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -24,4 +33,8 @@
     font-size: 1.6rem;
     line-height: 2rem;
     text-transform: lowercase;
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+    }
 }

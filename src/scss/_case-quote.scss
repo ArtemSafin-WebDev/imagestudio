@@ -1,15 +1,36 @@
 .case-quote {
     margin: 18rem 0;
+    @include breakpoint(mobile) {
+        margin: 7rem 0;
+    }
 }
 
 .case-quote__row {
     display: grid;
     grid-template-columns: minmax(0, 36rem) minmax(0, 1fr);
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2rem;
+    }
 
     .icon-double-circles {
         width: 11rem;
         height: auto;
         display: block;
+        @include breakpoint(mobile) {
+            width: 8rem;
+        }
+    }
+}
+
+.case-quote__type {
+    font-size: 2.8rem;
+    line-height: 4rem;
+    text-transform: lowercase;
+    font-weight: 400;
+    @include breakpoint(mobile) {
+        font-size: 2.3rem;
+        line-height: 2.8rem;
     }
 }
 
@@ -17,11 +38,42 @@
     padding: 8.5rem 18rem;
     background: #f9f9f9;
     color: var(--text-color);
+    @include breakpoint(mobile) {
+        padding: 2rem var(--content-padding);
+    }
 }
 
 .case-quote__card-content {
     margin-bottom: 4.5rem;
     max-width: 80rem;
+    position: relative;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
+
+    &--with-quotes {
+        &::before {
+            content: '';
+            position: absolute;
+            right: 100%;
+            margin-right: 5rem;
+            width: 2.4rem;
+            height: 2rem;
+            background-size: contain;
+            background-image: url('../img/quotes.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            top: 1.5rem;
+
+            @include breakpoint(mobile) {
+                position: static;
+                margin-bottom: 1.5rem;
+                margin-right: 0;
+                display: block;
+            }
+        }
+    }
     h1,
     h2,
     h3,
@@ -33,12 +85,24 @@
         line-height: 4rem;
         text-transform: lowercase;
         margin-bottom: 3rem;
+        max-width: 57rem;
+
+        @include breakpoint(mobile) {
+            max-width: none;
+            font-size: 2.1rem;
+            line-height: 2.5rem;
+            margin-bottom: 0.7rem;
+        }
     }
 
     p {
         font-size: 2.8rem;
         line-height: 4rem;
         text-transform: lowercase;
+        @include breakpoint(mobile) {
+            font-size: 1.7rem;
+            line-height: 2.5rem;
+        }
     }
 }
 
@@ -57,6 +121,10 @@
     overflow: hidden;
     backface-visibility: hidden;
     transform: translateZ(0);
+    @include breakpoint(mobile) {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
 }
 
 .case-quote__card-author-image {
@@ -77,10 +145,19 @@
     font-size: 1.8rem;
     line-height: 2.7rem;
     text-transform: capitalize;
+
+    @include breakpoint(mobile) {
+        font-size: 1.7rem;
+        line-height: 2.5rem;
+    }
 }
 
 .case-quote__card-author-text {
     font-size: 1.4rem;
     line-height: 1.7rem;
     text-transform: lowercase;
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
 }

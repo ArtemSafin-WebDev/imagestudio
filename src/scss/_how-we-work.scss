@@ -220,3 +220,13 @@
         }
     }
 }
+
+
+.how-we-work__form-submit {
+    margin-left: 2rem;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        margin-top: 4rem;
+    }
+}

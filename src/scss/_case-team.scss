@@ -1,0 +1,66 @@
+.case-team {
+    margin-bottom: 12rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 7rem;
+    }
+}
+
+.case-team__row {
+    display: grid;
+    grid-template-columns: minmax(0, 30rem) minmax(0, 1fr);
+    grid-gap: 6rem;
+    padding-top: 6rem;
+    border-top: 1px solid #000000;
+    @include breakpoint(mobile) {
+        grid-gap: 2rem;
+        grid-template-columns: minmax(0, 1fr);
+        padding-top: 3rem;
+    }
+}
+
+.case-team__heading {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    text-transform: lowercase;
+    font-weight: 400;
+}
+
+.case-team__list {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-column-gap: 8rem;
+    grid-row-gap: 3rem;
+    @include breakpoint(mobile) {
+        grid-gap: 2rem;
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.case-team__card {
+    display: flex;
+    flex-direction: column;
+}
+
+.case-team__card-title {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    text-transform: lowercase;
+    font-weight: 400;
+    margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.1rem;
+        line-height: 2.5rem;
+        margin-bottom: .7rem;
+    }
+}
+
+.case-team__card-name {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    text-transform: lowercase;
+    @include breakpoint(mobile) {
+        font-size: 1.7rem;
+        line-height: 2.5rem;
+    }
+}

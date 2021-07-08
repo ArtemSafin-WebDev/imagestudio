@@ -1,0 +1,117 @@
+.inline-form {
+    margin-bottom: 18rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 7rem;
+    }
+}
+
+.inline-form__row {
+    display: grid;
+    grid-template-columns: minmax(0, 27rem) minmax(0, 1fr);
+    padding: 9rem;
+    background-color: var(--primary-color);
+    color: white;
+    @include breakpoint(mobile) {
+        padding: 3rem var(--content-padding);
+        grid-template-columns: minmax(0, 1fr);
+        margin: 0 calc(-1 * var(--content-padding));
+    }
+}
+
+.inline-form__star {
+    width: 9rem;
+    height: 9rem;
+    animation-name: star-spin;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    fill: white;
+
+    @include breakpoint(mobile) {
+        width: 6.6rem;
+        height: 6.6rem;
+        margin-bottom: 1.4rem;
+        position: absolute;
+    }
+}
+
+.inline-form__heading {
+    font-size: 4rem;
+    line-height: 5rem;
+    letter-spacing: -0.1rem;
+    text-transform: lowercase;
+    font-weight: 400;
+
+    @include breakpoint(mobile) {
+        font-size: 2.1rem;
+        line-height: 3.2rem;
+        padding-left: 8rem;
+        display: flex;
+        align-items: center;
+        min-height: 6.6rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.inline-form__form-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-column-gap: 4rem;
+    grid-row-gap: 5rem;
+
+    @include breakpoint(mobile) {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        grid-row-gap: 3.5rem;
+    }
+
+    .parsley-errors-list.filled {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        color: #e38787;
+        text-transform: lowercase;
+    }
+}
+
+.inline-form__content {
+    display: grid;
+    grid-template-columns: minmax(0, 20rem) minmax(0, 1fr);
+    grid-gap: 7rem;
+
+    @include breakpoint(mobile) {
+        grid-gap: 3rem;
+        grid-template-columns: minmax(0, 1fr);
+        display: contents;
+    }
+}
+
+.inline-form__form-controls {
+    display: flex;
+    align-items: center;
+  
+    justify-content: space-between;
+
+    @include breakpointMF(small-tablet) {
+        grid-column: 2 / 3;
+    }
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: initial;
+        justify-content: initial;
+    }
+
+    .parsley-errors-list {
+        display: none;
+    }
+}
+
+
+.inline-form__submit {
+    margin-left: 2rem;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        margin-top: 4rem;
+    }
+}

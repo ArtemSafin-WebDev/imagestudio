@@ -17,8 +17,6 @@
     white-space: nowrap;
     user-select: none;
 
-    
-
     &::after {
         content: attr(data-text);
         left: 100%;
@@ -26,10 +24,17 @@
         padding: 0.8rem 1.6rem;
         padding-top: 0.6rem;
         transition: transform 0.5s ease;
-     
+
         @include breakpoint(mobile) {
             padding: 0.6rem 1.6rem;
             padding-top: 0.5rem;
+        }
+    }
+
+    &--large {
+        border-radius: 4rem;
+        &::after {
+            padding: 1.4rem 2.8rem;
         }
     }
     &:link,
@@ -51,7 +56,6 @@
             animation-duration: 2s;
             animation-iteration-count: infinite;
             animation-timing-function: linear;
-         
         }
     }
 
@@ -84,8 +88,11 @@
     transition: transform 0.5s ease;
     padding: 0.8rem 1.6rem;
     padding-top: 0.6rem;
- 
-   
+
+    .btn--large & {
+        padding: 1.4rem 2.8rem;
+    }
+
     @include breakpoint(mobile) {
         padding: 0.4rem 1.6rem;
         padding-top: 0.3rem;

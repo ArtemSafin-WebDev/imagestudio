@@ -1,11 +1,17 @@
 .case-intro {
     margin-bottom: 20rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 7rem;
+    }
 }
 
 .case-intro__image {
     display: block;
     height: auto;
     margin-bottom: 4.5rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
 }
 
 .case-intro__info {
@@ -13,7 +19,11 @@
     grid-template-columns: minmax(0, 27rem) minmax(0, 1fr) minmax(0, 53rem);
     grid-column-gap: 9rem;
     align-items: flex-start;
-    
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2rem;
+        align-items: initial;
+    }
 }
 
 .case-intro__back-link {
@@ -21,12 +31,22 @@
     align-items: center;
     font-size: 1.8rem;
     line-height: 2.4rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+    }
     svg {
         width: 2.2rem;
         flex-shrink: 0;
         margin-right: 2rem;
         fill: currentColor;
         transform: scaleX(-1);
+
+        @include breakpoint(mobile) {
+            width: 1.2rem;
+            margin-right: 1rem;
+        }
     }
 }
 
@@ -37,13 +57,21 @@
     letter-spacing: -0.01em;
     text-transform: lowercase;
     margin-top: -1.5rem;
-    
+    @include breakpoint(mobile) {
+        margin: 0;
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: 3.7rem;
+    }
 }
 
 .case-intro__tags {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    @include breakpoint(mobile) {
+        flex-direction: row;
+    }
 }
 
 .case-intro__tag {
@@ -54,5 +82,12 @@
     &:last-child {
         margin-bottom: 0;
     }
-}
 
+    @include breakpoint(mobile) {
+        font-size: 1.7rem;
+        line-height: 2.4rem;
+        margin-right: 1.4rem;
+        margin-bottom: 1.4rem;
+    }
+    
+}
