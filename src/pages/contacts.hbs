@@ -1,0 +1,323 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="contacts">
+    <div class="container">
+        <div class="contacts__content">
+            <div class="contacts__top-row">
+                <h1 class="contacts__main-heading">
+                    Контакты
+                </h1>
+                <div class="contacts__social">
+                    <a href="#" class="contacts__social-link">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-instagram">
+                            <use xlink:href="#instagram"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="contacts__social-link">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-behance">
+                            <use xlink:href="#behance"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="contacts__social-link">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-vk">
+                            <use xlink:href="#vk"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="contacts__layout">
+                <div class="contacts__left-col">
+                    <div class="contacts__info-blocks">
+                        <div class="contacts__info-block">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-home">
+                                <use xlink:href="#home"></use>
+                            </svg>
+                            <h3 class="contacts__info-block-heading">
+                                офис
+                            </h3>
+                            <div class="contacts__info-block-text">
+                                <p>
+                                    Республика Татарстан, г. Казань, ул. Г. Камала, д. 18
+                                </p>
+                            </div>
+                            <div class="contacts__info-block-schedule">
+                                <div class="contacts__info-block-schedule-item">
+                                    <span>
+                                        Пн - Пт
+                                    </span>
+                                    <span class="divider">
+
+                                    </span>
+                                    <span>
+                                        9:00 - 18:00
+                                    </span>
+                                </div>
+                                <div class="contacts__info-block-schedule-item">
+                                    <span>
+                                        сб - вс
+                                    </span>
+                                    <span class="divider">
+
+                                    </span>
+                                    <span>
+                                        выходной
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="contacts__info-block-links">
+                                <a href="tel:+79534855566" class="contacts__info-block-link">+7 953 485 5566</a>
+                                <a href="mailto:info@imagestudio.su "
+                                    class="contacts__info-block-link">info@imagestudio.su </a>
+                            </div>
+                        </div>
+                        <div class="contacts__info-block">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-copy">
+                                <use xlink:href="#copy"></use>
+                            </svg>
+                            <h3 class="contacts__info-block-heading">
+                                копицентр
+                            </h3>
+                            <div class="contacts__info-block-text">
+                                <p>
+                                    Республика Татарстан, г. Казань, ул. Г. Камала, д. 18
+                                </p>
+                            </div>
+                            <div class="contacts__info-block-schedule">
+                                <div class="contacts__info-block-schedule-item">
+                                    <span>
+                                        Пн - Пт
+                                    </span>
+                                    <span class="divider">
+
+                                    </span>
+                                    <span>
+                                        9:00 - 18:00
+                                    </span>
+                                </div>
+                                <div class="contacts__info-block-schedule-item">
+                                    <span>
+                                        сб - вс
+                                    </span>
+                                    <span class="divider">
+
+                                    </span>
+                                    <span>
+                                        выходной
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="contacts__info-block-links">
+                                <a href="tel:+79534855566" class="contacts__info-block-link">+7 953 485 5566</a>
+                                <a href="mailto:info@imagestudio.su "
+                                    class="contacts__info-block-link">info@imagestudio.su </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacts__right-col">
+                    <div class="contacts__map-wrapper">
+                        <div class="contacts__map js-map">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="inline-form">
+    <div class="container">
+        <div class="inline-form__row">
+            <svg width="14" height="14" aria-hidden="true" class="icon-star inline-form__star">
+                <use xlink:href="#star"></use>
+            </svg>
+            <div class="inline-form__content">
+                <h2 class="inline-form__heading">
+                    связаться с нами
+                </h2>
+                <form action="/" method="POST" class="inline-form__form" data-need-validation>
+                    <div class="inline-form__form-fields">
+                        <div class="contact-form__field">
+                            <input type="text" name="name" class="contact-form__input" required placeholder="имя *">
+                        </div>
+                        <div class="contact-form__field">
+                            <input type="text" name="company" class="contact-form__input" placeholder="компания">
+                        </div>
+                        <div class="contact-form__field">
+                            <input type="tel" name="phone" class="contact-form__input js-phone-input" required
+                                data-parsley-phone="" placeholder="телефон *">
+                            <div class="contact-form__remark">
+                                * — Обязательные для заполнения поля
+                            </div>
+
+                        </div>
+
+                        <div class="contact-form__field">
+                            <input type="email" name="email" class="contact-form__input" placeholder="e-mail">
+                        </div>
+                        <div class="contact-form__field contact-form__field--centered">
+                            <div class="contact-form__file-upload js-contact-form-file-upload"
+                                data-loaded-text="заменить файл">
+                                <label class="contact-form__file-upload-dropzone">
+                                    <input type="file" name="file" class="contact-form__file-upload-input">
+                                    <div class="contact-form__file-upload-icon">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-paper-clip">
+                                            <use xlink:href="#paper-clip"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="contact-form__file-upload-text">
+                                        прикрепить файл
+                                    </div>
+                                </label>
+
+                            </div>
+                        </div>
+
+                        <div class="contact-form__field">
+                            <textarea name="comment" class="contact-form__input" placeholder="комментарий"></textarea>
+                        </div>
+                        <div class="inline-form__form-controls">
+                            <label class="contact-form__policy-checkbox">
+                                <input type="checkbox" name="policy" value="1"
+                                    class="contact-form__policy-checkbox-input" required checked>
+                                <span class="contact-form__policy-checkbox-mark">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="contact-form__policy-checkbox-text">
+                                    согласен с <a href="#">
+                                        политикой<br> конфиденциальности
+                                    </a>
+                                </span>
+                            </label>
+                            <button type="submit" class="btn btn--large btn--white inline-form__submit"
+                                data-text="отправить заявку">
+                                <span class="btn__inner-text">
+                                    отправить заявку
+                                </span>
+
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="company-requisites">
+    <div class="container">
+        <div class="company-requisites__accordion js-accordion">
+            <div class="company-requisites__btn">
+                <img src="img/document.svg" alt="" class="company-requisites__btn-image">
+                <h2 class="company-requisites__title">
+                    Реквизиты компании
+                </h2>
+                <div class="company-requisites__btn-content">
+                    <a href="#" class="company-requisites__btn-link js-accordion-btn">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-arrow-down">
+                            <use xlink:href="#arrow-down"></use>
+                        </svg>
+                        <span class="company-requisites__btn-link-text">
+                            Показать реквизиты
+                        </span>
+                        <span class="company-requisites__btn-link-text">
+                            скрыть реквизиты
+                        </span>
+
+                    </a>
+
+                    <a href="#" class="dot-link company-requisites__btn-partner-card">
+                        <span class="dot-link__text">
+                            Скачать карту партнера
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="company-requisites__content js-accordion-content">
+                <div class="company-requisites__content-inner">
+                    <div class="company-requisites__table-wrapper">
+
+
+                        <div class="company-requisites__table">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>
+                                            Фактический адрес
+                                        </th>
+                                        <td>
+                                            420021, РТ, г. Казань, ул. Галиаскара Камала, дом 18, офис 5
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            ИНН
+                                        </th>
+                                        <td>
+                                            1655353785
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            ОГРН
+                                        </th>
+                                        <td>
+                                            1161690078131
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            КПП
+                                        </th>
+                                        <td>
+                                            165501001
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            Р/сч
+                                        </th>
+                                        <td>
+                                            4070 2810 8072 7000 5833
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            К/сч
+                                        </th>
+                                        <td>
+                                            3010 1810 8452 5000 0999
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            БИК
+                                        </th>
+                                        <td>
+                                            044525999
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            Банк
+                                        </th>
+                                        <td>
+                                            ТОЧКА ПАО БАНКА «ФК ОТКРЫТИЕ» г.Москва
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}

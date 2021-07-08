@@ -8,6 +8,10 @@
 .company-requisites__accordion {
     background: #f9f9f9;
     overflow: hidden;
+
+    @include breakpoint(mobile) {
+        margin: 0 calc(-1 * var(--content-padding));
+    }
 }
 
 .company-requisites__btn {
@@ -19,7 +23,7 @@
     position: relative;
     z-index: 1;
     @include breakpoint(mobile) {
-        padding: 2.5rem 2.5rem;
+        padding: 2.5rem var(--content-padding);
         display: flex;
         flex-direction: column;
         grid-gap: initial;
@@ -143,7 +147,7 @@
     padding-right: 9rem;
 
     @include breakpoint(mobile) {
-        padding: 0 2.5rem;
+        padding: 0 var(--content-padding);
     }
 }
 

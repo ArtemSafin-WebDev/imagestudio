@@ -216,6 +216,10 @@ th {
     vertical-align: top;
 }
 
+[class*='ymaps-2'][class*='-ground-pane'] {
+    filter: grayscale(100%);
+}
+
 .lazyload,
 .lazyloading {
     opacity: 0;
