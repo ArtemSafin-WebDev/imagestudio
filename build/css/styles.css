@@ -12436,3 +12436,98 @@ textarea.contact-form__input {
   font-size: 1.6rem;
   line-height: 2.4rem;
   display: none; }
+
+.not-found {
+  position: relative;
+  z-index: 1;
+  background-color: #f2f2f2; }
+
+.not-found__bg-image {
+  position: absolute;
+  left: -17rem;
+  top: -22rem;
+  width: 120rem;
+  height: auto;
+  z-index: -1; }
+  @media only screen and (max-width: 640px) {
+    .not-found__bg-image {
+      left: -4rem;
+      top: -7rem;
+      width: 100%;
+      max-width: none;
+      width: 100vw; } }
+
+@media only screen and (max-width: 640px) {
+  .not-found__heading {
+    margin-bottom: 8rem; } }
+
+.not-found__row {
+  display: grid;
+  grid-template-columns: minmax(0, 36rem) minmax(0, 1fr);
+  min-height: 100vh;
+  padding-top: 28rem; }
+  @media only screen and (max-width: 640px) {
+    .not-found__row {
+      grid-gap: initial;
+      padding-top: 12rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+
+.not-found__content {
+  position: relative;
+  z-index: 1; }
+
+.not-found__error {
+  font-size: 6rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-transform: lowercase;
+  margin-bottom: 6rem;
+  margin-top: -1.5rem; }
+  @media only screen and (max-width: 640px) {
+    .not-found__error {
+      m0font-weight: 600;
+      font-size: 3rem;
+      line-height: 3.7rem;
+      text-transform: lowercase;
+      margin: 0;
+      margin-bottom: 1rem; } }
+
+.not-found__text {
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  text-transform: lowercase;
+  margin-bottom: 2.5rem;
+  max-width: 43rem; }
+  @media only screen and (max-width: 640px) {
+    .not-found__text {
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      max-width: none; } }
+
+.not-found__link {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  text-transform: lowercase;
+  padding: 0.4rem 1.6rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid var(--primary-color);
+  border-radius: 2.2rem;
+  color: var(--primary-color);
+  -webkit-transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s; }
+  .not-found__link:link, .not-found__link:visited {
+    color: var(--primary-color); }
+  .no-touch .not-found__link:hover,
+  .touch .not-found__link:active {
+    background-color: var(--primary-color);
+    color: white; }

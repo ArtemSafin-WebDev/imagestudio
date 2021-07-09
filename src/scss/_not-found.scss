@@ -1,0 +1,105 @@
+.not-found {
+    position: relative;
+    z-index: 1;
+    background-color: #f2f2f2;
+}
+
+.not-found__bg-image {
+    position: absolute;
+    left: -17rem;
+    top: -22rem;
+    width: 120rem;
+    height: auto;
+    z-index: -1;
+
+    @include breakpoint(mobile) {
+        left: -4rem;
+        top: -7rem;
+        width: 100%;
+        max-width: none;
+        width: 100vw;
+    }
+}
+
+.not-found__heading {
+    @include breakpoint(mobile) {
+        margin-bottom: 8rem;
+    }
+}
+
+.not-found__row {
+    display: grid;
+    grid-template-columns: minmax(0, 36rem) minmax(0, 1fr);
+    min-height: 100vh;
+    padding-top: 28rem;
+
+    @include breakpoint(mobile) {
+        grid-gap: initial;
+       
+        padding-top: 12rem;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.not-found__content {
+    position: relative;
+    z-index: 1;
+}
+
+.not-found__error {
+    font-size: 6rem;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    text-transform: lowercase;
+    margin-bottom: 6rem;
+    margin-top: -1.5rem;
+
+    @include breakpoint(mobile) {
+        m0font-weight: 600;
+        font-size: 3rem;
+        line-height: 3.7rem;
+        text-transform: lowercase;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+.not-found__text {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    text-transform: lowercase;
+    margin-bottom: 2.5rem;
+    max-width: 43rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        max-width: none;
+        
+
+    }
+}
+
+.not-found__link {
+    align-self: flex-start;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    text-transform: lowercase;
+    padding: 0.4rem 1.6rem;
+    align-items: center;
+    border: 1px solid var(--primary-color);
+    border-radius: 2.2rem;
+    color: var(--primary-color);
+    transition: background-color 0.2s, color 0.2s;
+    &:link,
+    &:visited {
+        color: var(--primary-color);
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: var(--primary-color);
+        color: white;
+    }
+}
