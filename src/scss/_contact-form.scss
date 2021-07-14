@@ -248,6 +248,12 @@ textarea.contact-form__input {
     line-height: 2.4rem;
     flex-shrink: 0;
     margin-right: 2.4rem;
+
+    .no-touch &:hover {
+        .contact-form__file-upload-text {
+            text-decoration: underline;
+        }
+    }
 }
 
 .contact-form__file-upload-input {

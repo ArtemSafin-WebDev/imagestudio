@@ -38,6 +38,21 @@
 .case-next__card {
     display: flex;
     flex-direction: column;
+
+    .no-touch &:hover {
+        color: var(--text-color);
+        .case-next__card-image-container {
+            opacity: .55;
+        }
+
+        .case-next__card-title {
+            opacity: .55;
+        }
+        .case-next__card-link  {
+            background-color: var(--primary-color);
+            color: white;
+        }
+    }
 }
 
 .case-next__card-image-container {
@@ -48,7 +63,7 @@
     transform: translateZ(0);
     position: relative;
     margin-bottom: 4rem;
-
+    transition: opacity .3s;
     @include breakpoint(mobile) {
         margin-bottom: 2rem;
         border-radius: 10rem 10rem 10rem 0;
@@ -122,6 +137,7 @@
     font-weight: 400;
     text-transform: lowercase;
     margin-right: 5.4rem;
+    transition: opacity .3s;
     @include breakpoint(mobile) {
         font-size: 2.1rem;
         line-height: 2.5rem;
@@ -166,9 +182,5 @@
         }
     }
 
-    .no-touch &:hover,
-    .touch &:active {
-        background-color: var(--primary-color);
-        color: white;
-    }
+    
 }
