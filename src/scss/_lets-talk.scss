@@ -6,7 +6,14 @@
     }
 
     .parsley-errors-list {
-        display: none;
+        position: absolute;
+        bottom: 100%;
+        left: 3rem;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        color: #E38787;
+        text-transform: lowercase;
+        margin-bottom: 0.7rem;
     }
     @include breakpoint(mobile) {
         margin-bottom: 6rem;
@@ -202,7 +209,15 @@
     }
 
     .parsley-error & {
-        border-color: #e38787 !important;
+        // border-color: #e38787 !important;
+
+        .lets-talk__input {
+            color: #e38787 !important;
+
+            @include placeholder {
+                color: #e38787;
+            }
+        }
     }
 
     @include breakpoint(mobile) {

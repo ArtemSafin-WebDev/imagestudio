@@ -1334,7 +1334,7 @@
 
                                 <div class="lets-talk__input-wrapper">
                                     <input type="tel" name="phone" class="lets-talk__input js-phone-input" required
-                                        data-parsley-class-handler="#lets-talk-error-element"
+                                        data-parsley-class-handler=".lets-talk__inputs-block"
                                         placeholder="номер телефона" data-parsley-phone>
                                     <button class="lets-talk__form-submit" type="submit">
                                         <span class="lets-talk__form-submit-text">
@@ -1350,7 +1350,7 @@
                                 </div>
                                 <label class="lets-talk__policy-checkbox">
                                     <input type="checkbox" name="policy" value="1"
-                                        class="lets-talk__policy-checkbox-input" required checked>
+                                        class="lets-talk__policy-checkbox-input" required checked data-parsley-errors-container="#let-talk-error-container">
                                     <span class="lets-talk__policy-checkbox-mark">
                                         <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
                                             <use xlink:href="#checkmark"></use>

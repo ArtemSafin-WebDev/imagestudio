@@ -2968,7 +2968,14 @@ select:-webkit-autofill:focus {
   .lets-talk--blue {
     color: white; }
   .lets-talk .parsley-errors-list {
-    display: none; }
+    position: absolute;
+    bottom: 100%;
+    left: 3rem;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: #E38787;
+    text-transform: lowercase;
+    margin-bottom: 0.7rem; }
   @media only screen and (max-width: 640px) {
     .lets-talk {
       margin-bottom: 6rem; } }
@@ -3142,8 +3149,16 @@ select:-webkit-autofill:focus {
       color: white !important; }
     .lets-talk--blue .lets-talk__input-wrapper input:-webkit-autofill {
       caret-color: white !important; }
-  .parsley-error .lets-talk__input-wrapper {
-    border-color: #e38787 !important; }
+  .parsley-error .lets-talk__input-wrapper .lets-talk__input {
+    color: #e38787 !important; }
+    .parsley-error .lets-talk__input-wrapper .lets-talk__input::-webkit-input-placeholder {
+      color: #e38787; }
+    .parsley-error .lets-talk__input-wrapper .lets-talk__input:-moz-placeholder {
+      color: #e38787; }
+    .parsley-error .lets-talk__input-wrapper .lets-talk__input::-moz-placeholder {
+      color: #e38787; }
+    .parsley-error .lets-talk__input-wrapper .lets-talk__input:-ms-input-placeholder {
+      color: #e38787; }
   @media only screen and (max-width: 640px) {
     .lets-talk__input-wrapper {
       padding: 0.5rem; } }
@@ -6440,7 +6455,7 @@ textarea.contact-form__input {
 
 .design-intro {
   margin-bottom: 20rem;
-  padding-top: 15rem; }
+  padding-top: 10rem; }
   @media only screen and (max-width: 640px) {
     .design-intro {
       padding-top: 10rem;
@@ -7711,7 +7726,7 @@ textarea.contact-form__input {
   display: grid;
   grid-template-columns: minmax(0, 30rem) minmax(0, 1fr);
   grid-column-gap: 6rem;
-  padding-top: 18rem;
+  padding-top: 20.7rem;
   padding-bottom: 27.4rem;
   min-height: 111rem; }
   @media only screen and (max-width: 640px) {
@@ -8111,7 +8126,7 @@ textarea.contact-form__input {
      object-fit: cover; }
 
 .polygraphy-catalog {
-  padding-top: 18rem;
+  padding-top: 11rem;
   margin-bottom: 14rem; }
   @media only screen and (max-width: 640px) {
     .polygraphy-catalog {
@@ -9053,7 +9068,7 @@ textarea.contact-form__input {
       max-width: none; } }
 
 .studio-intro {
-  padding-top: 18rem;
+  padding-top: 10rem;
   margin-bottom: 20rem; }
   @media only screen and (max-width: 640px) {
     .studio-intro {
@@ -10890,7 +10905,7 @@ textarea.contact-form__input {
     margin-bottom: 0; }
 
 .case-images__figcaption {
-  max-width: 46rem;
+  max-width: 36rem;
   font-size: 1.6rem;
   line-height: 2rem;
   text-transform: lowercase; }
@@ -11298,7 +11313,8 @@ textarea.contact-form__input {
   font-size: 1.8rem;
   line-height: 2.4rem;
   text-transform: lowercase;
-  color: var(--primary-color); }
+  color: var(--primary-color);
+  display: none; }
   @media only screen and (max-width: 640px) {
     .company-requisites__btn-link {
       font-size: 1.7rem;
@@ -11358,10 +11374,6 @@ textarea.contact-form__input {
   @media only screen and (max-width: 640px) {
     .company-requisites__btn-partner-card {
       margin-left: 0; } }
-
-.company-requisites__content {
-  height: 0;
-  overflow: hidden; }
 
 .company-requisites__table-wrapper {
   padding-left: 36rem;
@@ -12215,7 +12227,7 @@ textarea.contact-form__input {
       margin-top: 4rem; } }
 
 .contacts {
-  padding-top: 10rem;
+  padding-top: 7rem;
   margin-bottom: 14rem; }
   @media only screen and (max-width: 640px) {
     .contacts {
@@ -12456,14 +12468,14 @@ textarea.contact-form__input {
 .not-found__bg-image {
   position: absolute;
   left: -17rem;
-  top: -22rem;
-  width: 120rem;
+  top: -23rem;
+  width: 112rem;
   height: auto;
   z-index: -1; }
   @media only screen and (max-width: 640px) {
     .not-found__bg-image {
       left: -4rem;
-      top: -7rem;
+      top: -8rem;
       width: 100%;
       max-width: none;
       width: 100vw; } }

@@ -80,6 +80,8 @@
     text-transform: lowercase;
     color: var(--primary-color);
 
+    display: none;
+
     @include breakpoint(mobile) {
         font-size: 1.7rem;
         line-height: 2.4rem;
@@ -135,8 +137,8 @@
 }
 
 .company-requisites__content {
-    height: 0;
-    overflow: hidden;
+    // height: 0;
+    // overflow: hidden;
 }
 
 .company-requisites__content-inner {
