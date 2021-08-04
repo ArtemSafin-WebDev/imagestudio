@@ -10,14 +10,18 @@ export default function whereToPrintSlider() {
     }
     elements.forEach(element => {
         const container = element.querySelector('.swiper-container');
-       
-
-       
 
         new Swiper(container, {
             slidesPerView: 'auto',
             spaceBetween: 12,
-            watchOverflow: true
+            watchOverflow: true,
+            slidesPerColumn: 2,
+            slidesPerColumnFill: 'row',
+            breakpoints: {
+                641: {
+                    slidesPerColumn: 1
+                }
+            }
         });
     });
 }

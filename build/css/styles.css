@@ -4370,19 +4370,19 @@ select:-webkit-autofill:focus {
     width: 100%;
     height: 100%;
     z-index: 5;
-    -webkit-transition: -webkit-transform 0.3s ease 0.3s;
-    transition: -webkit-transform 0.3s ease 0.3s;
-    transition: transform 0.3s ease 0.3s;
-    transition: transform 0.3s ease 0.3s, -webkit-transform 0.3s ease 0.3s;
+    -webkit-transition: -webkit-transform 0.5s ease 0.5s;
+    transition: -webkit-transform 0.5s ease 0.5s;
+    transition: transform 0.5s ease 0.5s;
+    transition: transform 0.5s ease 0.5s, -webkit-transform 0.5s ease 0.5s;
     -webkit-transform: translateY(100%);
             transform: translateY(100%); }
     .services__slider-image-layer.active {
       -webkit-transform: translateY(0%);
               transform: translateY(0%);
-      -webkit-transition: -webkit-transform 0.3s;
-      transition: -webkit-transform 0.3s;
-      transition: transform 0.3s;
-      transition: transform 0.3s, -webkit-transform 0.3s;
+      -webkit-transition: -webkit-transform 0.5s;
+      transition: -webkit-transform 0.5s;
+      transition: transform 0.5s;
+      transition: transform 0.5s, -webkit-transform 0.5s;
       z-index: 10; } }
 
 @media only screen and (max-width: 640px) {
@@ -8331,11 +8331,9 @@ textarea.contact-form__input {
     .where-to-print__list-item {
       width: 14.5rem; } }
 
-.where-to-print__list-item--large {
-  grid-column: span 2; }
-  @media only screen and (max-width: 640px) {
-    .where-to-print__list-item--large {
-      width: 32rem; } }
+@media only screen and (min-width: 641px) {
+  .where-to-print__list-item--large {
+    grid-column: span 2; } }
 
 .where-to-print__card {
   padding: 5rem 3rem;
@@ -8361,16 +8359,12 @@ textarea.contact-form__input {
     .where-to-print__card {
       padding-top: 3.5rem;
       padding-bottom: 2rem; } }
-  .where-to-print__list-item--large .where-to-print__card {
-    text-align: left;
-    padding: 6rem;
-    border-radius: 9rem;
-    padding-bottom: 21rem; }
-    @media only screen and (max-width: 640px) {
-      .where-to-print__list-item--large .where-to-print__card {
-        border-radius: 6rem;
-        padding: 4rem;
-        padding-bottom: 17rem; } }
+  @media only screen and (min-width: 641px) {
+    .where-to-print__list-item--large .where-to-print__card {
+      text-align: left;
+      padding: 6rem;
+      border-radius: 9rem;
+      padding-bottom: 21rem; } }
   .no-touch .where-to-print__card:hover,
   .touch .where-to-print__card:active {
     color: var(--text-color); }
@@ -8387,28 +8381,25 @@ textarea.contact-form__input {
 .where-to-print__card-image-container {
   position: relative;
   margin-bottom: 2.5rem; }
-  .where-to-print__list-item--large .where-to-print__card-image-container {
-    position: absolute;
-    z-index: -1;
-    right: 6rem;
-    bottom: 2rem;
-    height: 18.8rem;
-    width: auto;
-    margin: 0; }
-    @media only screen and (max-width: 640px) {
-      .where-to-print__list-item--large .where-to-print__card-image-container {
-        height: 15rem;
-        right: 4rem; } }
-    .where-to-print__list-item--large .where-to-print__card-image-container .where-to-print__card-image {
-      position: static;
-      height: 100%;
+  @media only screen and (min-width: 641px) {
+    .where-to-print__list-item--large .where-to-print__card-image-container {
+      position: absolute;
+      z-index: -1;
+      right: 6rem;
+      bottom: 2rem;
+      height: 18.8rem;
       width: auto;
-      -o-object-fit: contain;
-         object-fit: contain;
-      -o-object-position: right bottom;
-         object-position: right bottom; }
-    .where-to-print__list-item--large .where-to-print__card-image-container::before {
-      display: none; }
+      margin: 0; }
+      .where-to-print__list-item--large .where-to-print__card-image-container .where-to-print__card-image {
+        position: static;
+        height: 100%;
+        width: auto;
+        -o-object-fit: contain;
+           object-fit: contain;
+        -o-object-position: right bottom;
+           object-position: right bottom; }
+      .where-to-print__list-item--large .where-to-print__card-image-container::before {
+        display: none; } }
   .where-to-print__card-image-container::before {
     content: '';
     display: block;
@@ -8437,14 +8428,11 @@ textarea.contact-form__input {
     .where-to-print__card-title {
       font-size: 1.6rem;
       line-height: 1.9rem; } }
-  .where-to-print__list-item--large .where-to-print__card-title {
-    font-size: 2.8rem;
-    line-height: 3.2rem;
-    margin-bottom: 0.8rem; }
-    @media only screen and (max-width: 640px) {
-      .where-to-print__list-item--large .where-to-print__card-title {
-        font-size: 2.1rem;
-        line-height: 2.5rem; } }
+  @media only screen and (min-width: 641px) {
+    .where-to-print__list-item--large .where-to-print__card-title {
+      font-size: 2.8rem;
+      line-height: 3.2rem;
+      margin-bottom: 0.8rem; } }
   .where-to-print__card-title:last-child {
     margin-bottom: 0; }
 
@@ -10905,14 +10893,17 @@ textarea.contact-form__input {
     margin-bottom: 0; }
 
 .case-images__figcaption {
-  max-width: 36rem;
+  max-width: 46rem;
   font-size: 1.6rem;
   line-height: 2rem;
-  text-transform: lowercase; }
+  text-transform: lowercase;
+  margin-left: 36rem; }
   @media only screen and (max-width: 640px) {
     .case-images__figcaption {
       font-size: 1.4rem;
-      line-height: 2.4rem; } }
+      line-height: 2.4rem;
+      margin-left: 0;
+      max-width: none; } }
 
 .delivery-intro {
   padding-top: 10rem;

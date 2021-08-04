@@ -34,7 +34,7 @@ export default function services() {
                 }
             };
 
-            const debouncedSetActiveSlides = debounce(setActiveSlides, 320);
+            const debouncedSetActiveSlides = debounce(setActiveSlides, 520);
 
             const setActiveLayer = index => {
                 setActiveLink(index);

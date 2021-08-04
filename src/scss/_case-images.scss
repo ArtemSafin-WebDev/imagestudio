@@ -29,12 +29,15 @@
 }
 
 .case-images__figcaption {
-    max-width: 36rem;
+    max-width: 46rem;
     font-size: 1.6rem;
     line-height: 2rem;
     text-transform: lowercase;
+    margin-left: 36rem;
     @include breakpoint(mobile) {
         font-size: 1.4rem;
         line-height: 2.4rem;
+        margin-left: 0;
+        max-width: none;
     }
 }
