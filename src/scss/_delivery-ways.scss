@@ -126,6 +126,7 @@
     margin-top: 4rem;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 
     @include breakpoint(mobile) {
         margin-top: 3rem;
@@ -143,12 +144,13 @@
 }
 
 .delivery-ways__card-company-logo {
-    height: 2rem;
-    width: auto;
+    height: auto;
+    width: 12rem;
     object-fit: contain;
     object-position: left center;
     @include breakpoint(mobile) {
-        height: 1.8rem;
+        height: auto;
+        width: 10rem;
     }
 }
 
