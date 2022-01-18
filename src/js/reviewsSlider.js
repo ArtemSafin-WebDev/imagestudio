@@ -15,12 +15,10 @@ export default function reviewsSlider() {
         const setActiveThumbCard = index => {
             thumbsCards.forEach(card => card.classList.remove('active'));
             thumbsCards[index].classList.add('active');
-            console.log('Setting active thumb card', thumbsCards[index])
-        }
+            console.log('Setting active thumb card', thumbsCards[index]);
+        };
 
-
-        const deboucedSetActiveThumb = debounce(setActiveThumbCard, 300)
-        
+        const deboucedSetActiveThumb = debounce(setActiveThumbCard, 300);
 
         const mainSlider = new Swiper(mainContainer, {
             slidesPerView: 'auto',
@@ -34,15 +32,22 @@ export default function reviewsSlider() {
                 prevEl: element.querySelector('.slider-arrows__btn--prev')
             },
             init: false,
+
             on: {
-                init: (swiper) => {
+                init: swiper => {
                     setActiveThumbCard(swiper.realIndex);
 
                     // deboucedSetActiveThumb(swiper.realIndex);
                 },
-                slideChange: (swiper) => {
+                slideChange: swiper => {
                     setActiveThumbCard(swiper.realIndex);
-
+                    swiper.slides.forEach((slide, slideIndex) => {
+                        if (slideIndex < swiper.activeIndex) {
+                            slide.classList.add('previous-slide');
+                        } else {
+                            slide.classList.remove('previous-slide');
+                        }
+                    });
                     // deboucedSetActiveThumb(swiper.realIndex);
                 }
             },
